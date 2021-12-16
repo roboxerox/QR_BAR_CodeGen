@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = BarCodeEncoderDecoder
+TARGET = QR_BarCodeEncoder
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use
@@ -25,16 +25,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        BarCodeEncoderDecoder.cpp \
-    code128.c \
-    qrcodegen.cpp
+        QR_BarCodeEncoder.cpp \
+        code128.c \
+        qrcodegen.cpp
 
 HEADERS += \
-        BarCodeEncoderDecoder.h \
-    code128.h \
-    qrcodegen.h
+        QR_BarCodeEncoder.h \
+        code128.h \
+        qrcodegen.h
 
 FORMS += \
-        BarCodeEncoderDecoder.ui
+        QR_BarCodeEncoder.ui
 
 LIBS += -lpng

@@ -1,20 +1,20 @@
 /**
-* @file BarCodeEncoderDecoder.cpp
+* @file QR_BarCodeEncoder.cpp
 * @author Anil Kumar
 * @date 11Dec2021
-* @brief This is BarCodeEncoderDecoder class.
+* @brief This is QR_BarCodeEncoder class.
 */
-#include "BarCodeEncoderDecoder.h"
-#include "ui_BarCodeEncoderDecoder.h"
+#include "QR_BarCodeEncoder.h"
+#include "ui_QR_BarCodeEncoder.h"
 
-BarCodeEncoderDecoder::BarCodeEncoderDecoder(QWidget *parent) :
+QR_BarCodeEncoder::QR_BarCodeEncoder(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::BarCodeEncoderDecoder)
+    ui(new Ui::QR_BarCodeEncoder)
 {
     ui->setupUi(this);
 }
 
-BarCodeEncoderDecoder::~BarCodeEncoderDecoder()
+QR_BarCodeEncoder::~QR_BarCodeEncoder()
 {
     delete ui;
 }
@@ -34,7 +34,7 @@ static void png_warning_callback(png_structp png_ptr, const char *msg)
     QMessageBox::warning(0,"libpng",msg);
 }
 
-void BarCodeEncoderDecoder::m_CreateBarcode(QString str_Barcode, QString fileName)
+void QR_BarCodeEncoder::m_CreateBarcode(QString str_Barcode, QString fileName)
 {
     char out[4096];
     int width;
@@ -104,7 +104,7 @@ void BarCodeEncoderDecoder::m_CreateBarcode(QString str_Barcode, QString fileNam
     fclose(fp);
 }
 
-void BarCodeEncoderDecoder::on_pushButton_Encode_clicked()
+void QR_BarCodeEncoder::on_pushButton_Encode_clicked()
 {
     if(ui->lineEdit->text()!="")
     {

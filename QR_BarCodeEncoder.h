@@ -1,8 +1,8 @@
 /**
-* @file BarCodeEncoderDecoder.h
+* @file QR_BarCodeEncoder.h
 * @author Anil Kumar
 * @date 11Dec2021
-* @brief This is header BarCodeEncoderDecoder class.
+* @brief This is header QR_BarCodeEncoder class.
 * It generate BAR code using code128 [https://github.com/fhunleth/code128]
 * It generate QR code using qrcodegen [https://github.com/nayuki/QR-Code-generator/tree/master/cpp]
 */
@@ -26,23 +26,23 @@ using qrcodegen::QrCode;
 using qrcodegen::QrSegment;
 
 namespace Ui {
-class BarCodeEncoderDecoder;
+class QR_BarCodeEncoder;
 }
 
-class BarCodeEncoderDecoder : public QMainWindow
+class QR_BarCodeEncoder : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    explicit BarCodeEncoderDecoder(QWidget *parent = 0);
-    ~BarCodeEncoderDecoder();
+    explicit QR_BarCodeEncoder(QWidget *parent = 0);
+    ~QR_BarCodeEncoder();
     void m_CreateBarcode(QString str_Barcode, QString fileName);
 
 private slots:
     void on_pushButton_Encode_clicked();
 
 private:
-    Ui::BarCodeEncoderDecoder *ui;
+    Ui::QR_BarCodeEncoder *ui;
 };
 
 #endif // BARCODEENCODERDECODER_H
