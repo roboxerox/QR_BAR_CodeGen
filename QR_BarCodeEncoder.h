@@ -19,11 +19,32 @@
 #include <QMessageBox>
 #include <QPixmap>
 #include <QBitmap>
+#include <QDir>
+#include <QFile>
+#include <QDateTime>
+#include <QDebug>
 
 #include "qrcodegen.h"
 
 using qrcodegen::QrCode;
 using qrcodegen::QrSegment;
+
+namespace IMG_FORMAT {
+enum
+{
+    PNG,
+    JPG
+};
+}
+
+namespace CODE_TYPE {
+enum
+{
+    BAR,
+    QR
+};
+}
+
 
 namespace Ui {
 class QR_BarCodeEncoder;

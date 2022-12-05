@@ -22,23 +22,41 @@ endif()
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
-add_executable(QR_BarCodeEncoder
-    QR_BarCodeEncoder.ui
-    QR_BarCodeEncoder.cpp
-    main.cpp
-    code128.c
-    code128.h
-    qrcodegen.cpp
-    qrcodegen.h
-)
+find_package(Qt5Core REQUIRED)
+
+set_source_files_properties(code128.c PROPERTIES LANGUAGE CXX )
+
+
+set(SRC_FILES
+		main.cpp
+		QR_BarCodeEncoder.cpp
+		code128.c
+		qrcodegen.cpp
+		)
+
+set(HEADER_FILES
+		QR_BarCodeEncoder.h
+		code128.h
+		qrcodegen.h
+		)
+		
+set(UI_FILES
+		QR_BarCodeEncoder.ui
+		)
+		
+#set(QRC_FILES
+#		resources.qrc
+#		)
+
+add_executable(${PROJECT_NAME} ${SRC_FILES} ${HEADER_FILES} ${UI_FILES} ${QRC_FILES})
 
 add_definitions(-DQT_NO_VERSION_TAGGING)
 
-target_link_libraries(QR_BarCodeEncoder -lpng)
+target_link_libraries(${PROJECT_NAME} -lpng)
 
-target_link_libraries(QR_BarCodeEncoder Qt5::Widgets)
+target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 
-
+include_directories(.)
 
 
 

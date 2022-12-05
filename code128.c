@@ -185,8 +185,7 @@ static void code128_append_pattern(int pattern, int pattern_length, char *out)
     // All patterns have their first bit set by design
     assert(pattern & (1 << (pattern_length - 1)));
 
-    int i;
-    for (i = pattern_length - 1; i >= 0; i--) {
+    for (int i = pattern_length - 1; i >= 0; i--) {
         // cast avoids warning: implicit conversion from 'int' to 'char' changes value from 255 to -1 [-Wconstant-conversion]
         *out++ = (unsigned char)((pattern & (1 << i)) ? 255 : 0);
     }

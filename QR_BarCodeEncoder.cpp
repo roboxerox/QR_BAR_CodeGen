@@ -12,6 +12,8 @@ QR_BarCodeEncoder::QR_BarCodeEncoder(QWidget *parent) :
     ui(new Ui::QR_BarCodeEncoder)
 {
     ui->setupUi(this);
+    ui->widget_Barcode->hide();
+    ui->label_QrCode->hide();
 }
 
 QR_BarCodeEncoder::~QR_BarCodeEncoder()
@@ -106,32 +108,74 @@ void QR_BarCodeEncoder::m_CreateBarcode(QString str_Barcode, QString fileName)
 
 void QR_BarCodeEncoder::on_pushButton_Encode_clicked()
 {
+    QString str_Barcodes = QDir::currentPath()+QDir::separator()+"bar_codes";
+    QString str_QRcodes = QDir::currentPath()+QDir::separator()+"qr_codes";
+
+    QDir dir;
+    bool bcode = dir.mkpath(str_Barcodes);
+    bool qcode = dir.mkpath(str_QRcodes);
+
+    if(!bcode || !qcode )
+    {
+        QMessageBox::warning(this,"Not created","Dir not created.");
+        return;
+    }
+
+    QString str_timestamp = QString::number(QDateTime::currentSecsSinceEpoch())+"_";
+
+
     if(ui->lineEdit->text()!="")
     {
-        /////// BAR CODE
-        QString outFile = "/tmp/b1.png";
-        m_CreateBarcode(ui->lineEdit->text(),outFile);
-        QPixmap pixmap;
-        if(pixmap.load(outFile)){
-            /** scale pixmap to fit in label'size and keep ratio of pixmap */
-            pixmap = pixmap.scaled(ui->label_BarCode->size(),Qt::KeepAspectRatio);
-            ui->label_BarCode->setPixmap(pixmap);
+        if(ui->comboBox_code_type->currentIndex() == CODE_TYPE::BAR)
+        {
+            ui->widget_Barcode->show();
+            ui->label_QrCode->hide();
+            /////// BAR CODE
+            QString outFile = str_Barcodes+QDir::separator()+str_timestamp+"barcode.png";
+            m_CreateBarcode(ui->lineEdit->text(),outFile);
+            QPixmap pixmap;
+            if(pixmap.load(outFile))
+            {
+                /** scale pixmap to fit in label'size and keep ratio of pixmap */
+                pixmap = pixmap.scaled(ui->label_BarCode->size(),Qt::KeepAspectRatio);
+                ui->label_BarCode->setPixmap(pixmap);
+            }
+            ui->label_Str->setText(ui->lineEdit->text());
         }
-        ui->label_Str->setText(ui->lineEdit->text());
+        else
+        {
+            ui->widget_Barcode->hide();
+            ui->label_QrCode->show();
 
+            /////// QR CODE
+            using namespace qrcodegen;
+            // Create the QR Code object
+            QrCode qr = QrCode::encodeText( ui->lineEdit->text().toUtf8().data(), QrCode::Ecc::MEDIUM );
+            qint32 sz = qr.getSize();
+            QImage im(sz,sz, QImage::Format_RGB32);
+            QRgb black = qRgb(  0,  0,  0);
+            QRgb white = qRgb(255,255,255);
+            for (int y = 0; y < sz; y++)
+                for (int x = 0; x < sz; x++)
+                    im.setPixel(x,y,qr.getModule(x, y) ? black : white );
 
-        /////// QR CODE
-        using namespace qrcodegen;
-        // Create the QR Code object
-        QrCode qr = QrCode::encodeText( ui->lineEdit->text().toUtf8().data(), QrCode::Ecc::MEDIUM );
-        qint32 sz = qr.getSize();
-        QImage im(sz,sz, QImage::Format_RGB32);
-        QRgb black = qRgb(  0,  0,  0);
-        QRgb white = qRgb(255,255,255);
-        for (int y = 0; y < sz; y++)
-            for (int x = 0; x < sz; x++)
-                im.setPixel(x,y,qr.getModule(x, y) ? black : white );
-        ui->label_QrCode->setPixmap( QPixmap::fromImage(im.scaled(256,256,Qt::KeepAspectRatio,Qt::FastTransformation),Qt::MonoOnly) );
+            QPixmap qrPix(QPixmap::fromImage(im.scaled(300,300,Qt::KeepAspectRatio,Qt::FastTransformation),Qt::MonoOnly));
+            ui->label_QrCode->setPixmap( qrPix );
+            switch (ui->comboBox_image_type->currentIndex())
+            {
+            case IMG_FORMAT::PNG:
+                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode.png","PNG");
+                break;
+            case IMG_FORMAT::JPG:
+                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode.jpg","JPG");
+                break;
+            default:
+                break;
+            }
+        }
+
+        ui->statusBar->showMessage("ID : "+str_timestamp.mid(0,str_timestamp.size()-1),3000);
+
     }
     else
         QMessageBox::warning(this,"Text error", "Code text not found.");
