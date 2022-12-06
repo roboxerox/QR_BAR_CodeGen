@@ -3,8 +3,6 @@
 * @author Anil Kumar
 * @date 11Dec2021
 * @brief This is header QR_BarCodeEncoder class.
-* It generate BAR code using code128 [https://github.com/fhunleth/code128]
-* It generate QR code using qrcodegen [https://github.com/nayuki/QR-Code-generator/tree/master/cpp]
 */
 #ifndef BARCODEENCODERDECODER_H
 #define BARCODEENCODERDECODER_H
@@ -23,8 +21,15 @@
 #include <QFile>
 #include <QDateTime>
 #include <QDebug>
-
 #include "qrcodegen.h"
+
+
+#define SW_MAJOR_VER        QString("0")
+#define SW_MINOR_VER        QString("2")
+#define SW_BUILD_VER        QString("1")
+
+#define SOFTWARE_VERSION    QString(SW_MAJOR_VER+"."+SW_MINOR_VER+"."+SW_BUILD_VER)
+
 
 using qrcodegen::QrCode;
 using qrcodegen::QrSegment;

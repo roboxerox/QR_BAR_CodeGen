@@ -2,11 +2,18 @@
 * @file QR_BarCodeEncoder.cpp
 * @author Anil Kumar
 * @date 11Dec2021
-* @brief This is QR_BarCodeEncoder class.
+* @brief This is QR_BarCodeEncoder class and main window of UI.
+* It generate BAR code using code128.
+* It generate QR code using qrcodegen.
 */
+
 #include "QR_BarCodeEncoder.h"
 #include "ui_QR_BarCodeEncoder.h"
 
+/**
+ * @brief QR_BarCodeEncoder::QR_BarCodeEncoder
+ * @param parent
+ */
 QR_BarCodeEncoder::QR_BarCodeEncoder(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::QR_BarCodeEncoder)
@@ -14,13 +21,22 @@ QR_BarCodeEncoder::QR_BarCodeEncoder(QWidget *parent) :
     ui->setupUi(this);
     ui->widget_Barcode->hide();
     ui->label_QrCode->hide();
+    ui->label_version->setText(SOFTWARE_VERSION);
 }
 
+/**
+ * @brief QR_BarCodeEncoder::~QR_BarCodeEncoder
+ */
 QR_BarCodeEncoder::~QR_BarCodeEncoder()
 {
     delete ui;
 }
 
+/**
+ * @brief png_error_callback
+ * @param png_ptr
+ * @param msg
+ */
 static void png_error_callback(png_structp png_ptr, const char *msg)
 {
     (void) png_ptr;
@@ -29,6 +45,11 @@ static void png_error_callback(png_structp png_ptr, const char *msg)
 
 }
 
+/**
+ * @brief png_warning_callback
+ * @param png_ptr
+ * @param msg
+ */
 static void png_warning_callback(png_structp png_ptr, const char *msg)
 {
     (void) png_ptr;
@@ -36,13 +57,16 @@ static void png_warning_callback(png_structp png_ptr, const char *msg)
     QMessageBox::warning(0,"libpng",msg);
 }
 
+/**
+ * @brief QR_BarCodeEncoder::m_CreateBarcode
+ * @param str_Barcode
+ * @param fileName
+ */
 void QR_BarCodeEncoder::m_CreateBarcode(QString str_Barcode, QString fileName)
 {
     char out[4096];
     int width;
     int height = 40;
-
-
 
     const char *str = str_Barcode.toLatin1();
     width = code128_estimate_len(str);
@@ -106,6 +130,10 @@ void QR_BarCodeEncoder::m_CreateBarcode(QString str_Barcode, QString fileName)
     fclose(fp);
 }
 
+
+/**
+ * @brief QR_BarCodeEncoder::on_pushButton_Encode_clicked
+ */
 void QR_BarCodeEncoder::on_pushButton_Encode_clicked()
 {
     QString str_Barcodes = QDir::currentPath()+QDir::separator()+"bar_codes";
@@ -128,6 +156,8 @@ void QR_BarCodeEncoder::on_pushButton_Encode_clicked()
     {
         if(ui->comboBox_code_type->currentIndex() == CODE_TYPE::BAR)
         {
+//            if(ui->lineEdit->text().contains('/'))
+//                return ;
             ui->widget_Barcode->show();
             ui->label_QrCode->hide();
             /////// BAR CODE
