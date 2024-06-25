@@ -1,0 +1,12 @@
+<map id="zxing::qrcode::DataMask" name="zxing::qrcode::DataMask">
+<area shape="rect" id="node1" title=" " alt="" coords="164,183,332,209"/>
+<area shape="rect" id="node3" href="$classzxing_1_1qrcode_1_1_data_mask000.html" title="000: mask bits for which (x + y) mod 2 == 0" alt="" coords="380,5,569,32"/>
+<area shape="rect" id="node4" href="$classzxing_1_1qrcode_1_1_data_mask001.html" title="001: mask bits for which x mod 2 == 0" alt="" coords="380,56,569,83"/>
+<area shape="rect" id="node5" href="$classzxing_1_1qrcode_1_1_data_mask010.html" title="010: mask bits for which y mod 3 == 0" alt="" coords="380,107,569,133"/>
+<area shape="rect" id="node6" href="$classzxing_1_1qrcode_1_1_data_mask011.html" title="011: mask bits for which (x + y) mod 3 == 0" alt="" coords="380,157,569,184"/>
+<area shape="rect" id="node7" href="$classzxing_1_1qrcode_1_1_data_mask100.html" title="100: mask bits for which (x/2 + y/3) mod 2 == 0" alt="" coords="380,208,569,235"/>
+<area shape="rect" id="node8" href="$classzxing_1_1qrcode_1_1_data_mask101.html" title="101: mask bits for which xy mod 2 + xy mod 3 == 0" alt="" coords="380,259,569,285"/>
+<area shape="rect" id="node9" href="$classzxing_1_1qrcode_1_1_data_mask110.html" title="110: mask bits for which (xy mod 2 + xy mod 3) mod 2 == 0" alt="" coords="380,309,569,336"/>
+<area shape="rect" id="node10" href="$classzxing_1_1qrcode_1_1_data_mask111.html" title="111: mask bits for which ((x+y)mod 2 + xy mod 3) mod 2 == 0" alt="" coords="381,360,569,387"/>
+<area shape="rect" id="node2" href="$classzxing_1_1_counted.html" title=" " alt="" coords="5,183,116,209"/>
+</map>

@@ -1,0 +1,99 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classzxing_1_1_counted.html" title=" " alt="" coords="5,1509,116,1536"/>
+<area shape="rect" id="node2" href="$classzxing_1_1_array.html" title=" " alt="" coords="184,5,359,32"/>
+<area shape="rect" id="node3" href="$classzxing_1_1_array.html" title=" " alt="" coords="201,56,342,83"/>
+<area shape="rect" id="node4" href="$classzxing_1_1_array.html" title=" " alt="" coords="201,107,342,133"/>
+<area shape="rect" id="node5" href="$classzxing_1_1_array.html" title=" " alt="" coords="206,157,337,184"/>
+<area shape="rect" id="node6" href="$classzxing_1_1_array.html" title=" " alt="" coords="200,209,343,250"/>
+<area shape="rect" id="node7" href="$classzxing_1_1_array.html" title=" " alt="" coords="174,274,369,315"/>
+<area shape="rect" id="node8" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="173,340,369,367"/>
+<area shape="rect" id="node9" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="190,391,353,417"/>
+<area shape="rect" id="node10" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="190,441,353,468"/>
+<area shape="rect" id="node11" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="196,492,347,519"/>
+<area shape="rect" id="node12" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="193,543,349,585"/>
+<area shape="rect" id="node13" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="174,609,369,650"/>
+<area shape="rect" id="node14" href="$classzxing_1_1_array.html" title=" " alt="" coords="209,675,333,701"/>
+<area shape="rect" id="node15" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="199,725,344,752"/>
+<area shape="rect" id="node16" href="$classzxing_1_1aztec_1_1_decoder.html" title=" " alt="" coords="196,776,347,803"/>
+<area shape="rect" id="node17" href="$classzxing_1_1aztec_1_1_detector.html" title=" " alt="" coords="196,827,347,853"/>
+<area shape="rect" id="node18" href="$classzxing_1_1aztec_1_1_point.html" title=" " alt="" coords="206,877,337,904"/>
+<area shape="rect" id="node19" href="$classzxing_1_1_binarizer.html" title=" " alt="" coords="215,928,327,955"/>
+<area shape="rect" id="node22" href="$classzxing_1_1_binary_bitmap.html" title=" " alt="" coords="202,979,341,1005"/>
+<area shape="rect" id="node23" href="$classzxing_1_1_bit_array.html" title=" " alt="" coords="217,1029,325,1056"/>
+<area shape="rect" id="node24" href="$classzxing_1_1_bit_matrix.html" title=" " alt="" coords="215,1080,328,1107"/>
+<area shape="rect" id="node25" href="$classzxing_1_1_bit_source.html" title=" " alt="" coords="212,1131,331,1157"/>
+<area shape="rect" id="node26" href="$classzxing_1_1datamatrix_1_1_bit_matrix_parser.html" title=" " alt="" coords="206,1182,337,1223"/>
+<area shape="rect" id="node27" href="$classzxing_1_1datamatrix_1_1_data_block.html" title=" " alt="" coords="206,1247,337,1289"/>
+<area shape="rect" id="node28" href="$classzxing_1_1datamatrix_1_1_detector.html" title=" " alt="" coords="206,1313,337,1354"/>
+<area shape="rect" id="node29" href="$classzxing_1_1datamatrix_1_1_result_points_and_transitions.html" title=" " alt="" coords="179,1378,363,1419"/>
+<area shape="rect" id="node30" href="$classzxing_1_1datamatrix_1_1_version.html" title=" " alt="" coords="206,1443,337,1485"/>
+<area shape="rect" id="node31" href="$classzxing_1_1_decoder_result.html" title=" " alt="" coords="197,1509,345,1536"/>
+<area shape="rect" id="node32" href="$classzxing_1_1_detector_result.html" title=" " alt="" coords="197,1560,346,1587"/>
+<area shape="rect" id="node34" href="$classzxing_1_1_generic_g_f.html" title=" " alt="" coords="209,1611,333,1637"/>
+<area shape="rect" id="node35" href="$classzxing_1_1_generic_g_f_poly.html" title=" " alt="" coords="196,1661,347,1688"/>
+<area shape="rect" id="node36" href="$classzxing_1_1_luminance_source.html" title=" " alt="" coords="189,1712,354,1739"/>
+<area shape="rect" id="node41" href="$classzxing_1_1_monochrome_rectangle_detector.html" title=" " alt="" coords="174,1763,369,1805"/>
+<area shape="rect" id="node42" href="$classzxing_1_1multi_1_1_multiple_barcode_reader.html" title=" " alt="" coords="176,1829,367,1870"/>
+<area shape="rect" id="node45" href="$classzxing_1_1pdf417_1_1decoder_1_1_bit_matrix_parser.html" title=" " alt="" coords="194,1894,349,1935"/>
+<area shape="rect" id="node46" href="$classzxing_1_1pdf417_1_1decoder_1_1ec_1_1_error_correction.html" title=" " alt="" coords="194,1959,349,2001"/>
+<area shape="rect" id="node47" href="$classzxing_1_1pdf417_1_1decoder_1_1ec_1_1_modulus_poly.html" title=" " alt="" coords="194,2025,349,2066"/>
+<area shape="rect" id="node48" href="$classzxing_1_1_perspective_transform.html" title=" " alt="" coords="177,2091,366,2117"/>
+<area shape="rect" id="node49" href="$classzxing_1_1qrcode_1_1_alignment_pattern_finder.html" title=" " alt="" coords="188,2142,355,2183"/>
+<area shape="rect" id="node50" href="$classzxing_1_1qrcode_1_1_bit_matrix_parser.html" title=" " alt="" coords="191,2207,351,2249"/>
+<area shape="rect" id="node51" href="$classzxing_1_1qrcode_1_1_data_block.html" title=" " alt="" coords="187,2273,356,2300"/>
+<area shape="rect" id="node52" href="$classzxing_1_1qrcode_1_1_data_mask.html" title=" " alt="" coords="187,2324,355,2351"/>
+<area shape="rect" id="node61" href="$classzxing_1_1qrcode_1_1_detector.html" title=" " alt="" coords="192,2375,351,2401"/>
+<area shape="rect" id="node63" href="$classzxing_1_1qrcode_1_1_error_correction_level.html" title=" " alt="" coords="173,2426,369,2467"/>
+<area shape="rect" id="node64" href="$classzxing_1_1qrcode_1_1_finder_pattern_info.html" title=" " alt="" coords="167,2492,375,2519"/>
+<area shape="rect" id="node65" href="$classzxing_1_1qrcode_1_1_format_information.html" title=" " alt="" coords="164,2543,379,2569"/>
+<area shape="rect" id="node66" href="$classzxing_1_1qrcode_1_1_mode.html" title=" " alt="" coords="201,2593,341,2620"/>
+<area shape="rect" id="node67" href="$classzxing_1_1qrcode_1_1_version.html" title=" " alt="" coords="195,2644,347,2671"/>
+<area shape="rect" id="node68" href="$classzxing_1_1_reader.html" title=" " alt="" coords="220,2695,323,2721"/>
+<area shape="rect" id="node88" href="$classzxing_1_1_result.html" title=" " alt="" coords="222,2745,321,2772"/>
+<area shape="rect" id="node89" href="$classzxing_1_1_result_point.html" title=" " alt="" coords="207,2796,336,2823"/>
+<area shape="rect" id="node94" href="$classzxing_1_1_result_point_callback.html" title=" " alt="" coords="181,2847,361,2873"/>
+<area shape="rect" id="node95" href="$classzxing_1_1_string.html" title=" " alt="" coords="224,2897,319,2924"/>
+<area shape="rect" id="node96" href="$structzxing_1_1_two_ints.html" title=" " alt="" coords="218,2948,325,2975"/>
+<area shape="rect" id="node97" href="$classzxing_1_1_white_rectangle_detector.html" title=" " alt="" coords="169,2999,373,3025"/>
+<area shape="rect" id="node20" href="$classzxing_1_1_global_histogram_binarizer.html" title=" " alt="" coords="437,928,646,955"/>
+<area shape="rect" id="node21" href="$classzxing_1_1_hybrid_binarizer.html" title=" " alt="" coords="727,928,877,955"/>
+<area shape="rect" id="node33" href="$classzxing_1_1aztec_1_1_aztec_detector_result.html" title=" " alt="" coords="449,1537,634,1578"/>
+<area shape="rect" id="node37" href="$class_camera_image_wrapper.html" title=" " alt="" coords="465,1603,617,1629"/>
+<area shape="rect" id="node38" href="$classzxing_1_1_greyscale_luminance_source.html" title=" " alt="" coords="450,1654,633,1695"/>
+<area shape="rect" id="node39" href="$classzxing_1_1_greyscale_rotated_luminance_source.html" title=" " alt="" coords="427,1719,656,1761"/>
+<area shape="rect" id="node40" href="$classzxing_1_1_inverted_luminance_source.html" title=" " alt="" coords="456,1785,627,1826"/>
+<area shape="rect" id="node43" href="$classzxing_1_1multi_1_1_generic_multiple_barcode_reader.html" title=" " alt="" coords="448,1850,635,1891"/>
+<area shape="rect" id="node44" href="$classzxing_1_1multi_1_1_q_r_code_multi_reader.html" title=" " alt="" coords="714,2242,890,2283"/>
+<area shape="rect" id="node53" href="$classzxing_1_1qrcode_1_1_data_mask000.html" title="000: mask bits for which (x + y) mod 2 == 0" alt="" coords="447,2223,636,2249"/>
+<area shape="rect" id="node54" href="$classzxing_1_1qrcode_1_1_data_mask001.html" title="001: mask bits for which x mod 2 == 0" alt="" coords="447,2273,636,2300"/>
+<area shape="rect" id="node55" href="$classzxing_1_1qrcode_1_1_data_mask010.html" title="010: mask bits for which y mod 3 == 0" alt="" coords="447,2324,636,2351"/>
+<area shape="rect" id="node56" href="$classzxing_1_1qrcode_1_1_data_mask011.html" title="011: mask bits for which (x + y) mod 3 == 0" alt="" coords="447,2375,636,2401"/>
+<area shape="rect" id="node57" href="$classzxing_1_1qrcode_1_1_data_mask100.html" title="100: mask bits for which (x/2 + y/3) mod 2 == 0" alt="" coords="447,2020,636,2047"/>
+<area shape="rect" id="node58" href="$classzxing_1_1qrcode_1_1_data_mask101.html" title="101: mask bits for which xy mod 2 + xy mod 3 == 0" alt="" coords="447,2071,636,2097"/>
+<area shape="rect" id="node59" href="$classzxing_1_1qrcode_1_1_data_mask110.html" title="110: mask bits for which (xy mod 2 + xy mod 3) mod 2 == 0" alt="" coords="447,2121,636,2148"/>
+<area shape="rect" id="node60" href="$classzxing_1_1qrcode_1_1_data_mask111.html" title="111: mask bits for which ((x+y)mod 2 + xy mod 3) mod 2 == 0" alt="" coords="447,2172,635,2199"/>
+<area shape="rect" id="node62" href="$classzxing_1_1multi_1_1_multi_detector.html" title=" " alt="" coords="454,2425,629,2452"/>
+<area shape="rect" id="node69" href="$classzxing_1_1aztec_1_1_aztec_reader.html" title=" " alt="" coords="453,2476,630,2503"/>
+<area shape="rect" id="node70" href="$classzxing_1_1datamatrix_1_1_data_matrix_reader.html" title=" " alt="" coords="476,2527,607,2569"/>
+<area shape="rect" id="node71" href="$classzxing_1_1multi_1_1_by_quadrant_reader.html" title=" " alt="" coords="458,2593,625,2634"/>
+<area shape="rect" id="node72" href="$classzxing_1_1_multi_format_reader.html" title=" " alt="" coords="455,2659,627,2685"/>
+<area shape="rect" id="node73" href="$classzxing_1_1oned_1_1_one_d_reader.html" title=" " alt="" coords="455,2811,628,2837"/>
+<area shape="rect" id="node86" href="$classzxing_1_1pdf417_1_1_p_d_f417_reader.html" title=" " alt="" coords="442,2760,641,2787"/>
+<area shape="rect" id="node87" href="$classzxing_1_1qrcode_1_1_q_r_code_reader.html" title=" " alt="" coords="441,2709,642,2736"/>
+<area shape="rect" id="node74" href="$classzxing_1_1oned_1_1_coda_bar_reader.html" title=" " alt="" coords="707,2735,897,2761"/>
+<area shape="rect" id="node75" href="$classzxing_1_1oned_1_1_code128_reader.html" title=" " alt="" coords="707,2785,897,2812"/>
+<area shape="rect" id="node76" href="$classzxing_1_1oned_1_1_code39_reader.html" title=" " alt="" coords="710,2836,894,2863"/>
+<area shape="rect" id="node77" href="$classzxing_1_1oned_1_1_code93_reader.html" title=" " alt="" coords="710,2887,894,2913"/>
+<area shape="rect" id="node78" href="$classzxing_1_1oned_1_1_i_t_f_reader.html" title=" " alt="" coords="723,2937,881,2964"/>
+<area shape="rect" id="node79" href="$classzxing_1_1oned_1_1_multi_format_one_d_reader.html" title=" " alt="" coords="719,2989,885,3030"/>
+<area shape="rect" id="node80" href="$classzxing_1_1oned_1_1_multi_format_u_p_c_e_a_n_reader.html" title=" " alt="" coords="719,2618,885,2659"/>
+<area shape="rect" id="node81" href="$classzxing_1_1oned_1_1_u_p_c_e_a_n_reader.html" title=" " alt="" coords="704,2684,900,2711"/>
+<area shape="rect" id="node82" href="$classzxing_1_1oned_1_1_e_a_n13_reader.html" title=" " alt="" coords="948,2608,1129,2635"/>
+<area shape="rect" id="node83" href="$classzxing_1_1oned_1_1_e_a_n8_reader.html" title=" " alt="" coords="951,2659,1126,2685"/>
+<area shape="rect" id="node84" href="$classzxing_1_1oned_1_1_u_p_c_a_reader.html" title=" " alt="" coords="950,2709,1127,2736"/>
+<area shape="rect" id="node85" href="$classzxing_1_1oned_1_1_u_p_c_e_reader.html" title=" " alt="" coords="950,2760,1127,2787"/>
+<area shape="rect" id="node90" href="$classzxing_1_1datamatrix_1_1_corner_point.html" title=" " alt="" coords="476,2862,607,2903"/>
+<area shape="rect" id="node91" href="$classzxing_1_1oned_1_1_one_d_result_point.html" title=" " alt="" coords="442,2928,641,2955"/>
+<area shape="rect" id="node92" href="$classzxing_1_1qrcode_1_1_alignment_pattern.html" title=" " alt="" coords="458,2979,625,3021"/>
+<area shape="rect" id="node93" href="$classzxing_1_1qrcode_1_1_finder_pattern.html" title=" " alt="" coords="448,3045,635,3072"/>
+</map>

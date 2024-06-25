@@ -20,8 +20,12 @@ QR_BarCodeEncoder::QR_BarCodeEncoder(QWidget *parent) :
 {
     ui->setupUi(this);
     ui->widget_Barcode->hide();
-    ui->label_QrCode->hide();
+    ui->widget_QrCode->hide();
     ui->label_version->setText(SOFTWARE_VERSION);
+
+    ui->statusBar->setStyleSheet("background-color: none;color: rgb(52, 101, 164);");
+
+    ui->tabWidget->setCurrentIndex(0);
 }
 
 /**
@@ -59,8 +63,9 @@ static void png_warning_callback(png_structp png_ptr, const char *msg)
 
 /**
  * @brief QR_BarCodeEncoder::m_CreateBarcode
- * @param str_Barcode
- * @param fileName
+ * @param str_Barcode   Bar Code String
+ * @param fileName      File name String
+ * This method create Bar code and save that as image fileName+str_Barcode
  */
 void QR_BarCodeEncoder::m_CreateBarcode(QString str_Barcode, QString fileName)
 {
@@ -73,7 +78,7 @@ void QR_BarCodeEncoder::m_CreateBarcode(QString str_Barcode, QString fileName)
     width = code128_encode_gs1(str, out, width);
 
     if (width == 0)
-        QMessageBox::warning(this,"Invalid error","Invalid characters in string");
+        QMessageBox::warning(0,"Invalid error","Invalid characters in string");
 
 
     FILE *fp = fopen(fileName.toLatin1(), "wb");
@@ -84,21 +89,21 @@ void QR_BarCodeEncoder::m_CreateBarcode(QString str_Barcode, QString fileName)
             (PNG_LIBPNG_VER_STRING, NULL,
              png_error_callback, png_warning_callback);
     if (!png_ptr)
-        QMessageBox::warning(this,"PNG error","png_create_write_struct");
+        QMessageBox::warning(0,"PNG error","png_create_write_struct");
 
     png_infop info_ptr = png_create_info_struct(png_ptr);
     if (!info_ptr)
     {
         png_destroy_write_struct(&png_ptr,
                                  (png_infopp)NULL);
-        QMessageBox::warning(this,"PNG error","png_create_info_struct");
+        QMessageBox::warning(0,"PNG error","png_create_info_struct");
     }
 
     if (setjmp(png_jmpbuf(png_ptr)))
     {
         png_destroy_write_struct(&png_ptr, &info_ptr);
         fclose(fp);
-        QMessageBox::warning(this,"lib error","libpng error");
+        QMessageBox::warning(0,"lib error","libpng error");
     }
 
     png_init_io(png_ptr, fp);
@@ -133,6 +138,7 @@ void QR_BarCodeEncoder::m_CreateBarcode(QString str_Barcode, QString fileName)
 
 /**
  * @brief QR_BarCodeEncoder::on_pushButton_Encode_clicked
+ * This slot call method m_CreateBarcode and QrCode as per selected type
  */
 void QR_BarCodeEncoder::on_pushButton_Encode_clicked()
 {
@@ -154,15 +160,16 @@ void QR_BarCodeEncoder::on_pushButton_Encode_clicked()
 
     if(ui->lineEdit->text()!="")
     {
+        QString strInputString = ui->lineEdit->text();
         if(ui->comboBox_code_type->currentIndex() == CODE_TYPE::BAR)
         {
-//            if(ui->lineEdit->text().contains('/'))
+//            if(strInputString.contains('/'))
 //                return ;
             ui->widget_Barcode->show();
-            ui->label_QrCode->hide();
+            ui->widget_QrCode->hide();
             /////// BAR CODE
-            QString outFile = str_Barcodes+QDir::separator()+str_timestamp+"barcode.png";
-            m_CreateBarcode(ui->lineEdit->text(),outFile);
+            QString outFile = str_Barcodes+QDir::separator()+str_timestamp+"barcode-"+strInputString+".png";
+            m_CreateBarcode(strInputString,outFile);
             QPixmap pixmap;
             if(pixmap.load(outFile))
             {
@@ -170,17 +177,17 @@ void QR_BarCodeEncoder::on_pushButton_Encode_clicked()
                 pixmap = pixmap.scaled(ui->label_BarCode->size(),Qt::KeepAspectRatio);
                 ui->label_BarCode->setPixmap(pixmap);
             }
-            ui->label_Str->setText(ui->lineEdit->text());
+            ui->label_BarStr->setText(strInputString);
         }
         else
         {
             ui->widget_Barcode->hide();
-            ui->label_QrCode->show();
+            ui->widget_QrCode->show();
 
             /////// QR CODE
             using namespace qrcodegen;
             // Create the QR Code object
-            QrCode qr = QrCode::encodeText( ui->lineEdit->text().toUtf8().data(), QrCode::Ecc::MEDIUM );
+            QrCode qr = QrCode::encodeText( strInputString.toUtf8().data(), QrCode::Ecc::MEDIUM );
             qint32 sz = qr.getSize();
             QImage im(sz,sz, QImage::Format_RGB32);
             QRgb black = qRgb(  0,  0,  0);
@@ -194,20 +201,81 @@ void QR_BarCodeEncoder::on_pushButton_Encode_clicked()
             switch (ui->comboBox_image_type->currentIndex())
             {
             case IMG_FORMAT::PNG:
-                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode.png","PNG");
+                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode-"+strInputString+".png","PNG");
                 break;
             case IMG_FORMAT::JPG:
-                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode.jpg","JPG");
+                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode-"+strInputString+".jpg","JPG");
                 break;
             default:
                 break;
             }
+            ui->label_QrStr->setText(strInputString);
+
         }
 
-        ui->statusBar->showMessage("ID : "+str_timestamp.mid(0,str_timestamp.size()-1),3000);
+        ui->statusBar->showMessage("ID : "+str_timestamp.mid(0,str_timestamp.size()-1),5000);
 
     }
     else
         QMessageBox::warning(this,"Text error", "Code text not found.");
 
+}
+
+/**
+ * @brief QR_BarCodeEncoder::on_pushButton_about_clicked
+ * This slot show About us popup MessageBox
+ */
+void QR_BarCodeEncoder::on_pushButton_about_clicked()
+{
+    QMessageBox *msg = new QMessageBox(this);
+    msg->setStyleSheet("background-color: none; color: rgb(52, 101, 164);");
+    msg->setIconPixmap(QPixmap(":/images/main.png").scaled(60,60,Qt::IgnoreAspectRatio));
+    msg->setText("QR/BAR Code Encoder\n\
+                 Version : "+SOFTWARE_VERSION+"\n\
+                 Description: This is a example of Bar code & QR Coder Generator\n\n\
+                 Copyright 2020-2025 The Xerox Robo Tech Pvt. Ltd.\n\
+                 All rights reserved.");
+    msg->setStandardButtons(QMessageBox::Ok);
+    msg->show();
+
+}
+
+void QR_BarCodeEncoder::on_pushButton_Browse_clicked()
+{
+   str_selected_fileName = QFileDialog::getOpenFileName(this,
+         tr("Open Image"), QDir::homePath(), tr("Image Files (*.png *.jpg)"));
+
+    qDebug()<<"Selected File : "<<str_selected_fileName;
+
+    QFile checkFile(str_selected_fileName);
+
+    if(!checkFile.exists())
+        QMessageBox::warning(0,"Not Found","Selected file is not exists .");
+    else
+        ui->label_imgPath->setText(str_selected_fileName);
+}
+
+void QR_BarCodeEncoder::on_pushButton_Decode_clicked()
+{
+    QFile checkFile(str_selected_fileName);
+
+    if(!checkFile.exists())
+    {
+        QMessageBox::warning(0,"Not Found","Selected file is not exists .");
+        return;
+    }
+
+    obj_zxing.setDecoder( QZXing::DecoderFormat_QR_CODE );
+
+    ui->label_selected_img->setPixmap( QPixmap( str_selected_fileName ) );
+
+    m_decode_BarCode();
+}
+
+void QR_BarCodeEncoder::m_decode_BarCode()
+{
+    QImage qrImage = ui->label_selected_img->pixmap()->toImage();
+    const QString & decodeText = obj_zxing.decodeImage( qrImage );
+
+    ui->plainTextEdit_decoded->setPlainText(decodeText);
 }

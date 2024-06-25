@@ -1,0 +1,24 @@
+var searchData=
+[
+  ['aztec_1497',['aztec',['../namespacezxing_1_1aztec.html',1,'zxing']]],
+  ['common_1498',['common',['../namespacezxing_1_1common.html',1,'zxing']]],
+  ['datamatrix_1499',['datamatrix',['../namespacezxing_1_1datamatrix.html',1,'zxing']]],
+  ['decoder_1500',['decoder',['../namespacezxing_1_1pdf417_1_1decoder.html',1,'zxing::pdf417']]],
+  ['detector_1501',['detector',['../namespacezxing_1_1common_1_1detector.html',1,'zxing::common::detector'],['../namespacezxing_1_1pdf417_1_1detector.html',1,'zxing::pdf417::detector']]],
+  ['ec_1502',['ec',['../namespacezxing_1_1pdf417_1_1decoder_1_1ec.html',1,'zxing::pdf417::decoder']]],
+  ['multi_1503',['multi',['../namespacezxing_1_1multi.html',1,'zxing']]],
+  ['oned_1504',['oned',['../namespacezxing_1_1oned.html',1,'zxing']]],
+  ['operator_3c_3c_1505',['operator&lt;&lt;',['../classzxing_1_1_string.html#ab3bf240068694373701830b5b4a2bc36',1,'zxing::String']]],
+  ['pdf417_1506',['pdf417',['../namespacezxing_1_1pdf417.html',1,'zxing']]],
+  ['qrcode_1507',['qrcode',['../namespacezxing_1_1qrcode.html',1,'zxing']]],
+  ['zapleadingzeros_1508',['zapLeadingZeros',['../class_big_unsigned.html#a4bc40738d0b403db5799bd71438435ae',1,'BigUnsigned::zapLeadingZeros()'],['../class_big_unsigned_in_a_base.html#a93d3365a8ce12915d186e086da351848',1,'BigUnsignedInABase::zapLeadingZeros()']]],
+  ['zero_1509',['zero',['../class_big_integer.html#ab8bd05c604c2549930bd6f9169c13212ab6a189a0946cb7a394f5fb23a7d1d72c',1,'BigInteger::zero()'],['../classzxing_1_1_generic_g_f.html#aea37846687563bb4dcf9783c6a765b8c',1,'zxing::GenericGF::zero()']]],
+  ['zero_5f_1510',['zero_',['../classzxing_1_1pdf417_1_1decoder_1_1ec_1_1_modulus_g_f.html#af591d8563c0be0675bdff2b8de989e99',1,'zxing::pdf417::decoder::ec::ModulusGF']]],
+  ['zx_5flog_5fdigits_1511',['ZX_LOG_DIGITS',['../_bit_matrix_8h.html#a40446d90a9d04afda83b14e6589e5b9e',1,'ZX_LOG_DIGITS():&#160;BitMatrix.h'],['../_z_xing_8h.html#a40446d90a9d04afda83b14e6589e5b9e',1,'ZX_LOG_DIGITS():&#160;ZXing.h']]],
+  ['zxing_1512',['zxing',['../namespacezxing.html',1,'']]],
+  ['zxing_2eh_1513',['ZXing.h',['../_z_xing_8h.html',1,'']]],
+  ['zxing_5farray_5flen_1514',['ZXING_ARRAY_LEN',['../_z_xing_8h.html#ae8daa6de72faf6d6319aec2ea086b4d5',1,'ZXing.h']]],
+  ['zxing_5fdebug_1515',['ZXING_DEBUG',['../_z_xing_8h.html#a5fae26348f1aff82667fae6fc810994f',1,'ZXing.h']]],
+  ['zxing_5ftime_1516',['ZXING_TIME',['../_z_xing_8h.html#a748a3b391243cb06210af85ffe5ac1cc',1,'ZXing.h']]],
+  ['zxing_5ftime_5fmark_1517',['ZXING_TIME_MARK',['../_z_xing_8h.html#add65961df92e98ed273142514127401d',1,'ZXing.h']]]
+];

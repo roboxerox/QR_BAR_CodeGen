@@ -1,7 +1,28 @@
 var searchData=
 [
-  ['code_249',['code',['../structcode128__step.html#a296ad25d8391da26fd2cb08e61c40769',1,'code128_step']]],
-  ['code128_5fpattern_250',['code128_pattern',['../code128_8c.html#a6716319996696f0364149ad200d6e5cb',1,'code128.c']]],
-  ['code128_5fstop_5fpattern_251',['code128_stop_pattern',['../code128_8c.html#af2a4eb07e7d1bf2665b20202fa8d3ebd',1,'code128.c']]],
-  ['current_5fix_252',['current_ix',['../structcode128__state.html#a7c6dc3c10f86939362bab680a6ac0a2c',1,'code128_state']]]
+  ['barcode_5fstart_5foffset_2693',['BARCODE_START_OFFSET',['../classzxing_1_1pdf417_1_1detector_1_1_lines_sampler.html#a310bf1223e8cd17ec5697bf40e92af29',1,'zxing::pdf417::detector::LinesSampler']]],
+  ['barcodeformatnames_2694',['barcodeFormatNames',['../classzxing_1_1_barcode_format.html#aefe66631455236bdb61cde1c6b2522db',1,'zxing::BarcodeFormat']]],
+  ['bars_5fin_5fsymbol_2695',['BARS_IN_SYMBOL',['../classzxing_1_1pdf417_1_1detector_1_1_lines_sampler.html#a2b298e54729e2c0417d949f24263f2b3',1,'zxing::pdf417::detector::LinesSampler']]],
+  ['base_2696',['base',['../class_big_unsigned_in_a_base.html#ae681463e5308aec2ff172e55fa881f0e',1,'BigUnsignedInABase']]],
+  ['base256_5fencode_2697',['BASE256_ENCODE',['../classzxing_1_1datamatrix_1_1_decoded_bit_stream_parser.html#a34361e5e8058b8589638813a1e179f76',1,'zxing::datamatrix::DecodedBitStreamParser']]],
+  ['begin_5fmacro_5fpdf417_5fcontrol_5fblock_2698',['BEGIN_MACRO_PDF417_CONTROL_BLOCK',['../classzxing_1_1pdf417_1_1_decoded_bit_stream_parser.html#a8e76f42abc3fec7dcd3c33ceb2a8899b',1,'zxing::pdf417::DecodedBitStreamParser']]],
+  ['begin_5fmacro_5fpdf417_5foptional_5ffield_2699',['BEGIN_MACRO_PDF417_OPTIONAL_FIELD',['../classzxing_1_1pdf417_1_1_decoded_bit_stream_parser.html#a680c767ad8a9848363668bc9ee818ba5',1,'zxing::pdf417::DecodedBitStreamParser']]],
+  ['best_5fix_2700',['best_ix',['../structcode128__state.html#a5f73312be9fab2ff5b6a255660608e7b',1,'code128_state']]],
+  ['binarizer_5f_2701',['binarizer_',['../classzxing_1_1_binary_bitmap.html#a80edb7b792da8e01beaa5109e8901c01',1,'zxing::BinaryBitmap']]],
+  ['bitmatrix_5f_2702',['bitMatrix_',['../classzxing_1_1datamatrix_1_1_bit_matrix_parser.html#a23e5463a7b07faf419e73f02cfdf78aa',1,'zxing::datamatrix::BitMatrixParser::bitMatrix_()'],['../classzxing_1_1pdf417_1_1decoder_1_1_bit_matrix_parser.html#af60cc3f024c1d10c5a86a2888ac043cf',1,'zxing::pdf417::decoder::BitMatrixParser::bitMatrix_()'],['../classzxing_1_1qrcode_1_1_bit_matrix_parser.html#a2baac6c3f19ab0b87f7dfbaa9bd89fb0',1,'zxing::qrcode::BitMatrixParser::bitMatrix_()']]],
+  ['bitoffset_5f_2703',['bitOffset_',['../classzxing_1_1_bit_source.html#a37d09059b208b03ec6212b4b917797ac',1,'zxing::BitSource']]],
+  ['bits_2704',['bits',['../classzxing_1_1_bit_array.html#a5f2f586289a900128acc26360c62a37b',1,'zxing::BitArray::bits()'],['../classzxing_1_1_bit_matrix.html#a4d3a9f15e33d7d5bd61ecc28e1998b8c',1,'zxing::BitMatrix::bits()']]],
+  ['bits_5f_2705',['bits_',['../classzxing_1_1_detector_result.html#a74d5baa9b72f056b8aaf4940b83af22b',1,'zxing::DetectorResult::bits_()'],['../classzxing_1_1qrcode_1_1_mode.html#af508379ef788ffa81d64b13c1fb0f152',1,'zxing::qrcode::Mode::bits_()'],['../classzxing_1_1qrcode_1_1_error_correction_level.html#aad3329c6abe5c2e6aef60eaee8a0197b',1,'zxing::qrcode::ErrorCorrectionLevel::bits_()']]],
+  ['bits_5fset_5fin_5fhalf_5fbyte_2706',['BITS_SET_IN_HALF_BYTE',['../classzxing_1_1qrcode_1_1_format_information.html#a542071066db82297fcc1ac9ee8a7b41c',1,'zxing::qrcode::FormatInformation']]],
+  ['bitsmask_2707',['bitsMask',['../classzxing_1_1_bit_array.html#a713bc2e19381462e34f4c77f9c7d4175',1,'zxing::BitArray::bitsMask()'],['../classzxing_1_1_bit_matrix.html#a21f2d2ad6ffff8e6ae18f5a4c4dbd8b0',1,'zxing::BitMatrix::bitsMask()']]],
+  ['bitsperword_2708',['bitsPerWord',['../classzxing_1_1_bit_array.html#aa88d505cca57cde9a6db45c90d377ab9',1,'zxing::BitArray::bitsPerWord()'],['../classzxing_1_1_bit_matrix.html#a3630dac43b8470a674ae595faa470a63',1,'zxing::BitMatrix::bitsPerWord()']]],
+  ['blk_2709',['blk',['../class_numberlike_array.html#a378baefd25f016ba27ade9cc5dbb09b2',1,'NumberlikeArray']]],
+  ['bottomleft_5f_2710',['bottomLeft_',['../classzxing_1_1qrcode_1_1_finder_pattern_info.html#ab42dbc9f195bed6c5eda8084c6a25f9d',1,'zxing::qrcode::FinderPatternInfo']]],
+  ['buckets_2711',['buckets',['../classzxing_1_1_global_histogram_binarizer.html#a27eff426ceae4fc564023314ba7f220d',1,'zxing::GlobalHistogramBinarizer']]],
+  ['byte_2712',['BYTE',['../classqrcodegen_1_1_qr_segment_1_1_mode.html#a4015444043af5e53c8226e694d635a8f',1,'qrcodegen::QrSegment::Mode::BYTE()'],['../classzxing_1_1qrcode_1_1_mode.html#ad5ad861861ae6a7016ad8b4439098ebf',1,'zxing::qrcode::Mode::BYTE()']]],
+  ['byte_5fcompaction_5fmode_5flatch_2713',['BYTE_COMPACTION_MODE_LATCH',['../classzxing_1_1pdf417_1_1_decoded_bit_stream_parser.html#ad12b0826dbbf75193229b7a527ad6eea',1,'zxing::pdf417::DecodedBitStreamParser']]],
+  ['byte_5fcompaction_5fmode_5flatch_5f6_2714',['BYTE_COMPACTION_MODE_LATCH_6',['../classzxing_1_1pdf417_1_1_decoded_bit_stream_parser.html#ad7a35bd48571c25329c13272ed5da5d5',1,'zxing::pdf417::DecodedBitStreamParser']]],
+  ['byteoffset_5f_2715',['byteOffset_',['../classzxing_1_1_bit_source.html#a36e5f779b0c392b29d4e63f73ec3386f',1,'zxing::BitSource']]],
+  ['bytes_5f_2716',['bytes_',['../classzxing_1_1_bit_source.html#aa63354f797b88c7adb1085f98444cd87',1,'zxing::BitSource']]],
+  ['bytesegments_5f_2717',['byteSegments_',['../classzxing_1_1_decoder_result.html#a0f9b6c6cccb29f8ce378f72f26304135',1,'zxing::DecoderResult']]]
 ];

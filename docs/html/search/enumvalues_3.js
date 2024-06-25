@@ -1,4 +1,23 @@
 var searchData=
 [
-  ['low_286',['LOW',['../classqrcodegen_1_1_qr_code.html#a9ac15e987cf5cb71b1662373e6c9fec0a41bc94cbd8eebea13ce0491b2ac11b88',1,'qrcodegen::QrCode']]]
+  ['data_5fmatrix_3117',['DATA_MATRIX',['../classzxing_1_1_barcode_format.html#a53cafdcea01164c0a83bf0326c7061a3ac215b66f986fe845acd45aa08e38ed3f',1,'zxing::BarcodeFormat']]],
+  ['decoderformat_5faztec_3118',['DecoderFormat_Aztec',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87ac86d08d7789ba82a2b600f7112f2c9f5',1,'QZXing']]],
+  ['decoderformat_5fcodabar_3119',['DecoderFormat_CODABAR',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87acf662295c7f99cb24d6e832b41153a12',1,'QZXing']]],
+  ['decoderformat_5fcode_5f128_3120',['DecoderFormat_CODE_128',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87ad1da5c95f376f8d07b61da912648cec8',1,'QZXing']]],
+  ['decoderformat_5fcode_5f39_3121',['DecoderFormat_CODE_39',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a520305384ab5efd729a138ba6e9ae778',1,'QZXing']]],
+  ['decoderformat_5fcode_5f93_3122',['DecoderFormat_CODE_93',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a397dcc0d60df44cd72dde11b323efd77',1,'QZXing']]],
+  ['decoderformat_5fdata_5fmatrix_3123',['DecoderFormat_DATA_MATRIX',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a8696a0580441a1cefae2ea89b57f8b2c',1,'QZXing']]],
+  ['decoderformat_5fean_5f13_3124',['DecoderFormat_EAN_13',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a121a4efd1b0534bcf05d2704b9d43aff',1,'QZXing']]],
+  ['decoderformat_5fean_5f8_3125',['DecoderFormat_EAN_8',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87ae27d8982a539cc24e39c28ec499ec400',1,'QZXing']]],
+  ['decoderformat_5fitf_3126',['DecoderFormat_ITF',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87ae894a7eb54dfe9ff11dd2f75f0284372',1,'QZXing']]],
+  ['decoderformat_5fmaxicode_3127',['DecoderFormat_MAXICODE',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87afff165935bb495a111f9e7af5a43939b',1,'QZXing']]],
+  ['decoderformat_5fnone_3128',['DecoderFormat_None',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87ae99608f487ce4ab4b71914e58e3578f6',1,'QZXing']]],
+  ['decoderformat_5fpdf_5f417_3129',['DecoderFormat_PDF_417',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a8d9466517b1e1693e7e28cc0226672b2',1,'QZXing']]],
+  ['decoderformat_5fqr_5fcode_3130',['DecoderFormat_QR_CODE',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a8432f7b63802840dd2c1aa6ca2a1092b',1,'QZXing']]],
+  ['decoderformat_5frss_5f14_3131',['DecoderFormat_RSS_14',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a82b3fdd9135efb9f15509b00a4c458a0',1,'QZXing']]],
+  ['decoderformat_5frss_5fexpanded_3132',['DecoderFormat_RSS_EXPANDED',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a9581b04033cb469174e4208d2aef122d',1,'QZXing']]],
+  ['decoderformat_5fupc_5fa_3133',['DecoderFormat_UPC_A',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87aab0789d5a24c9203bfd855ce5643b36a',1,'QZXing']]],
+  ['decoderformat_5fupc_5fe_3134',['DecoderFormat_UPC_E',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a4a649c2e0195224ef64de13fa50ca256',1,'QZXing']]],
+  ['decoderformat_5fupc_5fean_5fextension_3135',['DecoderFormat_UPC_EAN_EXTENSION',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87a106433692feddc73031e90572392bae7',1,'QZXing']]],
+  ['digit_3136',['DIGIT',['../classzxing_1_1aztec_1_1_decoder.html#ae4819e70ed013b30a8e2ea46591f8c1ca75d8703cace6dd4b6661d83d88ebda0a',1,'zxing::aztec::Decoder']]]
 ];

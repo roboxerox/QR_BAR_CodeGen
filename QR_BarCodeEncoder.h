@@ -22,11 +22,13 @@
 #include <QDateTime>
 #include <QDebug>
 #include "qrcodegen.h"
+#include "QZXing.h"
+#include <QFileDialog>
 
 
-#define SW_MAJOR_VER        QString("0")
-#define SW_MINOR_VER        QString("2")
-#define SW_BUILD_VER        QString("1")
+#define SW_MAJOR_VER        QString("1")
+#define SW_MINOR_VER        QString("0")
+#define SW_BUILD_VER        QString("3")
 
 #define SOFTWARE_VERSION    QString(SW_MAJOR_VER+"."+SW_MINOR_VER+"."+SW_BUILD_VER)
 
@@ -67,8 +69,17 @@ public:
 private slots:
     void on_pushButton_Encode_clicked();
 
+    void on_pushButton_about_clicked();
+
+    void on_pushButton_Browse_clicked();
+
+    void on_pushButton_Decode_clicked();
+
 private:
     Ui::QR_BarCodeEncoder *ui;
+    QZXing obj_zxing;
+    QString str_selected_fileName = "";
+    void m_decode_BarCode();
 };
 
 #endif // BARCODEENCODERDECODER_H

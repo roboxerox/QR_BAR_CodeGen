@@ -6,6 +6,8 @@ int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
 
+    app.setWindowIcon(QIcon(":/images/main.png"));
+
     qDebug()<< app.arguments();
     app.setApplicationName("QR/BAR Code Encoder");
     app.setApplicationVersion(SOFTWARE_VERSION);

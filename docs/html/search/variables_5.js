@@ -1,4 +1,29 @@
 var searchData=
 [
-  ['isfunction_257',['isFunction',['../classqrcodegen_1_1_qr_code.html#aa18fbbeae6410f0cbac227c6ae142b17',1,'qrcodegen::QrCode']]]
+  ['ean13reader_2785',['ean13Reader',['../classzxing_1_1oned_1_1_u_p_c_a_reader.html#aa765f105925d07862af719dbaf53db3b',1,'zxing::oned::UPCAReader']]],
+  ['ean_5f13_5fhint_2786',['EAN_13_HINT',['../classzxing_1_1_decode_hints.html#a43662eb75275a6c6d9e6f9c83ea864f5',1,'zxing::DecodeHints']]],
+  ['ean_5f8_5fhint_2787',['EAN_8_HINT',['../classzxing_1_1_decode_hints.html#a5ff57da40b40b5018c2aea9b0bc48c61',1,'zxing::DecodeHints']]],
+  ['ecblocks_5f_2788',['ecBlocks_',['../classzxing_1_1datamatrix_1_1_e_c_blocks.html#a6d568abf51e5b3c113160d340776d5c2',1,'zxing::datamatrix::ECBlocks::ecBlocks_()'],['../classzxing_1_1datamatrix_1_1_version.html#a728d437a26dd8fae35675044fecb89e7',1,'zxing::datamatrix::Version::ecBlocks_()'],['../classzxing_1_1qrcode_1_1_e_c_blocks.html#a51b9d76648d57c2a0e8a8d8fe622266d',1,'zxing::qrcode::ECBlocks::ecBlocks_()'],['../classzxing_1_1qrcode_1_1_version.html#aef9e7e5873ad5f69a066f5c481d22237',1,'zxing::qrcode::Version::ecBlocks_()']]],
+  ['ecc_5fcodewords_5fper_5fblock_2789',['ECC_CODEWORDS_PER_BLOCK',['../classqrcodegen_1_1_qr_code.html#a353797a74e1bd8777f87f4cc764dea8d',1,'qrcodegen::QrCode']]],
+  ['eccodewords_5f_2790',['ecCodewords_',['../classzxing_1_1datamatrix_1_1_e_c_blocks.html#adba9a1f7843875596368d0f1db41fb92',1,'zxing::datamatrix::ECBlocks']]],
+  ['eccodewordsperbloc_5f_2791',['ecCodewordsPerBloc_',['../classzxing_1_1qrcode_1_1_e_c_blocks.html#a775317953321be8caf62cc488604f575',1,'zxing::qrcode::ECBlocks']]],
+  ['eci_2792',['ECI',['../classqrcodegen_1_1_qr_segment_1_1_mode.html#aa5baff785628d3e6161515fbe6cc1f7a',1,'qrcodegen::QrSegment::Mode::ECI()'],['../classzxing_1_1qrcode_1_1_mode.html#a9dac77752f15c6c7e9a4c0be44129631',1,'zxing::qrcode::Mode::ECI()']]],
+  ['eclevel_5f_2793',['ecLevel_',['../classzxing_1_1_decoder_result.html#a25daaffd3404f0e086502293f4fe7634',1,'zxing::DecoderResult::ecLevel_()'],['../classzxing_1_1pdf417_1_1decoder_1_1_bit_matrix_parser.html#aa9351e934c3d5f2201b62c1087e64325',1,'zxing::pdf417::decoder::BitMatrixParser::ecLevel_()']]],
+  ['edifact_5fencode_2794',['EDIFACT_ENCODE',['../classzxing_1_1datamatrix_1_1_decoded_bit_stream_parser.html#a9ffb5d14b118c2897ea2e086bad354f1',1,'zxing::datamatrix::DecodedBitStreamParser']]],
+  ['enableddecoders_2795',['enabledDecoders',['../class_q_z_xing.html#abfd4ba73f2a6c8ac3b49c5405403321d',1,'QZXing']]],
+  ['end_2796',['end',['../structzxing_1_1_two_ints.html#a30975d826e5d0d64aa9e535a77b14afd',1,'zxing::TwoInts::end()'],['../classzxing_1_1_line.html#ade67b8a2061de9cb67a5c5424babd756',1,'zxing::Line::end()']]],
+  ['equal_2797',['equal',['../class_big_integer.html#a6af9bee51f320bbfb3138ade782d265f',1,'BigInteger']]],
+  ['erasecount_5f_2798',['eraseCount_',['../classzxing_1_1pdf417_1_1decoder_1_1_bit_matrix_parser.html#a0fcf82e7d016d6196dac44d16476d694',1,'zxing::pdf417::decoder::BitMatrixParser']]],
+  ['erasures_5f_2799',['erasures_',['../classzxing_1_1pdf417_1_1decoder_1_1_bit_matrix_parser.html#aa496e363d4f11a7180a04d9c7b874321',1,'zxing::pdf417::decoder::BitMatrixParser']]],
+  ['errorcorrectionlevel_2800',['errorCorrectionLevel',['../classqrcodegen_1_1_qr_code.html#a01ba4e9fdcc782ccc08dbf83ab985021',1,'qrcodegen::QrCode']]],
+  ['errorcorrectionlevel_5f_2801',['errorCorrectionLevel_',['../classzxing_1_1qrcode_1_1_format_information.html#a6dbcda3a326bab6420b35d1c8ad8ec7c',1,'zxing::qrcode::FormatInformation']]],
+  ['esc_2802',['esc',['../structiso2022__esc__t.html#aff9b50aa49c33f7701d25d568583a85e',1,'iso2022_esc_t']]],
+  ['esc_5flen_2803',['esc_len',['../structiso2022__esc__t.html#a36985d0712f52bc45aa210a3a9cc8744',1,'iso2022_esc_t']]],
+  ['estimatedmodulesize_5f_2804',['estimatedModuleSize_',['../classzxing_1_1qrcode_1_1_alignment_pattern.html#a24aa496e39b4f9f5825c8e52e05d9d55',1,'zxing::qrcode::AlignmentPattern::estimatedModuleSize_()'],['../classzxing_1_1qrcode_1_1_finder_pattern.html#a07064c0c884876f4886f73a25d6613b2',1,'zxing::qrcode::FinderPattern::estimatedModuleSize_()']]],
+  ['euc_5fjp_2805',['EUC_JP',['../classzxing_1_1common_1_1_string_utils.html#ad6c1c87e05f323f8c273dcd87aed2fde',1,'zxing::common::StringUtils']]],
+  ['exp900_2806',['EXP900',['../classzxing_1_1pdf417_1_1_decoded_bit_stream_parser.html#a4e445c3ceb615ded340fa0e72fe6442f',1,'zxing::pdf417::DecodedBitStreamParser']]],
+  ['exp900_5fsize_2807',['EXP900_SIZE',['../classzxing_1_1pdf417_1_1_decoded_bit_stream_parser.html#a3a26ec17e80f2f95058ba352d3c554b4',1,'zxing::pdf417::DecodedBitStreamParser']]],
+  ['exptable_2808',['expTable',['../classzxing_1_1_generic_g_f.html#a808115cf665c57433060653a102f49d8',1,'zxing::GenericGF']]],
+  ['exptable_5f_2809',['expTable_',['../classzxing_1_1pdf417_1_1decoder_1_1ec_1_1_modulus_g_f.html#a437671047e3cbddf59baa260eb73a4de',1,'zxing::pdf417::decoder::ec::ModulusGF']]],
+  ['extendedmode_2810',['extendedMode',['../classzxing_1_1oned_1_1_code39_reader.html#aa17aff35ced485d94ec64320c2eab730',1,'zxing::oned::Code39Reader']]]
 ];

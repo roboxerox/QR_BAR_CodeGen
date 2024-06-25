@@ -1,4 +1,13 @@
 <map id="QR_BarCodeEncoder" name="QR_BarCodeEncoder">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,153,107"/>
-<area shape="rect" id="node2" title=" " alt="" coords="26,5,133,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="6,572,154,599"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,483,112,509"/>
+<area shape="rect" id="node3" href="$class_q_z_xing.html" title="A class containing a very very small subset of the ZXing library." alt="" coords="136,483,203,509"/>
+<area shape="rect" id="node4" title=" " alt="" coords="121,295,191,322"/>
+<area shape="rect" id="node5" href="$class_image_handler.html" title=" " alt="" coords="118,393,221,420"/>
+<area shape="rect" id="node6" href="$classzxing_1_1_multi_format_reader.html" title=" " alt="" coords="245,393,417,420"/>
+<area shape="rect" id="node7" href="$classzxing_1_1_reader.html" title=" " alt="" coords="203,132,306,159"/>
+<area shape="rect" id="node8" href="$classzxing_1_1_counted.html" title=" " alt="" coords="209,5,319,32"/>
+<area shape="rect" id="node11" href="$classzxing_1_1_result_point_callback.html" title=" " alt="" coords="286,81,466,108"/>
+<area shape="rect" id="node9" href="$classzxing_1_1_decode_hints.html" title=" " alt="" coords="299,295,437,322"/>
+<area shape="rect" id="node10" href="$classzxing_1_1_ref.html" title=" " alt="" coords="297,183,450,224"/>
 </map>

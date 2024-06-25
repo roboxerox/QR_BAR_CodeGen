@@ -22,6 +22,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+include(QZXing_sourceV2.4/QZXing.pri)
 
 SOURCES += \
         main.cpp \
@@ -38,3 +39,6 @@ FORMS += \
         QR_BarCodeEncoder.ui
 
 LIBS += -lpng
+
+RESOURCES += \
+    icons.qrc

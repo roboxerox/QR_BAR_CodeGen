@@ -1,6 +1,26 @@
 var searchData=
 [
-  ['ecc_5fcodewords_5fper_5fblock_254',['ECC_CODEWORDS_PER_BLOCK',['../classqrcodegen_1_1_qr_code.html#a353797a74e1bd8777f87f4cc764dea8d',1,'qrcodegen::QrCode']]],
-  ['eci_255',['ECI',['../classqrcodegen_1_1_qr_segment_1_1_mode.html#aa5baff785628d3e6161515fbe6cc1f7a',1,'qrcodegen::QrSegment::Mode']]],
-  ['errorcorrectionlevel_256',['errorCorrectionLevel',['../classqrcodegen_1_1_qr_code.html#a01ba4e9fdcc782ccc08dbf83ab985021',1,'qrcodegen::QrCode']]]
+  ['data_2762',['data',['../classqrcodegen_1_1_qr_segment.html#a310df78ffc24d3e7629f90caab29ce6e',1,'qrcodegen::QrSegment::data()'],['../structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a3f2ece99201314a3503c36be414cd6f8',1,'zxing::oned::OneDReader::Range::data()']]],
+  ['data_5fmasks_2763',['DATA_MASKS',['../classzxing_1_1qrcode_1_1_data_mask.html#afa0aadd97a79d0aea6e1b1fc96c8d418',1,'zxing::qrcode::DataMask']]],
+  ['data_5fmatrix_5ffield_5f256_2764',['DATA_MATRIX_FIELD_256',['../classzxing_1_1_generic_g_f.html#ac314916f75ce2a9a44e2e1db6048a33a',1,'zxing::GenericGF']]],
+  ['data_5fmatrix_5fhint_2765',['DATA_MATRIX_HINT',['../classzxing_1_1_decode_hints.html#adba4413b6662292c5a1c38e26dafcb44',1,'zxing::DecodeHints']]],
+  ['datacodewords_5f_2766',['dataCodewords_',['../classzxing_1_1datamatrix_1_1_e_c_b.html#a3dcb167e89d76697bb70ff40815df905',1,'zxing::datamatrix::ECB::dataCodewords_()'],['../classzxing_1_1qrcode_1_1_e_c_b.html#a008c2498981b74afde7ba01637bf1b80',1,'zxing::qrcode::ECB::dataCodewords_()']]],
+  ['dataheight_5f_2767',['dataHeight_',['../classzxing_1_1_greyscale_luminance_source.html#a88b4fa7a2396bb2a2c15250550daf96e',1,'zxing::GreyscaleLuminanceSource']]],
+  ['datamask_5f_2768',['dataMask_',['../classzxing_1_1qrcode_1_1_format_information.html#aa8cd84d9df0ccb42389a05d0d8034263',1,'zxing::qrcode::FormatInformation']]],
+  ['dataregionsizecolumns_5f_2769',['dataRegionSizeColumns_',['../classzxing_1_1datamatrix_1_1_version.html#a7aa41f52744813ae01c84b9b0c55708a',1,'zxing::datamatrix::Version']]],
+  ['dataregionsizerows_5f_2770',['dataRegionSizeRows_',['../classzxing_1_1datamatrix_1_1_version.html#a595eb9f5f58f529f85dc6d3c14eea282',1,'zxing::datamatrix::Version']]],
+  ['datawidth_5f_2771',['dataWidth_',['../classzxing_1_1_greyscale_luminance_source.html#a196eeca138a64663f84fb8659e7a2b9d',1,'zxing::GreyscaleLuminanceSource::dataWidth_()'],['../classzxing_1_1_greyscale_rotated_luminance_source.html#a6baa6c31729fa0d69b83b2c00218d63e',1,'zxing::GreyscaleRotatedLuminanceSource::dataWidth_()']]],
+  ['ddata_5f_2772',['ddata_',['../classzxing_1_1aztec_1_1_decoder.html#ad71f7f1695bea60ac192d1b2ff531a32',1,'zxing::aztec::Decoder']]],
+  ['decodemiddlecounters_2773',['decodeMiddleCounters',['../classzxing_1_1oned_1_1_e_a_n13_reader.html#a9bceb878584cb25310efc7c2036e2f8f',1,'zxing::oned::EAN13Reader::decodeMiddleCounters()'],['../classzxing_1_1oned_1_1_e_a_n8_reader.html#addda990431fdf618ddd8d889b925fc43',1,'zxing::oned::EAN8Reader::decodeMiddleCounters()'],['../classzxing_1_1oned_1_1_u_p_c_e_reader.html#a604e3deb91faf88a76c593744b60fa00',1,'zxing::oned::UPCEReader::decodeMiddleCounters()']]],
+  ['decoder_2774',['decoder',['../class_q_z_xing.html#a9bfa6da8b977cb3c2009b42a24009625',1,'QZXing::decoder()'],['../classzxing_1_1pdf417_1_1_p_d_f417_reader.html#ad1b2a5bd4cada5f446c86609c6b31ad5',1,'zxing::pdf417::PDF417Reader::decoder()']]],
+  ['decoder_5f_2775',['decoder_',['../classzxing_1_1aztec_1_1_aztec_reader.html#ae160e808f698ac123cfb545f88f96434',1,'zxing::aztec::AztecReader::decoder_()'],['../classzxing_1_1datamatrix_1_1_data_matrix_reader.html#a1ef8dbeb74e3d4ced387a39d88d2ec2b',1,'zxing::datamatrix::DataMatrixReader::decoder_()'],['../classzxing_1_1qrcode_1_1_q_r_code_reader.html#a60069a456498f4449c594456cedaf520',1,'zxing::qrcode::QRCodeReader::decoder_()']]],
+  ['decoderowresult_2776',['decodeRowResult',['../classzxing_1_1oned_1_1_coda_bar_reader.html#a5206d4babfbdd9d7df9a8f616b54fd4b',1,'zxing::oned::CodaBarReader::decodeRowResult()'],['../classzxing_1_1oned_1_1_code39_reader.html#a163b472ee1ed2f04090c582eb85b8bf1',1,'zxing::oned::Code39Reader::decodeRowResult()'],['../classzxing_1_1oned_1_1_code93_reader.html#ae789d6afd7fe252e94af021bcf8aaa2f',1,'zxing::oned::Code93Reader::decodeRowResult()']]],
+  ['decoderowstringbuffer_2777',['decodeRowStringBuffer',['../classzxing_1_1oned_1_1_u_p_c_e_a_n_reader.html#ac372eb19c94121e88769634c049f56d8',1,'zxing::oned::UPCEANReader']]],
+  ['default_5fhint_2778',['DEFAULT_HINT',['../classzxing_1_1_decode_hints.html#a64e9cc9ce5188b529d632a945697c108',1,'zxing::DecodeHints']]],
+  ['delegate_2779',['delegate',['../classzxing_1_1_inverted_luminance_source.html#aa9f6f6757df06563c7d1bd69c9e519ac',1,'zxing::InvertedLuminanceSource']]],
+  ['delegate_5f_2780',['delegate_',['../classzxing_1_1multi_1_1_by_quadrant_reader.html#af2002947799798542f2e4f126ee25ddd',1,'zxing::multi::ByQuadrantReader::delegate_()'],['../classzxing_1_1multi_1_1_generic_multiple_barcode_reader.html#a4e201c27396c7243f3ed3d3656f90a62',1,'zxing::multi::GenericMultipleBarcodeReader::delegate_()']]],
+  ['diff_5fmodsize_5fcutoff_2781',['DIFF_MODSIZE_CUTOFF',['../classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a1bb01398da3588604ab7c5d8c1e3ea73',1,'zxing::multi::MultiFinderPatternFinder']]],
+  ['diff_5fmodsize_5fcutoff_5fpercent_2782',['DIFF_MODSIZE_CUTOFF_PERCENT',['../classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a510e04d4728d5b0b155d45a2195ee833',1,'zxing::multi::MultiFinderPatternFinder']]],
+  ['dimension_5f_2783',['dimension_',['../classzxing_1_1pdf417_1_1detector_1_1_lines_sampler.html#ac0ef814a4857d99744e50f0a11c8e9dc',1,'zxing::pdf417::detector::LinesSampler']]],
+  ['downinit_5f_2784',['downInit_',['../classzxing_1_1_white_rectangle_detector.html#aaea424c8ec5432a8e764cac724bf274d',1,'zxing::WhiteRectangleDetector']]]
 ];

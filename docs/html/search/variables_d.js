@@ -1,4 +1,25 @@
 var searchData=
 [
-  ['ui_280',['ui',['../class_q_r___bar_code_encoder.html#a919ac9312ef3b2bd46d79f1a70e5e610',1,'QR_BarCodeEncoder']]]
+  ['n_2909',['N',['../class_numberlike_array.html#a25b7418a31008a14a5efd6610b0fa258',1,'NumberlikeArray']]],
+  ['n_5fdata_5fmasks_2910',['N_DATA_MASKS',['../namespacezxing_1_1qrcode.html#a2c28a5997995c20d31fe1687fd28993d',1,'zxing::qrcode']]],
+  ['n_5fformat_5finfo_5fdecode_5flookups_2911',['N_FORMAT_INFO_DECODE_LOOKUPS',['../classzxing_1_1qrcode_1_1_format_information.html#ab3a42b5864e4a7d53ecf150ff1b06508',1,'zxing::qrcode::FormatInformation']]],
+  ['n_5flevels_2912',['N_LEVELS',['../classzxing_1_1qrcode_1_1_error_correction_level.html#ac1af6b2d73ebe00107118f46231e2b81',1,'zxing::qrcode::ErrorCorrectionLevel']]],
+  ['n_5fversion_5fdecode_5finfos_2913',['N_VERSION_DECODE_INFOS',['../classzxing_1_1qrcode_1_1_version.html#a7ab210c67a319ff0f06ac7e91a2eade7',1,'zxing::qrcode::Version']]],
+  ['n_5fversions_2914',['N_VERSIONS',['../namespacezxing_1_1datamatrix.html#aee3ff9606b3b652c1214d08bb355cb90',1,'zxing::datamatrix::N_VERSIONS()'],['../namespacezxing_1_1qrcode.html#a97a3269f8eeb028cc04216e1b452b41e',1,'zxing::qrcode::N_VERSIONS()']]],
+  ['name_2915',['name',['../win__iconv_8c.html#a8f8f80d37794cde9472343e4487ba3eb',1,'win_iconv.c']]],
+  ['name_5f_2916',['name_',['../classzxing_1_1qrcode_1_1_mode.html#ab0d1fcc64b0e2ce6ebaadfd33a8f9683',1,'zxing::qrcode::Mode::name_()'],['../classzxing_1_1qrcode_1_1_error_correction_level.html#a5b6f6b7dfeba471969e8abe69d7c166c',1,'zxing::qrcode::ErrorCorrectionLevel::name_()']]],
+  ['name_5fto_5feci_2917',['NAME_TO_ECI',['../classzxing_1_1common_1_1_character_set_e_c_i.html#a0eb6473b23df75b4b980cadb8b86f09f',1,'zxing::common::CharacterSetECI']]],
+  ['names_5f_2918',['names_',['../classzxing_1_1common_1_1_character_set_e_c_i.html#ac010068c5b85810f3d984f492dc355eb',1,'zxing::common::CharacterSetECI']]],
+  ['narrowlinewidth_2919',['narrowLineWidth',['../classzxing_1_1oned_1_1_i_t_f_reader.html#a8eb2d11c70a9bb2cacf787cd6c5c6548',1,'zxing::oned::ITFReader']]],
+  ['nbcenterlayers_5f_2920',['nbCenterLayers_',['../classzxing_1_1aztec_1_1_detector.html#acb20a482bda8a9a3c77c9bbea2766a93',1,'zxing::aztec::Detector']]],
+  ['nbdatablocks_5f_2921',['nbDataBlocks_',['../classzxing_1_1aztec_1_1_detector.html#abaf0b86a48de97722d047bdf472601ce',1,'zxing::aztec::Detector::nbDataBlocks_()'],['../classzxing_1_1aztec_1_1_aztec_detector_result.html#a3ce9ea2ccdb5052b9582ec5cf4add99a',1,'zxing::aztec::AztecDetectorResult::nbDatablocks_()']]],
+  ['nblayers_5f_2922',['nbLayers_',['../classzxing_1_1aztec_1_1_aztec_detector_result.html#a41951ea449315552192d7926de5366f1',1,'zxing::aztec::AztecDetectorResult::nbLayers_()'],['../classzxing_1_1aztec_1_1_detector.html#a4eeb4a092b5354c6aed80726b10a101b',1,'zxing::aztec::Detector::nbLayers_()']]],
+  ['next_5finput_2923',['next_input',['../structcode128__step.html#a2de9aeb5b1d3c7a0cb58f670f4b7870c',1,'code128_step']]],
+  ['num_5ferror_5fcorrection_5fblocks_2924',['NUM_ERROR_CORRECTION_BLOCKS',['../classqrcodegen_1_1_qr_code.html#adba3820a83cadf8c3e8694d6b0ec337b',1,'qrcodegen::QrCode']]],
+  ['numbitscharcount_2925',['numBitsCharCount',['../classqrcodegen_1_1_qr_segment_1_1_mode.html#a178f9e9cc298c24746614daf254abbac',1,'qrcodegen::QrSegment::Mode']]],
+  ['numchars_2926',['numChars',['../classqrcodegen_1_1_qr_segment.html#a120b909db182961bf8a6689b05583187',1,'qrcodegen::QrSegment']]],
+  ['numcodewords_5f_2927',['numCodewords_',['../classzxing_1_1aztec_1_1_decoder.html#a775d2f4dcd491d7e6c65ff2f2632189f',1,'zxing::aztec::Decoder']]],
+  ['numdatacodewords_5f_2928',['numDataCodewords_',['../classzxing_1_1datamatrix_1_1_data_block.html#aeb86b920eeb678e0c0eb1ae118d6ec49',1,'zxing::datamatrix::DataBlock::numDataCodewords_()'],['../classzxing_1_1qrcode_1_1_data_block.html#acf842ff1bef1b37dbc1729e28f072b62',1,'zxing::qrcode::DataBlock::numDataCodewords_()']]],
+  ['numeric_2929',['NUMERIC',['../classqrcodegen_1_1_qr_segment_1_1_mode.html#ae4c4fd7f09b271a04e142d4d856e6bf6',1,'qrcodegen::QrSegment::Mode::NUMERIC()'],['../classzxing_1_1qrcode_1_1_mode.html#a1af22907af6b997d8fa7ddb6b81de1e6',1,'zxing::qrcode::Mode::NUMERIC()']]],
+  ['numeric_5fcompaction_5fmode_5flatch_2930',['NUMERIC_COMPACTION_MODE_LATCH',['../classzxing_1_1pdf417_1_1_decoded_bit_stream_parser.html#a159e2ef8ab35759a55b5eafd220f0aff',1,'zxing::pdf417::DecodedBitStreamParser']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['numcharcountbits_232',['numCharCountBits',['../classqrcodegen_1_1_qr_segment_1_1_mode.html#a59a1c7427a4ef30976603a50e63401a7',1,'qrcodegen::QrSegment::Mode']]]
+  ['kernel_5fmbtowc_2375',['kernel_mbtowc',['../win__iconv_8c.html#a10f685e7a97e361904c4cef107eaee63',1,'win_iconv.c']]],
+  ['kernel_5fwctomb_2376',['kernel_wctomb',['../win__iconv_8c.html#a17a1dff0ea98f78fa621d6f006834013',1,'win_iconv.c']]]
 ];

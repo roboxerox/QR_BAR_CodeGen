@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['len_91',['len',['../structcode128__step.html#ad3bd2f2ae0b289b8fd984869af080f8e',1,'code128_step']]],
-  ['low_92',['LOW',['../classqrcodegen_1_1_qr_code.html#a9ac15e987cf5cb71b1662373e6c9fec0a41bc94cbd8eebea13ce0491b2ac11b88',1,'qrcodegen::QrCode']]]
+  ['kanji_883',['KANJI',['../classqrcodegen_1_1_qr_segment_1_1_mode.html#a36b33d4af43c2c3b4026e07dbe95f62a',1,'qrcodegen::QrSegment::Mode::KANJI()'],['../classzxing_1_1qrcode_1_1_mode.html#aee8ddd19fd206bf2cf5bfc93d7540ea6',1,'zxing::qrcode::Mode::KANJI()']]],
+  ['kernel_5fmbtowc_884',['kernel_mbtowc',['../win__iconv_8c.html#a10f685e7a97e361904c4cef107eaee63',1,'win_iconv.c']]],
+  ['kernel_5fwctomb_885',['kernel_wctomb',['../win__iconv_8c.html#a17a1dff0ea98f78fa621d6f006834013',1,'win_iconv.c']]]
 ];

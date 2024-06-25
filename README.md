@@ -1,3 +1,4 @@
+
 # ![](https://github.com/roboxerox/QR_BAR_CodeGen/blob/main/images/qrcode.png) QR_BAR_CodeGen ![](https://github.com/roboxerox/QR_BAR_CodeGen/blob/main/images/barcode.png)
 QR_BAR_CodeGen is a Bar code and QR code generator. It's also able to save as images (jpg/png). BAR code encoded by CODE128.
 
@@ -21,5 +22,7 @@ QR_BAR_CodeGen is a Bar code and QR code generator. It's also able to save as im
     
 ### Help links
 
-1. [code128](https://github.com/fhunleth/code128)
-2. [qrcodegen](https://github.com/nayuki/QR-Code-generator/tree/master/cpp)
+
+1. Bar Code using [Code 128](https://en.wikipedia.org/wiki/Code_128)
+2. [QR Codegen](https://github.com/nayuki/QR-Code-generator/tree/master/cpp) source code
+3. [QR Code](https://en.wikipedia.org/wiki/QR_code) wiki
