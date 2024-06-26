@@ -3,6 +3,12 @@
 QR_BAR_CodeGen is a Bar code and QR code generator as will as decode QR code. It's also able to save as images (jpg/png). BAR code encoded by CODE128.
 
 
+### Install Dependencies
+1. [png library](https://github.com/pnggroup/libpng)
+2. [Qt5](https://wiki.qt.io/Install_Qt_5_on_Ubuntu)
+
+		sudo apt-get install build-essential libpng-dev qt5-default
+
 ### Cmake build & run
 
 		git clone https://github.com/roboxerox/QR_BAR_CodeGen.git
