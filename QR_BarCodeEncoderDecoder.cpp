@@ -68,36 +68,47 @@ static void png_warning_callback(png_structp png_ptr, const char *msg)
  * @param fileName      File name String
  * This method create Bar code and save that as image fileName+str_Barcode
  */
-void QR_BarCodeEncoderDecoder::m_CreateBarcode(QString str_Barcode, QString fileName)
+bool QR_BarCodeEncoderDecoder::m_CreateBarcode(QString str_Barcode, QString fileName)
 {
     char out[4096];
     int width;
     int height = 40;
 
-    const char *str = str_Barcode.toLatin1();
+    const char *str = str_Barcode.toLatin1().data();
     width = code128_estimate_len(str);
     width = code128_encode_gs1(str, out, width);
 
     if (width == 0)
+    {
         QMessageBox::warning(0,"Invalid error","Invalid characters in string");
+        return false;
+    }
 
 
     FILE *fp = fopen(fileName.toLatin1(), "wb");
     if (!fp)
+    {
         QMessageBox::warning(this,"File error","can't open output");
+        return false;
+    }
 
     png_structp png_ptr = png_create_write_struct
             (PNG_LIBPNG_VER_STRING, NULL,
              png_error_callback, png_warning_callback);
     if (!png_ptr)
+    {
         QMessageBox::warning(0,"PNG error","png_create_write_struct");
+        return false;
+    }
 
     png_infop info_ptr = png_create_info_struct(png_ptr);
     if (!info_ptr)
     {
         png_destroy_write_struct(&png_ptr,
                                  (png_infopp)NULL);
+
         QMessageBox::warning(0,"PNG error","png_create_info_struct");
+        return false;
     }
 
     if (setjmp(png_jmpbuf(png_ptr)))
@@ -105,6 +116,7 @@ void QR_BarCodeEncoderDecoder::m_CreateBarcode(QString str_Barcode, QString file
         png_destroy_write_struct(&png_ptr, &info_ptr);
         fclose(fp);
         QMessageBox::warning(0,"lib error","libpng error");
+        return false;
     }
 
     png_init_io(png_ptr, fp);
@@ -134,6 +146,8 @@ void QR_BarCodeEncoderDecoder::m_CreateBarcode(QString str_Barcode, QString file
     png_destroy_write_struct(&png_ptr, &info_ptr);
 
     fclose(fp);
+
+    return true;
 }
 
 
@@ -162,6 +176,15 @@ void QR_BarCodeEncoderDecoder::on_pushButton_Encode_clicked()
     if(ui->lineEdit->text()!="")
     {
         QString strInputString = ui->lineEdit->text();
+
+        QString fName ;
+        if(strInputString.size()>80)
+            fName = strInputString.mid(0,80);
+        else
+            fName = strInputString;
+
+        fName.remove("\n");
+
         if(ui->comboBox_code_type->currentIndex() == CODE_TYPE::BAR)
         {
 //            if(strInputString.contains('/'))
@@ -169,16 +192,20 @@ void QR_BarCodeEncoderDecoder::on_pushButton_Encode_clicked()
             ui->widget_Barcode->show();
             ui->widget_QrCode->hide();
             /////// BAR CODE
-            QString outFile = str_Barcodes+QDir::separator()+str_timestamp+"barcode-"+strInputString+".png";
-            m_CreateBarcode(strInputString,outFile);
-            QPixmap pixmap;
-            if(pixmap.load(outFile))
+
+            QString outFile = str_Barcodes+QDir::separator()+str_timestamp+"barcode-"+fName.replace("/","-")+".png";
+            bool stat = m_CreateBarcode(strInputString.remove("\n").replace("/","-"),outFile);
+            if(stat)
             {
-                /** scale pixmap to fit in label'size and keep ratio of pixmap */
-                pixmap = pixmap.scaled(ui->label_BarCode->size(),Qt::KeepAspectRatio);
-                ui->label_BarCode->setPixmap(pixmap);
+                QPixmap pixmap;
+                if(pixmap.load(outFile))
+                {
+                    /** scale pixmap to fit in label'size and keep ratio of pixmap */
+                    pixmap = pixmap.scaled(ui->label_BarCode->size(),Qt::KeepAspectRatio);
+                    ui->label_BarCode->setPixmap(pixmap);
+                }
+                ui->label_BarStr->setText(strInputString);
             }
-            ui->label_BarStr->setText(strInputString);
         }
         else
         {
@@ -202,10 +229,10 @@ void QR_BarCodeEncoderDecoder::on_pushButton_Encode_clicked()
             switch (ui->comboBox_image_type->currentIndex())
             {
             case IMG_FORMAT::PNG:
-                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode-"+strInputString+".png","PNG");
+                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode-"+fName+".png","PNG");
                 break;
             case IMG_FORMAT::JPG:
-                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode-"+strInputString+".jpg","JPG");
+                qrPix.scaled(512,512,Qt::KeepAspectRatio,Qt::FastTransformation).save(str_QRcodes+QDir::separator()+str_timestamp+"qrcode-"+fName+".jpg","JPG");
                 break;
             default:
                 break;

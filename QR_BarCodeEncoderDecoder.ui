@@ -155,7 +155,7 @@ QTabBar::tab:!selected:hover {
 }</string>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tab_encoder">
        <attribute name="title">
@@ -538,6 +538,7 @@ color: rgb(52, 101, 164);</string>
              </property>
              <property name="styleSheet">
               <string notr="true">color: rgb(185, 241, 84);
+color: rgb(18, 123, 2);
 background-color: transparent;</string>
              </property>
             </widget>

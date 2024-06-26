@@ -67,7 +67,7 @@ class QR_BarCodeEncoderDecoder : public QMainWindow
 public:
     explicit QR_BarCodeEncoderDecoder(QWidget *parent = 0);
     ~QR_BarCodeEncoderDecoder();
-    void m_CreateBarcode(QString str_Barcode, QString fileName);
+    bool m_CreateBarcode(QString str_Barcode, QString fileName);
 
 private slots:
     void on_pushButton_Encode_clicked();
