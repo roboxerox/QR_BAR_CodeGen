@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/common/PerspectiveTransform.h File Reference</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/PerspectiveTransform.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_a3ace16ddd93045efc82ba13e68cbc36.html">common</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_4d73b296e36c89c6e527070d6d113155.html">common</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,39 +75,39 @@ $(function() {
 <div class="title">PerspectiveTransform.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="_counted_8h_source.html">zxing/common/Counted.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="_counted_8h_source.html">zqrdecode/common/Counted.h</a>&gt;</code><br />
 <code>#include &lt;vector&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for PerspectiveTransform.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="_perspective_transform_8h__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2common_2_perspective_transform_8h" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2_perspective_transform_8h" id="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2_perspective_transform_8h">
-<area shape="rect" title=" " alt="" coords="33,5,287,47"/>
-<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="5,95,176,121"/>
-<area shape="rect" title=" " alt="" coords="200,95,259,121"/>
-<area shape="rect" title=" " alt="" coords="55,169,127,196"/>
+<div class="center"><img src="_perspective_transform_8h__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2_perspective_transform_8h" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2_perspective_transform_8h" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2_perspective_transform_8h">
+<area shape="rect" title=" " alt="" coords="72,5,291,61"/>
+<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="5,109,205,136"/>
+<area shape="rect" title=" " alt="" coords="229,109,288,136"/>
+<area shape="rect" title=" " alt="" coords="69,184,141,211"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_perspective_transform_8h__dep__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2common_2_perspective_transform_8hdep" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2_perspective_transform_8hdep" id="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2_perspective_transform_8hdep">
-<area shape="rect" title=" " alt="" coords="707,5,962,47"/>
-<area shape="rect" href="_grid_sampler_8cpp.html" title=" " alt="" coords="5,206,216,247"/>
-<area shape="rect" href="_grid_sampler_8h.html" title=" " alt="" coords="476,102,673,143"/>
-<area shape="rect" href="_perspective_transform_8cpp.html" title=" " alt="" coords="1250,102,1518,143"/>
-<area shape="rect" href="datamatrix_2detector_2_detector_8h.html" title=" " alt="" coords="747,95,922,151"/>
-<area shape="rect" href="qrcode_2detector_2_detector_8h.html" title=" " alt="" coords="1051,95,1226,151"/>
-<area shape="rect" href="_aztec_detector_8cpp.html" title=" " alt="" coords="241,199,415,255"/>
-<area shape="rect" href="_data_matrix_detector_8cpp.html" title=" " alt="" coords="638,199,813,255"/>
-<area shape="rect" href="_p_d_f417_detector_8cpp.html" title=" " alt="" coords="439,199,614,255"/>
-<area shape="rect" href="_q_r_detector_8cpp.html" title=" " alt="" coords="1051,199,1226,255"/>
-<area shape="rect" href="_data_matrix_reader_8cpp.html" title=" " alt="" coords="837,199,1027,255"/>
-<area shape="rect" href="_multi_detector_8h.html" title=" " alt="" coords="1250,199,1433,255"/>
-<area shape="rect" href="_q_r_code_reader_8cpp.html" title=" " alt="" coords="1457,206,1679,247"/>
-<area shape="rect" href="_multi_detector_8cpp.html" title=" " alt="" coords="1138,303,1321,359"/>
-<area shape="rect" href="_q_r_code_multi_reader_8cpp.html" title=" " alt="" coords="1345,303,1559,359"/>
+<div class="center"><img src="_perspective_transform_8h__dep__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2_perspective_transform_8hdep" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2_perspective_transform_8hdep" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2_perspective_transform_8hdep">
+<area shape="rect" title=" " alt="" coords="827,5,1045,61"/>
+<area shape="rect" href="_grid_sampler_8cpp.html" title=" " alt="" coords="5,221,181,277"/>
+<area shape="rect" href="_grid_sampler_8h.html" title=" " alt="" coords="622,109,791,165"/>
+<area shape="rect" href="_perspective_transform_8cpp.html" title=" " alt="" coords="1417,109,1650,165"/>
+<area shape="rect" href="datamatrix_2detector_2_detector_8h.html" title=" " alt="" coords="835,109,1037,165"/>
+<area shape="rect" href="qrcode_2detector_2_detector_8h.html" title=" " alt="" coords="1213,109,1393,165"/>
+<area shape="rect" href="_aztec_detector_8cpp.html" title=" " alt="" coords="205,221,427,277"/>
+<area shape="rect" href="_data_matrix_detector_8cpp.html" title=" " alt="" coords="718,213,925,284"/>
+<area shape="rect" href="_p_d_f417_detector_8cpp.html" title=" " alt="" coords="451,221,693,277"/>
+<area shape="rect" href="_q_r_detector_8cpp.html" title=" " alt="" coords="1195,221,1410,277"/>
+<area shape="rect" href="_data_matrix_reader_8cpp.html" title=" " alt="" coords="949,221,1171,277"/>
+<area shape="rect" href="_multi_detector_8h.html" title=" " alt="" coords="1434,213,1603,284"/>
+<area shape="rect" href="_q_r_code_reader_8cpp.html" title=" " alt="" coords="1628,221,1815,277"/>
+<area shape="rect" href="_multi_detector_8cpp.html" title=" " alt="" coords="1318,332,1487,403"/>
+<area shape="rect" href="_q_r_code_multi_reader_8cpp.html" title=" " alt="" coords="1511,339,1758,395"/>
 </map>
 </div>
 </div>
@@ -115,18 +115,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classzxing_1_1_perspective_transform.html">zxing::PerspectiveTransform</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classzqrdecode_1_1_perspective_transform.html">zqrdecode::PerspectiveTransform</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacezxing"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacezxing.html">zxing</a></td></tr>
+<tr class="memitem:namespacezqrdecode"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacezqrdecode.html">zqrdecode</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

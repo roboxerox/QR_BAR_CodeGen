@@ -1,5 +1,5 @@
 <map id="CameraImageWrapper" name="CameraImageWrapper">
-<area shape="rect" id="node1" title=" " alt="" coords="12,155,164,181"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_luminance_source.html" title=" " alt="" coords="5,80,171,107"/>
-<area shape="rect" id="node3" href="$classzxing_1_1_counted.html" title=" " alt="" coords="33,5,143,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="27,155,179,181"/>
+<area shape="rect" id="node2" href="$classzqrdecode_1_1_luminance_source.html" title=" " alt="" coords="5,80,200,107"/>
+<area shape="rect" id="node3" href="$classzqrdecode_1_1_counted.html" title=" " alt="" coords="33,5,172,32"/>
 </map>

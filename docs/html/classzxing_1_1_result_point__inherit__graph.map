@@ -1,8 +1,0 @@
-<map id="zxing::ResultPoint" name="zxing::ResultPoint">
-<area shape="rect" id="node1" title=" " alt="" coords="164,101,293,127"/>
-<area shape="rect" id="node3" href="$classzxing_1_1datamatrix_1_1_corner_point.html" title=" " alt="" coords="375,5,506,47"/>
-<area shape="rect" id="node4" href="$classzxing_1_1oned_1_1_one_d_result_point.html" title=" " alt="" coords="341,71,540,98"/>
-<area shape="rect" id="node5" href="$classzxing_1_1qrcode_1_1_alignment_pattern.html" title=" " alt="" coords="357,123,524,164"/>
-<area shape="rect" id="node6" href="$classzxing_1_1qrcode_1_1_finder_pattern.html" title=" " alt="" coords="347,189,534,215"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_counted.html" title=" " alt="" coords="5,101,116,127"/>
-</map>

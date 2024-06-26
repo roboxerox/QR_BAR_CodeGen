@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/common/reedsolomon/ReedSolomonDecoder.cpp File Reference</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/reedsolomon/ReedSolomonDecoder.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_a3ace16ddd93045efc82ba13e68cbc36.html">common</a></li><li class="navelem"><a class="el" href="dir_b67f53b61f5c92bd589d4d7c2b2391de.html">reedsolomon</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_4d73b296e36c89c6e527070d6d113155.html">common</a></li><li class="navelem"><a class="el" href="dir_ee046b5f25a85ad9ddc9e3c0aeb4eb3b.html">reedsolomon</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,37 +74,37 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;iostream&gt;</code><br />
 <code>#include &lt;memory&gt;</code><br />
-<code>#include &lt;<a class="el" href="_reed_solomon_decoder_8h_source.html">zxing/common/reedsolomon/ReedSolomonDecoder.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_reed_solomon_exception_8h_source.html">zxing/common/reedsolomon/ReedSolomonException.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_illegal_argument_exception_8h_source.html">zxing/common/IllegalArgumentException.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_illegal_state_exception_8h_source.html">zxing/IllegalStateException.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_reed_solomon_decoder_8h_source.html">zqrdecode/common/reedsolomon/ReedSolomonDecoder.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_reed_solomon_exception_8h_source.html">zqrdecode/common/reedsolomon/ReedSolomonException.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_illegal_argument_exception_8h_source.html">zqrdecode/common/IllegalArgumentException.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_illegal_state_exception_8h_source.html">zqrdecode/IllegalStateException.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ReedSolomonDecoder.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_reed_solomon_decoder_8cpp__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2common_2reedsolomon_2_reed_solomon_decoder_8cpp" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2reedsolomon_2_reed_solomon_decoder_8cpp" id="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2reedsolomon_2_reed_solomon_decoder_8cpp">
-<area shape="rect" title=" " alt="" coords="535,5,724,61"/>
-<area shape="rect" title=" " alt="" coords="308,452,380,479"/>
-<area shape="rect" title=" " alt="" coords="497,206,567,233"/>
-<area shape="rect" href="_reed_solomon_decoder_8h.html" title=" " alt="" coords="277,109,462,151"/>
-<area shape="rect" href="_reed_solomon_exception_8h.html" title=" " alt="" coords="642,199,827,240"/>
-<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="693,109,894,151"/>
-<area shape="rect" href="_illegal_state_exception_8h.html" title=" " alt="" coords="918,117,1109,143"/>
-<area shape="rect" title=" " alt="" coords="288,377,347,404"/>
-<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="40,377,211,404"/>
-<area shape="rect" href="_array_8h.html" title=" " alt="" coords="50,295,201,322"/>
-<area shape="rect" href="_generic_g_f_poly_8h.html" title=" " alt="" coords="49,199,234,240"/>
-<area shape="rect" href="_generic_g_f_8h.html" title=" " alt="" coords="277,288,462,329"/>
-<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="802,295,929,322"/>
-<area shape="rect" title=" " alt="" coords="883,377,938,404"/>
-<area shape="rect" title=" " alt="" coords="781,377,859,404"/>
-<area shape="rect" href="_reader_exception_8h.html" title=" " alt="" coords="916,206,1084,233"/>
+<div class="center"><img src="_reed_solomon_decoder_8cpp__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2reedsolomon_2_reed_solomon_decoder_8cpp" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2reedsolomon_2_reed_solomon_decoder_8cpp" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2reedsolomon_2_reed_solomon_decoder_8cpp">
+<area shape="rect" title=" " alt="" coords="562,5,802,76"/>
+<area shape="rect" title=" " alt="" coords="340,467,412,493"/>
+<area shape="rect" title=" " alt="" coords="550,221,620,247"/>
+<area shape="rect" href="_reed_solomon_decoder_8h.html" title=" " alt="" coords="307,124,522,165"/>
+<area shape="rect" href="_reed_solomon_exception_8h.html" title=" " alt="" coords="695,213,910,255"/>
+<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="767,124,942,165"/>
+<area shape="rect" href="_illegal_state_exception_8h.html" title=" " alt="" coords="970,131,1190,158"/>
+<area shape="rect" title=" " alt="" coords="325,392,384,419"/>
+<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="41,392,241,419"/>
+<area shape="rect" href="_array_8h.html" title=" " alt="" coords="51,310,231,337"/>
+<area shape="rect" href="_generic_g_f_poly_8h.html" title=" " alt="" coords="52,213,267,255"/>
+<area shape="rect" href="_generic_g_f_8h.html" title=" " alt="" coords="307,303,522,344"/>
+<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="870,310,1025,337"/>
+<area shape="rect" title=" " alt="" coords="966,392,1020,419"/>
+<area shape="rect" title=" " alt="" coords="863,392,942,419"/>
+<area shape="rect" href="_reader_exception_8h.html" title=" " alt="" coords="985,221,1182,247"/>
 </map>
 </div>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -1,10 +1,10 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(QR_BarCodeEncoder
+project(QR_BarCodeEncoderDecoder
   VERSION
     1.0
   DESCRIPTION
-    "QR and BAR code generator"
+    "QR/BAR code Encoder-Decoder"
   LANGUAGES
     CXX
 )
@@ -29,30 +29,30 @@ set_source_files_properties(../code128.c PROPERTIES LANGUAGE CXX )
 
 set(SRC_FILES
 		../main.cpp
-		../QR_BarCodeEncoder.cpp
+		../QR_BarCodeEncoderDecoder.cpp
 		../code128.c
 		../qrcodegen.cpp
 		)
 
 set(HEADER_FILES
-		../QR_BarCodeEncoder.h
+		../QR_BarCodeEncoderDecoder.h
 		../code128.h
 		../qrcodegen.h
 		)
 		
 set(UI_FILES
-		../QR_BarCodeEncoder.ui
+		../QR_BarCodeEncoderDecoder.ui
 		)
 		
-#set(QRC_FILES
-#		resources.qrc
-#		)
+set(QRC_FILES
+		../icons.qrc
+		)
 
 add_executable(${PROJECT_NAME} ${SRC_FILES} ${HEADER_FILES} ${UI_FILES} ${QRC_FILES})
 
 message(**** ${CMAKE_BINARY_DIR})
-#ADD_LIBRARY(qzxing_1 STATIC IMPORTED)
-#SET_TARGET_PROPERTIES(qzxing_1 PROPERTIES IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/QZXing_sourceV2.4/libqzxing.a)
+#ADD_LIBRARY(QZqrDecode_1 STATIC IMPORTED)
+#SET_TARGET_PROPERTIES(QZqrDecode_1 PROPERTIES IMPORTED_LOCATION ${CMAKE_BINARY_DIR}/QZQrdecode_sourceV2.0/libQZqrDecode.a)
 
 add_definitions(-DQT_NO_VERSION_TAGGING)
 
@@ -60,9 +60,9 @@ target_link_libraries(${PROJECT_NAME} -lpng)
 
 target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 
-TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${CMAKE_BINARY_DIR}/QZXing_sourceV2.4/libqzxing.a)
+TARGET_LINK_LIBRARIES(${PROJECT_NAME} ${CMAKE_BINARY_DIR}/QZQrdecode_sourceV2.0/libQZqrDecode.a)
 
-include_directories(.. ../QZXing_sourceV2.4 ../QZXing_sourceV2.4/zxing/zxing ../QZXing_sourceV2.4/zxing/zxing/common ../QZXing_sourceV2.4/zxing)
+include_directories(.. ../QZQrdecode_sourceV2.0 ../QZQrdecode_sourceV2.0/zqrdecode/zqrdecode ../QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common ../QZQrdecode_sourceV2.0/zqrdecode)
 
 
 

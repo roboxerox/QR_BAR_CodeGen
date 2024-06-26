@@ -1,0 +1,8 @@
+<map id="zqrdecode::datamatrix::Detector" name="zqrdecode::datamatrix::Detector">
+<area shape="rect" id="node1" title=" " alt="" coords="5,468,156,509"/>
+<area shape="rect" id="node2" href="$classzqrdecode_1_1_counted.html" title=" " alt="" coords="66,5,205,32"/>
+<area shape="rect" id="node4" href="$classzqrdecode_1_1_bit_matrix.html" title=" " alt="" coords="117,275,260,301"/>
+<area shape="rect" id="node5" href="$classzqrdecode_1_1_array_ref.html" title=" " alt="" coords="148,171,291,212"/>
+<area shape="rect" id="node6" href="$classzqrdecode_1_1_array.html" title=" " alt="" coords="199,81,357,108"/>
+<area shape="rect" id="node3" href="$classzqrdecode_1_1_ref.html" title=" " alt="" coords="97,364,280,405"/>
+</map>

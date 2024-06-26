@@ -1,0 +1,13 @@
+<map id="zqrdecode::Exception" name="zqrdecode::Exception">
+<area shape="rect" id="node1" title=" " alt="" coords="157,137,305,163"/>
+<area shape="rect" id="node3" href="$classzqrdecode_1_1datamatrix_1_1_detector_exception.html" title=" " alt="" coords="393,5,544,47"/>
+<area shape="rect" id="node4" href="$classzqrdecode_1_1_illegal_argument_exception.html" title=" " alt="" coords="379,71,559,112"/>
+<area shape="rect" id="node5" href="$classzqrdecode_1_1_reader_exception.html" title=" " alt="" coords="373,137,564,163"/>
+<area shape="rect" id="node10" href="$classzqrdecode_1_1_reed_solomon_exception.html" title=" " alt="" coords="353,187,584,214"/>
+<area shape="rect" id="node11" href="$classzqrdecode_1_1_writer_exception.html" title=" " alt="" coords="377,238,560,265"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,137,109,163"/>
+<area shape="rect" id="node6" href="$classzqrdecode_1_1_checksum_exception.html" title=" " alt="" coords="633,61,844,87"/>
+<area shape="rect" id="node7" href="$classzqrdecode_1_1_format_exception.html" title=" " alt="" coords="644,111,833,138"/>
+<area shape="rect" id="node8" href="$classzqrdecode_1_1_illegal_state_exception.html" title=" " alt="" coords="632,162,845,189"/>
+<area shape="rect" id="node9" href="$classzqrdecode_1_1_not_found_exception.html" title=" " alt="" coords="636,213,841,239"/>
+</map>

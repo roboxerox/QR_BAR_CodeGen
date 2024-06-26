@@ -1,10 +1,10 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/qrcode/FormatInformation.h" name="QZXing_sourceV2.4/zxing/zxing/qrcode/FormatInformation.h">
-<area shape="rect" id="node1" title=" " alt="" coords="208,5,429,47"/>
-<area shape="rect" id="node2" href="$_error_correction_level_8h.html" title=" " alt="" coords="93,95,281,136"/>
-<area shape="rect" id="node7" href="$_counted_8h.html" title=" " alt="" coords="197,184,368,211"/>
-<area shape="rect" id="node8" title=" " alt="" coords="308,259,380,285"/>
-<area shape="rect" id="node3" href="$_reader_exception_8h.html" title=" " alt="" coords="5,184,173,211"/>
-<area shape="rect" id="node4" href="$_exception_8h.html" title=" " alt="" coords="26,259,153,285"/>
-<area shape="rect" id="node5" title=" " alt="" coords="17,333,71,360"/>
-<area shape="rect" id="node6" title=" " alt="" coords="95,333,174,360"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/qrcode/FormatInformation.h" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/qrcode/FormatInformation.h">
+<area shape="rect" id="node1" title=" " alt="" coords="276,5,463,61"/>
+<area shape="rect" id="node2" href="$_error_correction_level_8h.html" title=" " alt="" coords="114,109,331,151"/>
+<area shape="rect" id="node7" href="$_counted_8h.html" title=" " alt="" coords="227,199,427,225"/>
+<area shape="rect" id="node8" title=" " alt="" coords="359,273,431,300"/>
+<area shape="rect" id="node3" href="$_reader_exception_8h.html" title=" " alt="" coords="5,199,203,225"/>
+<area shape="rect" id="node4" href="$_exception_8h.html" title=" " alt="" coords="27,273,181,300"/>
+<area shape="rect" id="node5" title=" " alt="" coords="31,348,86,375"/>
+<area shape="rect" id="node6" title=" " alt="" coords="110,348,189,375"/>
 </map>

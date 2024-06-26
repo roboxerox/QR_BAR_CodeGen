@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/Binarizer.h Source File</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/Binarizer.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,72 +77,59 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Binarizer.h</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  zxing</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  zqrdecode</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  Copyright 2010 ZXing authors All rights reserved.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * you may not use this file except in compliance with the License.</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * limitations under the License.</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_luminance_source_8h.html">zxing/LuminanceSource.h</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bit_array_8h.html">zxing/common/BitArray.h</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bit_matrix_8h.html">zxing/common/BitMatrix.h</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_counted_8h.html">zxing/common/Counted.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_luminance_source_8h.html">zqrdecode/LuminanceSource.h</a>&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bit_array_8h.html">zqrdecode/common/BitArray.h</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bit_matrix_8h.html">zqrdecode/common/BitMatrix.h</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_counted_8h.html">zqrdecode/common/Counted.h</a>&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezqrdecode.html">zqrdecode</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_binarizer.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzqrdecode_1_1_binarizer.html">Binarizer</a> : <span class="keyword">public</span> <a class="code" href="classzqrdecode_1_1_counted.html">Counted</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_binarizer.html#aaf98e535de9d0741ac724499a0f146ca">   19</a></span>&#160;  <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;LuminanceSource&gt;</a> <a class="code" href="classzqrdecode_1_1_binarizer.html#aaf98e535de9d0741ac724499a0f146ca">source_</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classzqrdecode_1_1_binarizer.html#a5c024e9f1bc08636af3ac7d13cc1bbe5">Binarizer</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;LuminanceSource&gt;</a> source);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzqrdecode_1_1_binarizer.html#a2a4d5fc15160ab95dcec6ebafb5149fa">~Binarizer</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitArray&gt;</a> <a class="code" href="classzqrdecode_1_1_binarizer.html#ad37330f63d6360eb3b6becb49a585934">getBlackRow</a>(<span class="keywordtype">int</span> y, <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitArray&gt;</a> row) = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> <a class="code" href="classzqrdecode_1_1_binarizer.html#aba2006ce9ff689076c422d71f17fb072">getBlackMatrix</a>() = 0;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezxing.html">zxing</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classzxing_1_1_binarizer.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzxing_1_1_binarizer.html">Binarizer</a> : <span class="keyword">public</span> <a class="code" href="classzxing_1_1_counted.html">Counted</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classzxing_1_1_binarizer.html#ae2b8e33d2ba16368a3cd0e4c77d245d0">   32</a></span>&#160;  <a class="code" href="classzxing_1_1_ref.html">Ref&lt;LuminanceSource&gt;</a> <a class="code" href="classzxing_1_1_binarizer.html#ae2b8e33d2ba16368a3cd0e4c77d245d0">source_</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;LuminanceSource&gt;</a> <a class="code" href="classzqrdecode_1_1_binarizer.html#a627d66ac4b220322eae7a4babd8be398">getLuminanceSource</a>() <span class="keyword">const</span> ;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;Binarizer&gt;</a> <a class="code" href="classzqrdecode_1_1_binarizer.html#a8d4c5750bac03b9fe31c7aae4a9968e5">createBinarizer</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;LuminanceSource&gt;</a> source) = 0;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1_binarizer.html#a36700a3869bb55d5fb88eef5523b87ac">getWidth</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1_binarizer.html#a4a1bb99f8606a2a2276fe27e4a573e5b">getHeight</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classzxing_1_1_binarizer.html#a10571c7035558595fc4a65f1d38a963d">Binarizer</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;LuminanceSource&gt;</a> source);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzxing_1_1_binarizer.html#ab881581e633f9d46141c305d8dab4866">~Binarizer</a>();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitArray&gt;</a> <a class="code" href="classzxing_1_1_binarizer.html#a019d36d8d4f1f6ba2ff9bf9bfd8c9064">getBlackRow</a>(<span class="keywordtype">int</span> y, <a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitArray&gt;</a> row) = 0;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> <a class="code" href="classzxing_1_1_binarizer.html#a4fe8fd9a5b3a99db426fccb33852a3a0">getBlackMatrix</a>() = 0;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classzxing_1_1_ref.html">Ref&lt;LuminanceSource&gt;</a> <a class="code" href="classzxing_1_1_binarizer.html#a04dca92bcb05d71a66720ceaf18f5adf">getLuminanceSource</a>() <span class="keyword">const</span> ;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzxing_1_1_ref.html">Ref&lt;Binarizer&gt;</a> <a class="code" href="classzxing_1_1_binarizer.html#a5f8f8692f8706f6a41f9c5a12464ccde">createBinarizer</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;LuminanceSource&gt;</a> source) = 0;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1_binarizer.html#ab3f79809eea04e85eba70e9db532fa0c">getWidth</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1_binarizer.html#aa74575cc0068c66c29283daf5b01ef27">getHeight</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;};</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BINARIZER_H_ */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;};</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* BINARIZER_H_ */</span><span class="preprocessor"></span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="a_counted_8h_html"><div class="ttname"><a href="_counted_8h.html">Counted.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_counted_html"><div class="ttname"><a href="classzxing_1_1_counted.html">zxing::Counted</a></div><div class="ttdef"><b>Definition:</b> Counted.h:26</div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html_a04dca92bcb05d71a66720ceaf18f5adf"><div class="ttname"><a href="classzxing_1_1_binarizer.html#a04dca92bcb05d71a66720ceaf18f5adf">zxing::Binarizer::getLuminanceSource</a></div><div class="ttdeci">Ref&lt; LuminanceSource &gt; getLuminanceSource() const</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:33</div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html_ae2b8e33d2ba16368a3cd0e4c77d245d0"><div class="ttname"><a href="classzxing_1_1_binarizer.html#ae2b8e33d2ba16368a3cd0e4c77d245d0">zxing::Binarizer::source_</a></div><div class="ttdeci">Ref&lt; LuminanceSource &gt; source_</div><div class="ttdef"><b>Definition:</b> Binarizer.h:32</div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html_ab881581e633f9d46141c305d8dab4866"><div class="ttname"><a href="classzxing_1_1_binarizer.html#ab881581e633f9d46141c305d8dab4866">zxing::Binarizer::~Binarizer</a></div><div class="ttdeci">virtual ~Binarizer()</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:30</div></div>
-<div class="ttc" id="anamespacezxing_html"><div class="ttname"><a href="namespacezxing.html">zxing</a></div><div class="ttdef"><b>Definition:</b> QZXing.h:15</div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html_aa74575cc0068c66c29283daf5b01ef27"><div class="ttname"><a href="classzxing_1_1_binarizer.html#aa74575cc0068c66c29283daf5b01ef27">zxing::Binarizer::getHeight</a></div><div class="ttdeci">int getHeight() const</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:41</div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html_a10571c7035558595fc4a65f1d38a963d"><div class="ttname"><a href="classzxing_1_1_binarizer.html#a10571c7035558595fc4a65f1d38a963d">zxing::Binarizer::Binarizer</a></div><div class="ttdeci">Binarizer(Ref&lt; LuminanceSource &gt; source)</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:27</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html_ad37330f63d6360eb3b6becb49a585934"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html#ad37330f63d6360eb3b6becb49a585934">zqrdecode::Binarizer::getBlackRow</a></div><div class="ttdeci">virtual Ref&lt; BitArray &gt; getBlackRow(int y, Ref&lt; BitArray &gt; row)=0</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_ref_html"><div class="ttname"><a href="classzqrdecode_1_1_ref.html">zqrdecode::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:39</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html_a627d66ac4b220322eae7a4babd8be398"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html#a627d66ac4b220322eae7a4babd8be398">zqrdecode::Binarizer::getLuminanceSource</a></div><div class="ttdeci">Ref&lt; LuminanceSource &gt; getLuminanceSource() const</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:18</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html_aba2006ce9ff689076c422d71f17fb072"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html#aba2006ce9ff689076c422d71f17fb072">zqrdecode::Binarizer::getBlackMatrix</a></div><div class="ttdeci">virtual Ref&lt; BitMatrix &gt; getBlackMatrix()=0</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html_a36700a3869bb55d5fb88eef5523b87ac"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html#a36700a3869bb55d5fb88eef5523b87ac">zqrdecode::Binarizer::getWidth</a></div><div class="ttdeci">int getWidth() const</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:22</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html_aaf98e535de9d0741ac724499a0f146ca"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html#aaf98e535de9d0741ac724499a0f146ca">zqrdecode::Binarizer::source_</a></div><div class="ttdeci">Ref&lt; LuminanceSource &gt; source_</div><div class="ttdef"><b>Definition:</b> Binarizer.h:19</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html_a8d4c5750bac03b9fe31c7aae4a9968e5"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html#a8d4c5750bac03b9fe31c7aae4a9968e5">zqrdecode::Binarizer::createBinarizer</a></div><div class="ttdeci">virtual Ref&lt; Binarizer &gt; createBinarizer(Ref&lt; LuminanceSource &gt; source)=0</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html_a2a4d5fc15160ab95dcec6ebafb5149fa"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html#a2a4d5fc15160ab95dcec6ebafb5149fa">zqrdecode::Binarizer::~Binarizer</a></div><div class="ttdeci">virtual ~Binarizer()</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:15</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html_a5c024e9f1bc08636af3ac7d13cc1bbe5"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html#a5c024e9f1bc08636af3ac7d13cc1bbe5">zqrdecode::Binarizer::Binarizer</a></div><div class="ttdeci">Binarizer(Ref&lt; LuminanceSource &gt; source)</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:12</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_counted_html"><div class="ttname"><a href="classzqrdecode_1_1_counted.html">zqrdecode::Counted</a></div><div class="ttdef"><b>Definition:</b> Counted.h:10</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html_a4a1bb99f8606a2a2276fe27e4a573e5b"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html#a4a1bb99f8606a2a2276fe27e4a573e5b">zqrdecode::Binarizer::getHeight</a></div><div class="ttdeci">int getHeight() const</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:26</div></div>
 <div class="ttc" id="a_bit_array_8h_html"><div class="ttname"><a href="_bit_array_8h.html">BitArray.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html_ab3f79809eea04e85eba70e9db532fa0c"><div class="ttname"><a href="classzxing_1_1_binarizer.html#ab3f79809eea04e85eba70e9db532fa0c">zxing::Binarizer::getWidth</a></div><div class="ttdeci">int getWidth() const</div><div class="ttdef"><b>Definition:</b> Binarizer.cpp:37</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_binarizer_html"><div class="ttname"><a href="classzqrdecode_1_1_binarizer.html">zqrdecode::Binarizer</a></div><div class="ttdef"><b>Definition:</b> Binarizer.h:17</div></div>
 <div class="ttc" id="a_luminance_source_8h_html"><div class="ttname"><a href="_luminance_source_8h.html">LuminanceSource.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html_a4fe8fd9a5b3a99db426fccb33852a3a0"><div class="ttname"><a href="classzxing_1_1_binarizer.html#a4fe8fd9a5b3a99db426fccb33852a3a0">zxing::Binarizer::getBlackMatrix</a></div><div class="ttdeci">virtual Ref&lt; BitMatrix &gt; getBlackMatrix()=0</div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html_a019d36d8d4f1f6ba2ff9bf9bfd8c9064"><div class="ttname"><a href="classzxing_1_1_binarizer.html#a019d36d8d4f1f6ba2ff9bf9bfd8c9064">zxing::Binarizer::getBlackRow</a></div><div class="ttdeci">virtual Ref&lt; BitArray &gt; getBlackRow(int y, Ref&lt; BitArray &gt; row)=0</div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html_a5f8f8692f8706f6a41f9c5a12464ccde"><div class="ttname"><a href="classzxing_1_1_binarizer.html#a5f8f8692f8706f6a41f9c5a12464ccde">zxing::Binarizer::createBinarizer</a></div><div class="ttdeci">virtual Ref&lt; Binarizer &gt; createBinarizer(Ref&lt; LuminanceSource &gt; source)=0</div></div>
 <div class="ttc" id="a_bit_matrix_8h_html"><div class="ttname"><a href="_bit_matrix_8h.html">BitMatrix.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_binarizer_html"><div class="ttname"><a href="classzxing_1_1_binarizer.html">zxing::Binarizer</a></div><div class="ttdef"><b>Definition:</b> Binarizer.h:30</div></div>
-<div class="ttc" id="aclasszxing_1_1_ref_html"><div class="ttname"><a href="classzxing_1_1_ref.html">zxing::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:55</div></div>
+<div class="ttc" id="anamespacezqrdecode_html"><div class="ttname"><a href="namespacezqrdecode.html">zqrdecode</a></div><div class="ttdef"><b>Definition:</b> QZqrDecode.h:15</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

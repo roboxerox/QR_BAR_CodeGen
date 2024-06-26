@@ -1,7 +1,7 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/common/reedsolomon/GenericGFPoly.h" name="QZXing_sourceV2.4/zxing/zxing/common/reedsolomon/GenericGFPoly.h">
-<area shape="rect" id="node1" title=" " alt="" coords="9,5,199,61"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,184,64,211"/>
-<area shape="rect" id="node3" href="$_array_8h.html" title=" " alt="" coords="29,109,179,136"/>
-<area shape="rect" id="node4" href="$_counted_8h.html" title=" " alt="" coords="109,184,280,211"/>
-<area shape="rect" id="node5" title=" " alt="" coords="159,259,231,285"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/reedsolomon/GenericGFPoly.h" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/reedsolomon/GenericGFPoly.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,261,61"/>
+<area shape="rect" id="node2" title=" " alt="" coords="27,184,85,211"/>
+<area shape="rect" id="node3" href="$_array_8h.html" title=" " alt="" coords="43,109,223,136"/>
+<area shape="rect" id="node4" href="$_counted_8h.html" title=" " alt="" coords="135,184,335,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="199,259,271,285"/>
 </map>

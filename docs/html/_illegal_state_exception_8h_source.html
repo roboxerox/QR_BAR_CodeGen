@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/IllegalStateException.h Source File</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/IllegalStateException.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,48 +77,33 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef __ILLEGAL_STATE_EXCEPTION_H__</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#define __ILLEGAL_STATE_EXCEPTION_H__</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Copyright 20011 ZXing authors</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * you may illegal use this file except in compliance with the License.</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * limitations under the License.</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_reader_exception_8h.html">zxing/ReaderException.h</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezxing.html">zxing</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classzxing_1_1_illegal_state_exception.html">   26</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzxing_1_1_illegal_state_exception.html">IllegalStateException</a> : <span class="keyword">public</span> <a class="code" href="classzxing_1_1_reader_exception.html">ReaderException</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classzxing_1_1_illegal_state_exception.html#aae4ef92ec772a593962275f9fcff257a">   28</a></span>&#160;  <a class="code" href="classzxing_1_1_illegal_state_exception.html#aae4ef92ec772a593962275f9fcff257a">IllegalStateException</a>() throw() {}</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classzxing_1_1_illegal_state_exception.html#a5bc42c29a607f5221a91d30017af168d">   29</a></span>&#160;  <a class="code" href="classzxing_1_1_illegal_state_exception.html#a5bc42c29a607f5221a91d30017af168d">IllegalStateException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *msg) <span class="keywordflow">throw</span>() : <a class="code" href="classzxing_1_1_reader_exception.html#aa579f97e84255a8e4771d82908a9d639">ReaderException</a>(msg) {}</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classzxing_1_1_illegal_state_exception.html#a92fdd4af844b9fa801cb874df544dbac">   30</a></span>&#160;  <a class="code" href="classzxing_1_1_illegal_state_exception.html#a92fdd4af844b9fa801cb874df544dbac">~IllegalStateException</a>() throw() {}</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;};</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif // __ILLEGAL_STATE_EXCEPTION_H__</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_reader_exception_8h.html">zqrdecode/ReaderException.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezqrdecode.html">zqrdecode</a> {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_illegal_state_exception.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzqrdecode_1_1_illegal_state_exception.html">IllegalStateException</a> : <span class="keyword">public</span> <a class="code" href="classzqrdecode_1_1_reader_exception.html">ReaderException</a> {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_illegal_state_exception.html#a2f5dc329b30f91931e01759efcd18c5b">   13</a></span>&#160;  <a class="code" href="classzqrdecode_1_1_illegal_state_exception.html#a2f5dc329b30f91931e01759efcd18c5b">IllegalStateException</a>() throw() {}</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_illegal_state_exception.html#a7be63ed65cac1220a7b6d69dd8e484e7">   14</a></span>&#160;  <a class="code" href="classzqrdecode_1_1_illegal_state_exception.html#a7be63ed65cac1220a7b6d69dd8e484e7">IllegalStateException</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *msg) <span class="keywordflow">throw</span>() : <a class="code" href="classzqrdecode_1_1_reader_exception.html#a5083b6721144d9ba2125a70484f56a3c">ReaderException</a>(msg) {}</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_illegal_state_exception.html#a9fc657235030bcfcde2743977559ce03">   15</a></span>&#160;  <a class="code" href="classzqrdecode_1_1_illegal_state_exception.html#a9fc657235030bcfcde2743977559ce03">~IllegalStateException</a>() throw() {}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;}</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif // __ILLEGAL_STATE_EXCEPTION_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="anamespacezxing_html"><div class="ttname"><a href="namespacezxing.html">zxing</a></div><div class="ttdef"><b>Definition:</b> QZXing.h:15</div></div>
-<div class="ttc" id="aclasszxing_1_1_illegal_state_exception_html_a92fdd4af844b9fa801cb874df544dbac"><div class="ttname"><a href="classzxing_1_1_illegal_state_exception.html#a92fdd4af844b9fa801cb874df544dbac">zxing::IllegalStateException::~IllegalStateException</a></div><div class="ttdeci">~IllegalStateException()</div><div class="ttdef"><b>Definition:</b> IllegalStateException.h:30</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_reader_exception_html_a5083b6721144d9ba2125a70484f56a3c"><div class="ttname"><a href="classzqrdecode_1_1_reader_exception.html#a5083b6721144d9ba2125a70484f56a3c">zqrdecode::ReaderException::ReaderException</a></div><div class="ttdeci">ReaderException()</div><div class="ttdef"><b>Definition:</b> ReaderException.h:17</div></div>
 <div class="ttc" id="a_reader_exception_8h_html"><div class="ttname"><a href="_reader_exception_8h.html">ReaderException.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_illegal_state_exception_html"><div class="ttname"><a href="classzxing_1_1_illegal_state_exception.html">zxing::IllegalStateException</a></div><div class="ttdef"><b>Definition:</b> IllegalStateException.h:26</div></div>
-<div class="ttc" id="aclasszxing_1_1_reader_exception_html"><div class="ttname"><a href="classzxing_1_1_reader_exception.html">zxing::ReaderException</a></div><div class="ttdef"><b>Definition:</b> ReaderException.h:28</div></div>
-<div class="ttc" id="aclasszxing_1_1_illegal_state_exception_html_aae4ef92ec772a593962275f9fcff257a"><div class="ttname"><a href="classzxing_1_1_illegal_state_exception.html#aae4ef92ec772a593962275f9fcff257a">zxing::IllegalStateException::IllegalStateException</a></div><div class="ttdeci">IllegalStateException()</div><div class="ttdef"><b>Definition:</b> IllegalStateException.h:28</div></div>
-<div class="ttc" id="aclasszxing_1_1_reader_exception_html_aa579f97e84255a8e4771d82908a9d639"><div class="ttname"><a href="classzxing_1_1_reader_exception.html#aa579f97e84255a8e4771d82908a9d639">zxing::ReaderException::ReaderException</a></div><div class="ttdeci">ReaderException()</div><div class="ttdef"><b>Definition:</b> ReaderException.h:30</div></div>
-<div class="ttc" id="aclasszxing_1_1_illegal_state_exception_html_a5bc42c29a607f5221a91d30017af168d"><div class="ttname"><a href="classzxing_1_1_illegal_state_exception.html#a5bc42c29a607f5221a91d30017af168d">zxing::IllegalStateException::IllegalStateException</a></div><div class="ttdeci">IllegalStateException(const char *msg)</div><div class="ttdef"><b>Definition:</b> IllegalStateException.h:29</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_illegal_state_exception_html_a2f5dc329b30f91931e01759efcd18c5b"><div class="ttname"><a href="classzqrdecode_1_1_illegal_state_exception.html#a2f5dc329b30f91931e01759efcd18c5b">zqrdecode::IllegalStateException::IllegalStateException</a></div><div class="ttdeci">IllegalStateException()</div><div class="ttdef"><b>Definition:</b> IllegalStateException.h:13</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_illegal_state_exception_html_a9fc657235030bcfcde2743977559ce03"><div class="ttname"><a href="classzqrdecode_1_1_illegal_state_exception.html#a9fc657235030bcfcde2743977559ce03">zqrdecode::IllegalStateException::~IllegalStateException</a></div><div class="ttdeci">~IllegalStateException()</div><div class="ttdef"><b>Definition:</b> IllegalStateException.h:15</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_illegal_state_exception_html"><div class="ttname"><a href="classzqrdecode_1_1_illegal_state_exception.html">zqrdecode::IllegalStateException</a></div><div class="ttdef"><b>Definition:</b> IllegalStateException.h:11</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_reader_exception_html"><div class="ttname"><a href="classzqrdecode_1_1_reader_exception.html">zqrdecode::ReaderException</a></div><div class="ttdef"><b>Definition:</b> ReaderException.h:15</div></div>
+<div class="ttc" id="anamespacezqrdecode_html"><div class="ttname"><a href="namespacezqrdecode.html">zqrdecode</a></div><div class="ttdef"><b>Definition:</b> QZqrDecode.h:15</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_illegal_state_exception_html_a7be63ed65cac1220a7b6d69dd8e484e7"><div class="ttname"><a href="classzqrdecode_1_1_illegal_state_exception.html#a7be63ed65cac1220a7b6d69dd8e484e7">zqrdecode::IllegalStateException::IllegalStateException</a></div><div class="ttdeci">IllegalStateException(const char *msg)</div><div class="ttdef"><b>Definition:</b> IllegalStateException.h:14</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

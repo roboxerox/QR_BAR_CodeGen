@@ -1,20 +1,20 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/aztec/decoder/Decoder.h" name="QZXing_sourceV2.4/zxing/zxing/aztec/decoder/Decoder.h">
-<area shape="rect" id="node1" title=" " alt="" coords="756,5,963,47"/>
-<area shape="rect" id="node2" href="$_bit_matrix_8h.html" title=" " alt="" coords="539,259,713,285"/>
-<area shape="rect" id="node15" href="$_str_8h.html" title=" " alt="" coords="1050,415,1189,442"/>
-<area shape="rect" id="node16" href="$_aztec_detector_result_8h.html" title=" " alt="" coords="771,95,948,136"/>
-<area shape="rect" id="node3" href="$_counted_8h.html" title=" " alt="" coords="782,497,953,524"/>
-<area shape="rect" id="node5" href="$_bit_array_8h.html" title=" " alt="" coords="416,333,583,360"/>
-<area shape="rect" id="node7" title=" " alt="" coords="269,497,322,524"/>
-<area shape="rect" id="node13" href="$_array_8h.html" title=" " alt="" coords="613,415,764,442"/>
-<area shape="rect" id="node4" title=" " alt="" coords="831,572,903,599"/>
-<area shape="rect" id="node6" href="$_z_xing_8h.html" title=" " alt="" coords="333,415,436,442"/>
-<area shape="rect" id="node9" href="$_illegal_argument_exception_8h.html" title=" " alt="" coords="5,408,207,449"/>
-<area shape="rect" id="node14" title=" " alt="" coords="659,497,718,524"/>
-<area shape="rect" id="node8" title=" " alt="" coords="353,497,416,524"/>
-<area shape="rect" id="node10" href="$_exception_8h.html" title=" " alt="" coords="80,497,207,524"/>
-<area shape="rect" id="node11" title=" " alt="" coords="480,572,535,599"/>
-<area shape="rect" id="node12" title=" " alt="" coords="104,572,183,599"/>
-<area shape="rect" id="node17" href="$_detector_result_8h.html" title=" " alt="" coords="754,184,965,211"/>
-<area shape="rect" id="node18" href="$_result_point_8h.html" title=" " alt="" coords="839,415,975,442"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/aztec/decoder/Decoder.h" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/aztec/decoder/Decoder.h">
+<area shape="rect" id="node1" title=" " alt="" coords="822,5,993,61"/>
+<area shape="rect" id="node2" href="$_bit_matrix_8h.html" title=" " alt="" coords="573,288,775,315"/>
+<area shape="rect" id="node15" href="$_str_8h.html" title=" " alt="" coords="1141,445,1308,471"/>
+<area shape="rect" id="node16" href="$_aztec_detector_result_8h.html" title=" " alt="" coords="804,109,1011,151"/>
+<area shape="rect" id="node3" href="$_counted_8h.html" title=" " alt="" coords="835,527,1035,553"/>
+<area shape="rect" id="node5" href="$_bit_array_8h.html" title=" " alt="" coords="433,363,629,389"/>
+<area shape="rect" id="node7" title=" " alt="" coords="242,527,295,553"/>
+<area shape="rect" id="node13" href="$_array_8h.html" title=" " alt="" coords="645,445,825,471"/>
+<area shape="rect" id="node4" title=" " alt="" coords="899,601,971,628"/>
+<area shape="rect" id="node6" href="$_z_qrdecode_8h.html" title=" " alt="" coords="307,445,468,471"/>
+<area shape="rect" id="node9" href="$_illegal_argument_exception_8h.html" title=" " alt="" coords="5,437,180,479"/>
+<area shape="rect" id="node14" title=" " alt="" coords="706,527,765,553"/>
+<area shape="rect" id="node8" title=" " alt="" coords="356,527,419,553"/>
+<area shape="rect" id="node10" href="$_exception_8h.html" title=" " alt="" coords="39,527,194,553"/>
+<area shape="rect" id="node11" title=" " alt="" coords="500,601,555,628"/>
+<area shape="rect" id="node12" title=" " alt="" coords="77,601,156,628"/>
+<area shape="rect" id="node17" href="$_detector_result_8h.html" title=" " alt="" coords="812,199,1003,240"/>
+<area shape="rect" id="node18" href="$_result_point_8h.html" title=" " alt="" coords="901,445,1066,471"/>
 </map>

@@ -1,7 +1,7 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/qrcode/decoder/Mode.h" name="QZXing_sourceV2.4/zxing/zxing/qrcode/decoder/Mode.h">
-<area shape="rect" id="node1" title=" " alt="" coords="239,5,414,61"/>
-<area shape="rect" id="node2" href="$qrcode_2decoder_2_decoded_bit_stream_parser_8h.html" title=" " alt="" coords="133,109,317,165"/>
-<area shape="rect" id="node5" href="$_q_r_mode_8cpp.html" title=" " alt="" coords="342,109,517,165"/>
-<area shape="rect" id="node3" href="$_q_r_decoded_bit_stream_parser_8cpp.html" title=" " alt="" coords="5,213,224,269"/>
-<area shape="rect" id="node4" href="$_q_r_decoder_8cpp.html" title=" " alt="" coords="249,213,423,269"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/qrcode/decoder/Mode.h" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/qrcode/decoder/Mode.h">
+<area shape="rect" id="node1" title=" " alt="" coords="259,5,428,61"/>
+<area shape="rect" id="node2" href="$qrcode_2decoder_2_decoded_bit_stream_parser_8h.html" title=" " alt="" coords="110,109,339,180"/>
+<area shape="rect" id="node5" href="$_q_r_mode_8cpp.html" title=" " alt="" coords="364,117,560,173"/>
+<area shape="rect" id="node3" href="$_q_r_decoded_bit_stream_parser_8cpp.html" title=" " alt="" coords="5,228,212,299"/>
+<area shape="rect" id="node4" href="$_q_r_decoder_8cpp.html" title=" " alt="" coords="236,235,448,291"/>
 </map>

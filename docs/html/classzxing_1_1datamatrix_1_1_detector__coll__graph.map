@@ -1,8 +1,0 @@
-<map id="zxing::datamatrix::Detector" name="zxing::datamatrix::Detector">
-<area shape="rect" id="node1" title=" " alt="" coords="5,453,136,495"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_counted.html" title=" " alt="" coords="70,5,181,32"/>
-<area shape="rect" id="node4" href="$classzxing_1_1_bit_matrix.html" title=" " alt="" coords="97,260,210,287"/>
-<area shape="rect" id="node5" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="138,171,289,197"/>
-<area shape="rect" id="node6" href="$classzxing_1_1_array.html" title=" " alt="" coords="188,81,319,108"/>
-<area shape="rect" id="node3" href="$classzxing_1_1_ref.html" title=" " alt="" coords="87,349,220,391"/>
-</map>

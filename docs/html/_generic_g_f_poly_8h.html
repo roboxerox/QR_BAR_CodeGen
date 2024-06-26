@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/common/reedsolomon/GenericGFPoly.h File Reference</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/reedsolomon/GenericGFPoly.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_a3ace16ddd93045efc82ba13e68cbc36.html">common</a></li><li class="navelem"><a class="el" href="dir_b67f53b61f5c92bd589d4d7c2b2391de.html">reedsolomon</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_4d73b296e36c89c6e527070d6d113155.html">common</a></li><li class="navelem"><a class="el" href="dir_ee046b5f25a85ad9ddc9e3c0aeb4eb3b.html">reedsolomon</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -76,43 +76,43 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &lt;vector&gt;</code><br />
-<code>#include &lt;<a class="el" href="_array_8h_source.html">zxing/common/Array.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_counted_8h_source.html">zxing/common/Counted.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_array_8h_source.html">zqrdecode/common/Array.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_counted_8h_source.html">zqrdecode/common/Counted.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for GenericGFPoly.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="_generic_g_f_poly_8h__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2common_2reedsolomon_2_generic_g_f_poly_8h" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2reedsolomon_2_generic_g_f_poly_8h" id="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2reedsolomon_2_generic_g_f_poly_8h">
-<area shape="rect" title=" " alt="" coords="9,5,199,61"/>
-<area shape="rect" title=" " alt="" coords="5,184,64,211"/>
-<area shape="rect" href="_array_8h.html" title=" " alt="" coords="29,109,179,136"/>
-<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="109,184,280,211"/>
-<area shape="rect" title=" " alt="" coords="159,259,231,285"/>
+<div class="center"><img src="_generic_g_f_poly_8h__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2reedsolomon_2_generic_g_f_poly_8h" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2reedsolomon_2_generic_g_f_poly_8h" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2reedsolomon_2_generic_g_f_poly_8h">
+<area shape="rect" title=" " alt="" coords="5,5,261,61"/>
+<area shape="rect" title=" " alt="" coords="27,184,85,211"/>
+<area shape="rect" href="_array_8h.html" title=" " alt="" coords="43,109,223,136"/>
+<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="135,184,335,211"/>
+<area shape="rect" title=" " alt="" coords="199,259,271,285"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="_generic_g_f_poly_8h__dep__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2common_2reedsolomon_2_generic_g_f_poly_8hdep" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2reedsolomon_2_generic_g_f_poly_8hdep" id="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2reedsolomon_2_generic_g_f_poly_8hdep">
-<area shape="rect" title=" " alt="" coords="270,5,459,61"/>
-<area shape="rect" href="_generic_g_f_8cpp.html" title=" " alt="" coords="57,109,246,165"/>
-<area shape="rect" href="_generic_g_f_poly_8cpp.html" title=" " alt="" coords="270,109,459,165"/>
-<area shape="rect" href="_reed_solomon_decoder_8h.html" title=" " alt="" coords="483,109,673,165"/>
-<area shape="rect" href="_aztec_decoder_8cpp.html" title=" " alt="" coords="5,221,260,262"/>
-<area shape="rect" href="_aztec_detector_8cpp.html" title=" " alt="" coords="284,213,459,269"/>
-<area shape="rect" href="_reed_solomon_decoder_8cpp.html" title=" " alt="" coords="483,213,673,269"/>
-<area shape="rect" href="datamatrix_2decoder_2_decoder_8h.html" title=" " alt="" coords="697,213,872,269"/>
-<area shape="rect" href="qrcode_2decoder_2_decoder_8h.html" title=" " alt="" coords="896,213,1071,269"/>
-<area shape="rect" href="_data_matrix_reader_8h.html" title=" " alt="" coords="483,317,673,373"/>
-<area shape="rect" href="_data_matrix_decoder_8cpp.html" title=" " alt="" coords="697,317,872,373"/>
-<area shape="rect" href="_data_matrix_reader_8cpp.html" title=" " alt="" coords="483,421,673,477"/>
-<area shape="rect" href="_multi_format_reader_8cpp.html" title=" " alt="" coords="784,429,980,470"/>
-<area shape="rect" href="_q_r_decoder_8cpp.html" title=" " alt="" coords="896,317,1071,373"/>
-<area shape="rect" href="_q_r_code_reader_8h.html" title=" " alt="" coords="1095,325,1301,366"/>
-<area shape="rect" href="_q_r_code_multi_reader_8h.html" title=" " alt="" coords="1047,421,1261,477"/>
-<area shape="rect" href="_q_r_code_reader_8cpp.html" title=" " alt="" coords="1286,429,1507,470"/>
-<area shape="rect" href="_q_r_code_multi_reader_8cpp.html" title=" " alt="" coords="1047,525,1261,581"/>
+<div class="center"><img src="_generic_g_f_poly_8h__dep__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2reedsolomon_2_generic_g_f_poly_8hdep" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2reedsolomon_2_generic_g_f_poly_8hdep" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2reedsolomon_2_generic_g_f_poly_8hdep">
+<area shape="rect" title=" " alt="" coords="281,5,537,61"/>
+<area shape="rect" href="_generic_g_f_8cpp.html" title=" " alt="" coords="5,117,249,173"/>
+<area shape="rect" href="_generic_g_f_poly_8cpp.html" title=" " alt="" coords="273,117,544,173"/>
+<area shape="rect" href="_reed_solomon_decoder_8h.html" title=" " alt="" coords="569,109,809,180"/>
+<area shape="rect" href="_aztec_decoder_8cpp.html" title=" " alt="" coords="81,235,299,291"/>
+<area shape="rect" href="_aztec_detector_8cpp.html" title=" " alt="" coords="323,235,545,291"/>
+<area shape="rect" href="_reed_solomon_decoder_8cpp.html" title=" " alt="" coords="569,228,809,299"/>
+<area shape="rect" href="datamatrix_2decoder_2_decoder_8h.html" title=" " alt="" coords="833,235,1033,291"/>
+<area shape="rect" href="qrcode_2decoder_2_decoder_8h.html" title=" " alt="" coords="1077,235,1255,291"/>
+<area shape="rect" href="_data_matrix_reader_8h.html" title=" " alt="" coords="599,354,805,410"/>
+<area shape="rect" href="_data_matrix_decoder_8cpp.html" title=" " alt="" coords="830,347,1035,417"/>
+<area shape="rect" href="_data_matrix_reader_8cpp.html" title=" " alt="" coords="591,465,813,521"/>
+<area shape="rect" href="_multi_format_reader_8cpp.html" title=" " alt="" coords="955,465,1124,521"/>
+<area shape="rect" href="_q_r_decoder_8cpp.html" title=" " alt="" coords="1060,354,1272,410"/>
+<area shape="rect" href="_q_r_code_reader_8h.html" title=" " alt="" coords="1296,354,1468,410"/>
+<area shape="rect" href="_q_r_code_multi_reader_8h.html" title=" " alt="" coords="1149,465,1381,521"/>
+<area shape="rect" href="_q_r_code_reader_8cpp.html" title=" " alt="" coords="1405,465,1591,521"/>
+<area shape="rect" href="_q_r_code_multi_reader_8cpp.html" title=" " alt="" coords="1141,569,1388,625"/>
 </map>
 </div>
 </div>
@@ -120,18 +120,18 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classzxing_1_1_generic_g_f_poly.html">zxing::GenericGFPoly</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classzqrdecode_1_1_generic_g_f_poly.html">zqrdecode::GenericGFPoly</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacezxing"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacezxing.html">zxing</a></td></tr>
+<tr class="memitem:namespacezqrdecode"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacezqrdecode.html">zqrdecode</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

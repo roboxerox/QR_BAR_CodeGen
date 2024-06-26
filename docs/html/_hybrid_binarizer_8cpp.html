@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/common/HybridBinarizer.cpp File Reference</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/HybridBinarizer.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_a3ace16ddd93045efc82ba13e68cbc36.html">common</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_4d73b296e36c89c6e527070d6d113155.html">common</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -72,38 +72,38 @@ $(function() {
 <div class="title">HybridBinarizer.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="_hybrid_binarizer_8h_source.html">zxing/common/HybridBinarizer.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_illegal_argument_exception_8h_source.html">zxing/common/IllegalArgumentException.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="_hybrid_binarizer_8h_source.html">zqrdecode/common/HybridBinarizer.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_illegal_argument_exception_8h_source.html">zqrdecode/common/IllegalArgumentException.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for HybridBinarizer.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_hybrid_binarizer_8cpp__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2common_2_hybrid_binarizer_8cpp" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2_hybrid_binarizer_8cpp" id="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2_hybrid_binarizer_8cpp">
-<area shape="rect" title=" " alt="" coords="620,5,848,47"/>
-<area shape="rect" href="_hybrid_binarizer_8h.html" title=" " alt="" coords="426,95,636,121"/>
-<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="880,483,1081,524"/>
-<area shape="rect" title=" " alt="" coords="763,572,822,599"/>
-<area shape="rect" href="_binarizer_8h.html" title=" " alt="" coords="162,259,281,285"/>
-<area shape="rect" href="_bit_array_8h.html" title=" " alt="" coords="498,408,665,435"/>
-<area shape="rect" href="_bit_matrix_8h.html" title=" " alt="" coords="197,333,372,360"/>
-<area shape="rect" href="_global_histogram_binarizer_8h.html" title=" " alt="" coords="356,169,564,211"/>
-<area shape="rect" href="_luminance_source_8h.html" title=" " alt="" coords="24,408,196,435"/>
-<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="231,572,402,599"/>
-<area shape="rect" href="_array_8h.html" title=" " alt="" coords="322,490,473,517"/>
-<area shape="rect" title=" " alt="" coords="130,490,196,517"/>
-<area shape="rect" title=" " alt="" coords="444,647,516,673"/>
-<area shape="rect" href="_z_xing_8h.html" title=" " alt="" coords="650,490,753,517"/>
-<area shape="rect" title=" " alt="" coords="598,572,651,599"/>
-<area shape="rect" title=" " alt="" coords="676,572,738,599"/>
-<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="917,572,1044,599"/>
-<area shape="rect" title=" " alt="" coords="998,647,1053,673"/>
-<area shape="rect" title=" " alt="" coords="896,647,974,673"/>
+<div class="center"><img src="_hybrid_binarizer_8cpp__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2_hybrid_binarizer_8cpp" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2_hybrid_binarizer_8cpp" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2_hybrid_binarizer_8cpp">
+<area shape="rect" title=" " alt="" coords="718,5,912,61"/>
+<area shape="rect" href="_hybrid_binarizer_8h.html" title=" " alt="" coords="464,109,702,136"/>
+<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="998,497,1173,539"/>
+<area shape="rect" title=" " alt="" coords="880,587,939,613"/>
+<area shape="rect" href="_binarizer_8h.html" title=" " alt="" coords="164,273,311,300"/>
+<area shape="rect" href="_bit_array_8h.html" title=" " alt="" coords="542,423,738,449"/>
+<area shape="rect" href="_bit_matrix_8h.html" title=" " alt="" coords="214,348,416,375"/>
+<area shape="rect" href="_global_histogram_binarizer_8h.html" title=" " alt="" coords="386,184,623,225"/>
+<area shape="rect" href="_luminance_source_8h.html" title=" " alt="" coords="25,423,226,449"/>
+<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="254,587,454,613"/>
+<area shape="rect" href="_array_8h.html" title=" " alt="" coords="353,505,533,531"/>
+<area shape="rect" title=" " alt="" coords="161,505,226,531"/>
+<area shape="rect" title=" " alt="" coords="496,661,568,688"/>
+<area shape="rect" href="_z_qrdecode_8h.html" title=" " alt="" coords="710,505,872,531"/>
+<area shape="rect" title=" " alt="" coords="659,587,712,613"/>
+<area shape="rect" title=" " alt="" coords="760,587,822,613"/>
+<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="1008,587,1163,613"/>
+<area shape="rect" title=" " alt="" coords="1104,661,1158,688"/>
+<area shape="rect" title=" " alt="" coords="1001,661,1080,688"/>
 </map>
 </div>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

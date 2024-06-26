@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/common/GridSampler.h Source File</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/GridSampler.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_a3ace16ddd93045efc82ba13e68cbc36.html">common</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_4d73b296e36c89c6e527070d6d113155.html">common</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,61 +77,48 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  GridSampler.h</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  zxing</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  zqrdecode</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  Copyright 2010 ZXing authors All rights reserved.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * you may not use this file except in compliance with the License.</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * limitations under the License.</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_counted_8h.html">zxing/common/Counted.h</a>&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bit_matrix_8h.html">zxing/common/BitMatrix.h</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_perspective_transform_8h.html">zxing/common/PerspectiveTransform.h</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezxing.html">zxing</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="classzxing_1_1_grid_sampler.html">   28</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzxing_1_1_grid_sampler.html">GridSampler</a> {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classzxing_1_1_grid_sampler.html#a59bfe6014623a33f69493c895656da14">   30</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classzxing_1_1_grid_sampler.html">GridSampler</a> <a class="code" href="classzxing_1_1_grid_sampler.html#a59bfe6014623a33f69493c895656da14">gridSampler</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classzxing_1_1_grid_sampler.html#a9e242910c0548a2c701fbd6f12bb22a5">GridSampler</a>();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> <a class="code" href="classzxing_1_1_grid_sampler.html#a350d04526fd56ce3feee915168260758">sampleGrid</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, <span class="keywordtype">int</span> dimension, <a class="code" href="classzxing_1_1_ref.html">Ref&lt;PerspectiveTransform&gt;</a> transform);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> <a class="code" href="classzxing_1_1_grid_sampler.html#a350d04526fd56ce3feee915168260758">sampleGrid</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, <span class="keywordtype">int</span> dimensionX, <span class="keywordtype">int</span> dimensionY, <a class="code" href="classzxing_1_1_ref.html">Ref&lt;PerspectiveTransform&gt;</a> transform);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> <a class="code" href="classzxing_1_1_grid_sampler.html#a350d04526fd56ce3feee915168260758">sampleGrid</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, <span class="keywordtype">int</span> dimension, <span class="keywordtype">float</span> p1ToX, <span class="keywordtype">float</span> p1ToY, <span class="keywordtype">float</span> p2ToX, <span class="keywordtype">float</span> p2ToY,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                            <span class="keywordtype">float</span> p3ToX, <span class="keywordtype">float</span> p3ToY, <span class="keywordtype">float</span> p4ToX, <span class="keywordtype">float</span> p4ToY, <span class="keywordtype">float</span> p1FromX, <span class="keywordtype">float</span> p1FromY, <span class="keywordtype">float</span> p2FromX,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                            <span class="keywordtype">float</span> p2FromY, <span class="keywordtype">float</span> p3FromX, <span class="keywordtype">float</span> p3FromY, <span class="keywordtype">float</span> p4FromX, <span class="keywordtype">float</span> p4FromY);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classzxing_1_1_grid_sampler.html#af284c1714f22a9bbcf8305b0c54811aa">checkAndNudgePoints</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, std::vector&lt;float&gt; &amp;points);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <span class="keyword">static</span> <a class="code" href="classzxing_1_1_grid_sampler.html">GridSampler</a> &amp;<a class="code" href="classzxing_1_1_grid_sampler.html#a03c639a778beacc4bf3e9a786398abda">getInstance</a>();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // __GRID_SAMPLER_H__</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_counted_8h.html">zqrdecode/common/Counted.h</a>&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bit_matrix_8h.html">zqrdecode/common/BitMatrix.h</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_perspective_transform_8h.html">zqrdecode/common/PerspectiveTransform.h</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezqrdecode.html">zqrdecode</a> {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_grid_sampler.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzqrdecode_1_1_grid_sampler.html">GridSampler</a> {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_grid_sampler.html#a04a777861ae5cb05df18c4eb1994cbe0">   17</a></span>&#160;  <span class="keyword">static</span> <a class="code" href="classzqrdecode_1_1_grid_sampler.html">GridSampler</a> <a class="code" href="classzqrdecode_1_1_grid_sampler.html#a04a777861ae5cb05df18c4eb1994cbe0">gridSampler</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classzqrdecode_1_1_grid_sampler.html#a7cd8c2d2c7bd322ba82f6338462a5889">GridSampler</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> <a class="code" href="classzqrdecode_1_1_grid_sampler.html#a361e3f08aaba8a9d7cbd10c9237d55ce">sampleGrid</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, <span class="keywordtype">int</span> dimension, <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;PerspectiveTransform&gt;</a> transform);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> <a class="code" href="classzqrdecode_1_1_grid_sampler.html#a361e3f08aaba8a9d7cbd10c9237d55ce">sampleGrid</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, <span class="keywordtype">int</span> dimensionX, <span class="keywordtype">int</span> dimensionY, <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;PerspectiveTransform&gt;</a> transform);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> <a class="code" href="classzqrdecode_1_1_grid_sampler.html#a361e3f08aaba8a9d7cbd10c9237d55ce">sampleGrid</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, <span class="keywordtype">int</span> dimension, <span class="keywordtype">float</span> p1ToX, <span class="keywordtype">float</span> p1ToY, <span class="keywordtype">float</span> p2ToX, <span class="keywordtype">float</span> p2ToY,</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                            <span class="keywordtype">float</span> p3ToX, <span class="keywordtype">float</span> p3ToY, <span class="keywordtype">float</span> p4ToX, <span class="keywordtype">float</span> p4ToY, <span class="keywordtype">float</span> p1FromX, <span class="keywordtype">float</span> p1FromY, <span class="keywordtype">float</span> p2FromX,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                            <span class="keywordtype">float</span> p2FromY, <span class="keywordtype">float</span> p3FromX, <span class="keywordtype">float</span> p3FromY, <span class="keywordtype">float</span> p4FromX, <span class="keywordtype">float</span> p4FromY);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classzqrdecode_1_1_grid_sampler.html#a5aaf21aaf109d0545b26e0119d146db6">checkAndNudgePoints</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, std::vector&lt;float&gt; &amp;points);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">static</span> <a class="code" href="classzqrdecode_1_1_grid_sampler.html">GridSampler</a> &amp;<a class="code" href="classzqrdecode_1_1_grid_sampler.html#a16fddaa8849cb8b82ccde06d6aadbeca">getInstance</a>();</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif // __GRID_SAMPLER_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasszxing_1_1_grid_sampler_html_a03c639a778beacc4bf3e9a786398abda"><div class="ttname"><a href="classzxing_1_1_grid_sampler.html#a03c639a778beacc4bf3e9a786398abda">zxing::GridSampler::getInstance</a></div><div class="ttdeci">static GridSampler &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> GridSampler.cpp:119</div></div>
 <div class="ttc" id="a_counted_8h_html"><div class="ttname"><a href="_counted_8h.html">Counted.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_grid_sampler_html_a59bfe6014623a33f69493c895656da14"><div class="ttname"><a href="classzxing_1_1_grid_sampler.html#a59bfe6014623a33f69493c895656da14">zxing::GridSampler::gridSampler</a></div><div class="ttdeci">static GridSampler gridSampler</div><div class="ttdef"><b>Definition:</b> GridSampler.h:30</div></div>
-<div class="ttc" id="aclasszxing_1_1_grid_sampler_html"><div class="ttname"><a href="classzxing_1_1_grid_sampler.html">zxing::GridSampler</a></div><div class="ttdef"><b>Definition:</b> GridSampler.h:28</div></div>
-<div class="ttc" id="aclasszxing_1_1_grid_sampler_html_a9e242910c0548a2c701fbd6f12bb22a5"><div class="ttname"><a href="classzxing_1_1_grid_sampler.html#a9e242910c0548a2c701fbd6f12bb22a5">zxing::GridSampler::GridSampler</a></div><div class="ttdeci">GridSampler()</div><div class="ttdef"><b>Definition:</b> GridSampler.cpp:32</div></div>
-<div class="ttc" id="aclasszxing_1_1_grid_sampler_html_af284c1714f22a9bbcf8305b0c54811aa"><div class="ttname"><a href="classzxing_1_1_grid_sampler.html#af284c1714f22a9bbcf8305b0c54811aa">zxing::GridSampler::checkAndNudgePoints</a></div><div class="ttdeci">static void checkAndNudgePoints(Ref&lt; BitMatrix &gt; image, std::vector&lt; float &gt; &amp;points)</div><div class="ttdef"><b>Definition:</b> GridSampler.cpp:87</div></div>
-<div class="ttc" id="anamespacezxing_html"><div class="ttname"><a href="namespacezxing.html">zxing</a></div><div class="ttdef"><b>Definition:</b> QZXing.h:15</div></div>
-<div class="ttc" id="aclasszxing_1_1_grid_sampler_html_a350d04526fd56ce3feee915168260758"><div class="ttname"><a href="classzxing_1_1_grid_sampler.html#a350d04526fd56ce3feee915168260758">zxing::GridSampler::sampleGrid</a></div><div class="ttdeci">Ref&lt; BitMatrix &gt; sampleGrid(Ref&lt; BitMatrix &gt; image, int dimension, Ref&lt; PerspectiveTransform &gt; transform)</div><div class="ttdef"><b>Definition:</b> GridSampler.cpp:35</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_ref_html"><div class="ttname"><a href="classzqrdecode_1_1_ref.html">zqrdecode::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:39</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_grid_sampler_html_a04a777861ae5cb05df18c4eb1994cbe0"><div class="ttname"><a href="classzqrdecode_1_1_grid_sampler.html#a04a777861ae5cb05df18c4eb1994cbe0">zqrdecode::GridSampler::gridSampler</a></div><div class="ttdeci">static GridSampler gridSampler</div><div class="ttdef"><b>Definition:</b> GridSampler.h:17</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_grid_sampler_html_a5aaf21aaf109d0545b26e0119d146db6"><div class="ttname"><a href="classzqrdecode_1_1_grid_sampler.html#a5aaf21aaf109d0545b26e0119d146db6">zqrdecode::GridSampler::checkAndNudgePoints</a></div><div class="ttdeci">static void checkAndNudgePoints(Ref&lt; BitMatrix &gt; image, std::vector&lt; float &gt; &amp;points)</div><div class="ttdef"><b>Definition:</b> GridSampler.cpp:73</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_grid_sampler_html_a361e3f08aaba8a9d7cbd10c9237d55ce"><div class="ttname"><a href="classzqrdecode_1_1_grid_sampler.html#a361e3f08aaba8a9d7cbd10c9237d55ce">zqrdecode::GridSampler::sampleGrid</a></div><div class="ttdeci">Ref&lt; BitMatrix &gt; sampleGrid(Ref&lt; BitMatrix &gt; image, int dimension, Ref&lt; PerspectiveTransform &gt; transform)</div><div class="ttdef"><b>Definition:</b> GridSampler.cpp:21</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_grid_sampler_html_a16fddaa8849cb8b82ccde06d6aadbeca"><div class="ttname"><a href="classzqrdecode_1_1_grid_sampler.html#a16fddaa8849cb8b82ccde06d6aadbeca">zqrdecode::GridSampler::getInstance</a></div><div class="ttdeci">static GridSampler &amp; getInstance()</div><div class="ttdef"><b>Definition:</b> GridSampler.cpp:105</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_grid_sampler_html"><div class="ttname"><a href="classzqrdecode_1_1_grid_sampler.html">zqrdecode::GridSampler</a></div><div class="ttdef"><b>Definition:</b> GridSampler.h:15</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_grid_sampler_html_a7cd8c2d2c7bd322ba82f6338462a5889"><div class="ttname"><a href="classzqrdecode_1_1_grid_sampler.html#a7cd8c2d2c7bd322ba82f6338462a5889">zqrdecode::GridSampler::GridSampler</a></div><div class="ttdeci">GridSampler()</div><div class="ttdef"><b>Definition:</b> GridSampler.cpp:18</div></div>
 <div class="ttc" id="a_bit_matrix_8h_html"><div class="ttname"><a href="_bit_matrix_8h.html">BitMatrix.h</a></div></div>
 <div class="ttc" id="a_perspective_transform_8h_html"><div class="ttname"><a href="_perspective_transform_8h.html">PerspectiveTransform.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_ref_html"><div class="ttname"><a href="classzxing_1_1_ref.html">zxing::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:55</div></div>
+<div class="ttc" id="anamespacezqrdecode_html"><div class="ttname"><a href="namespacezqrdecode.html">zqrdecode</a></div><div class="ttdef"><b>Definition:</b> QZqrDecode.h:15</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

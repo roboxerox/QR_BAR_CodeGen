@@ -1,7 +1,0 @@
-<map id="zxing::qrcode::FinderPatternInfo" name="zxing::qrcode::FinderPatternInfo">
-<area shape="rect" id="node1" title=" " alt="" coords="5,380,213,407"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_counted.html" title=" " alt="" coords="49,5,159,32"/>
-<area shape="rect" id="node5" href="$classzxing_1_1_result_point.html" title=" " alt="" coords="139,81,269,108"/>
-<area shape="rect" id="node3" href="$classzxing_1_1_ref.html" title=" " alt="" coords="133,247,291,288"/>
-<area shape="rect" id="node4" href="$classzxing_1_1qrcode_1_1_finder_pattern.html" title=" " alt="" coords="125,157,312,184"/>
-</map>

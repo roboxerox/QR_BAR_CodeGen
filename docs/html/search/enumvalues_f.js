@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['upc_5fa_3164',['UPC_A',['../classzxing_1_1_barcode_format.html#a53cafdcea01164c0a83bf0326c7061a3a67b6fb5a4c22ea30463be6c68a2e1bdc',1,'zxing::BarcodeFormat']]],
-  ['upc_5fe_3165',['UPC_E',['../classzxing_1_1_barcode_format.html#a53cafdcea01164c0a83bf0326c7061a3ae6f6e7527cd2deb37c166134f59a3ef1',1,'zxing::BarcodeFormat']]],
-  ['upc_5fean_5fextension_3166',['UPC_EAN_EXTENSION',['../classzxing_1_1_barcode_format.html#a53cafdcea01164c0a83bf0326c7061a3ad718a1b14d8290c9621f5de893a7b0c3',1,'zxing::BarcodeFormat']]],
-  ['upper_3167',['UPPER',['../classzxing_1_1aztec_1_1_decoder.html#ae4819e70ed013b30a8e2ea46591f8c1cabb4ce9cd62f25222532d20d0e3e6f136',1,'zxing::aztec::Decoder']]]
+  ['upc_5fa_3169',['UPC_A',['../classzqrdecode_1_1_barcode_format.html#ae46f46d069ac751e3656c32cf965b3c1a00a3c0bc1650f75945f47e5630d33141',1,'zqrdecode::BarcodeFormat']]],
+  ['upc_5fe_3170',['UPC_E',['../classzqrdecode_1_1_barcode_format.html#ae46f46d069ac751e3656c32cf965b3c1a88ad44b3e277b12222296d76712e5caf',1,'zqrdecode::BarcodeFormat']]],
+  ['upc_5fean_5fextension_3171',['UPC_EAN_EXTENSION',['../classzqrdecode_1_1_barcode_format.html#ae46f46d069ac751e3656c32cf965b3c1a6ae66713f2de02445ddbf16b8ca7cf59',1,'zqrdecode::BarcodeFormat']]],
+  ['upper_3172',['UPPER',['../classzqrdecode_1_1aztec_1_1_decoder.html#a28ac4de1efeddb4292c4eba361ff4b74a82ebdcb50567570c643713c9b4650ff1',1,'zqrdecode::aztec::Decoder']]]
 ];

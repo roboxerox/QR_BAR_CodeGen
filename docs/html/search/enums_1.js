@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['decoderformat_3102',['DecoderFormat',['../class_q_z_xing.html#a88e0c36a340bb40ab288b59a0107ff87',1,'QZXing']]]
+  ['decoderformat_3107',['DecoderFormat',['../class_q_zqr_decode.html#a3a718e4719f1d96c039deb13ebf5d296',1,'QZqrDecode']]]
 ];

@@ -1,9 +1,0 @@
-<map id="zxing::ReaderException" name="zxing::ReaderException">
-<area shape="rect" id="node1" title=" " alt="" coords="324,81,485,108"/>
-<area shape="rect" id="node4" href="$classzxing_1_1_checksum_exception.html" title=" " alt="" coords="534,5,717,32"/>
-<area shape="rect" id="node5" href="$classzxing_1_1_format_exception.html" title=" " alt="" coords="545,56,705,83"/>
-<area shape="rect" id="node6" href="$classzxing_1_1_illegal_state_exception.html" title=" " alt="" coords="533,107,717,133"/>
-<area shape="rect" id="node7" href="$classzxing_1_1_not_found_exception.html" title=" " alt="" coords="537,157,713,184"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_exception.html" title=" " alt="" coords="157,81,276,108"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,81,109,108"/>
-</map>

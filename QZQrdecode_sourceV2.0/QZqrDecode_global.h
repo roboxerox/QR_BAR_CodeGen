@@ -1,0 +1,13 @@
+#ifndef QZQRDECODE_GLOBAL_H
+#define QZQRDECODE_GLOBAL_H
+
+#include <QtCore>
+#include <qglobal.h>
+
+#if defined(QZQRDECODE_LIBRARY)
+#  define QZQRDECODESHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define QZQRDECODESHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif  //QZQRDECODE_GLOBAL_H

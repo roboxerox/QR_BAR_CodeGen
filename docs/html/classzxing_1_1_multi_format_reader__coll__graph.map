@@ -1,8 +1,0 @@
-<map id="zxing::MultiFormatReader" name="zxing::MultiFormatReader">
-<area shape="rect" id="node1" title=" " alt="" coords="5,393,177,420"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_reader.html" title=" " alt="" coords="12,132,115,159"/>
-<area shape="rect" id="node3" href="$classzxing_1_1_counted.html" title=" " alt="" coords="21,5,132,32"/>
-<area shape="rect" id="node6" href="$classzxing_1_1_result_point_callback.html" title=" " alt="" coords="99,81,279,108"/>
-<area shape="rect" id="node4" href="$classzxing_1_1_decode_hints.html" title=" " alt="" coords="112,295,249,322"/>
-<area shape="rect" id="node5" href="$classzxing_1_1_ref.html" title=" " alt="" coords="109,183,263,224"/>
-</map>

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/multi/qrcode/detector/MultiFinderPatternFinder.h Source File</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/multi/qrcode/detector/MultiFinderPatternFinder.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_26747cfd18b0d83c1e8906d8d8a104bf.html">multi</a></li><li class="navelem"><a class="el" href="dir_866af70f8b4a516e0b7eeb5f721f6315.html">qrcode</a></li><li class="navelem"><a class="el" href="dir_90b801a214af786b6dbc35039a7aaa79.html">detector</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_acbb1ededed9fda5cbbb89f218acfba2.html">multi</a></li><li class="navelem"><a class="el" href="dir_e01b6df49a09b97b75b5c6162a96504f.html">qrcode</a></li><li class="navelem"><a class="el" href="dir_ff0f02e6fbe839f3cff6c6e686097676.html">detector</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,70 +75,56 @@ $(function() {
 <a href="_multi_finder_pattern_finder_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __MULTI_FINDER_PATTERN_FINDER_H__</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __MULTI_FINDER_PATTERN_FINDER_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright 2011 ZXing authors</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * you may not use this file except in compliance with the License.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * limitations under the License.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_finder_pattern_8h.html">zxing/qrcode/detector/FinderPattern.h</a>&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_finder_pattern_finder_8h.html">zxing/qrcode/detector/FinderPatternFinder.h</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_finder_pattern_info_8h.html">zxing/qrcode/detector/FinderPatternInfo.h</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezxing.html">zxing</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">namespace </span>multi {</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_finder_pattern_8h.html">zqrdecode/qrcode/detector/FinderPattern.h</a>&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_finder_pattern_finder_8h.html">zqrdecode/qrcode/detector/FinderPatternFinder.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_finder_pattern_info_8h.html">zqrdecode/qrcode/detector/FinderPatternInfo.h</a>&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezqrdecode.html">zqrdecode</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span>multi {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html">MultiFinderPatternFinder</a> : <a class="code" href="classzqrdecode_1_1qrcode_1_1_finder_pattern_finder.html">zqrdecode::qrcode::FinderPatternFinder</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::vector&lt;std::vector&lt;Ref&lt;zqrdecode::qrcode::FinderPattern&gt; &gt; &gt; <a class="code" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a3d4eed1c0b507f6de873dd2142c6f1b7">selectBestPatterns</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a73f6ba2ed3e349cec618ef86e5866fd6">   17</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a73f6ba2ed3e349cec618ef86e5866fd6">MAX_MODULE_COUNT_PER_EDGE</a>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a2b0672fb1019ca70e094be466cdf2ee7">   18</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a2b0672fb1019ca70e094be466cdf2ee7">MIN_MODULE_COUNT_PER_EDGE</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a510e04d4728d5b0b155d45a2195ee833">   19</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a510e04d4728d5b0b155d45a2195ee833">DIFF_MODSIZE_CUTOFF_PERCENT</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a1bb01398da3588604ab7c5d8c1e3ea73">   20</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a1bb01398da3588604ab7c5d8c1e3ea73">DIFF_MODSIZE_CUTOFF</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#aef4d571d30ff197d3692ea9ff400c186">MultiFinderPatternFinder</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;ResultPointCallback&gt;</a> resultPointCallback);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a71e639619fa2e594d6525daa84bd9db8">~MultiFinderPatternFinder</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Ref&lt;zqrdecode::qrcode::FinderPatternInfo&gt; &gt; <a class="code" href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#ad61d85cddede5839f42056d75367fc7f">findMulti</a>(<a class="code" href="classzqrdecode_1_1_decode_hints.html">DecodeHints</a> <span class="keyword">const</span>&amp; hints);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html">MultiFinderPatternFinder</a> : <a class="code" href="classzxing_1_1qrcode_1_1_finder_pattern_finder.html">zxing::qrcode::FinderPatternFinder</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    std::vector&lt;std::vector&lt;Ref&lt;zxing::qrcode::FinderPattern&gt; &gt; &gt; <a class="code" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a3d4eed1c0b507f6de873dd2142c6f1b7">selectBestPatterns</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a73f6ba2ed3e349cec618ef86e5866fd6">   31</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a73f6ba2ed3e349cec618ef86e5866fd6">MAX_MODULE_COUNT_PER_EDGE</a>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a2b0672fb1019ca70e094be466cdf2ee7">   32</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a2b0672fb1019ca70e094be466cdf2ee7">MIN_MODULE_COUNT_PER_EDGE</a>;</div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a510e04d4728d5b0b155d45a2195ee833">   33</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a510e04d4728d5b0b155d45a2195ee833">DIFF_MODSIZE_CUTOFF_PERCENT</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a1bb01398da3588604ab7c5d8c1e3ea73">   34</a></span>&#160;    <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">float</span> <a class="code" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a1bb01398da3588604ab7c5d8c1e3ea73">DIFF_MODSIZE_CUTOFF</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <a class="code" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#aef4d571d30ff197d3692ea9ff400c186">MultiFinderPatternFinder</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitMatrix&gt;</a> image, <a class="code" href="classzxing_1_1_ref.html">Ref&lt;ResultPointCallback&gt;</a> resultPointCallback);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a71e639619fa2e594d6525daa84bd9db8">~MultiFinderPatternFinder</a>();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">virtual</span> std::vector&lt;Ref&lt;zxing::qrcode::FinderPatternInfo&gt; &gt; <a class="code" href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#ad61d85cddede5839f42056d75367fc7f">findMulti</a>(<a class="code" href="classzxing_1_1_decode_hints.html">DecodeHints</a> <span class="keyword">const</span>&amp; hints);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;};</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;}</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // __MULTI_FINDER_PATTERN_FINDER_H__</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;};</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;}</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif // __MULTI_FINDER_PATTERN_FINDER_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasszxing_1_1multi_1_1_multi_finder_pattern_finder_html_a2b0672fb1019ca70e094be466cdf2ee7"><div class="ttname"><a href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a2b0672fb1019ca70e094be466cdf2ee7">zxing::multi::MultiFinderPatternFinder::MIN_MODULE_COUNT_PER_EDGE</a></div><div class="ttdeci">static const float MIN_MODULE_COUNT_PER_EDGE</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:32</div></div>
-<div class="ttc" id="aclasszxing_1_1_decode_hints_html"><div class="ttname"><a href="classzxing_1_1_decode_hints.html">zxing::DecodeHints</a></div><div class="ttdef"><b>Definition:</b> DecodeHints.h:32</div></div>
-<div class="ttc" id="aclasszxing_1_1multi_1_1_multi_finder_pattern_finder_html_aef4d571d30ff197d3692ea9ff400c186"><div class="ttname"><a href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#aef4d571d30ff197d3692ea9ff400c186">zxing::multi::MultiFinderPatternFinder::MultiFinderPatternFinder</a></div><div class="ttdeci">MultiFinderPatternFinder(Ref&lt; BitMatrix &gt; image, Ref&lt; ResultPointCallback &gt; resultPointCallback)</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.cpp:55</div></div>
-<div class="ttc" id="aclasszxing_1_1multi_1_1_multi_finder_pattern_finder_html_a73f6ba2ed3e349cec618ef86e5866fd6"><div class="ttname"><a href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a73f6ba2ed3e349cec618ef86e5866fd6">zxing::multi::MultiFinderPatternFinder::MAX_MODULE_COUNT_PER_EDGE</a></div><div class="ttdeci">static const float MAX_MODULE_COUNT_PER_EDGE</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:31</div></div>
-<div class="ttc" id="aclasszxing_1_1multi_1_1_multi_finder_pattern_finder_html_ad61d85cddede5839f42056d75367fc7f"><div class="ttname"><a href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#ad61d85cddede5839f42056d75367fc7f">zxing::multi::MultiFinderPatternFinder::findMulti</a></div><div class="ttdeci">virtual std::vector&lt; Ref&lt; zxing::qrcode::FinderPatternInfo &gt; &gt; findMulti(DecodeHints const &amp;hints)</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.cpp:63</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1multi_1_1_multi_finder_pattern_finder_html_a2b0672fb1019ca70e094be466cdf2ee7"><div class="ttname"><a href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a2b0672fb1019ca70e094be466cdf2ee7">zqrdecode::multi::MultiFinderPatternFinder::MIN_MODULE_COUNT_PER_EDGE</a></div><div class="ttdeci">static const float MIN_MODULE_COUNT_PER_EDGE</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:18</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1multi_1_1_multi_finder_pattern_finder_html_a3d4eed1c0b507f6de873dd2142c6f1b7"><div class="ttname"><a href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a3d4eed1c0b507f6de873dd2142c6f1b7">zqrdecode::multi::MultiFinderPatternFinder::selectBestPatterns</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Ref&lt; zqrdecode::qrcode::FinderPattern &gt; &gt; &gt; selectBestPatterns()</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.cpp:123</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1multi_1_1_multi_finder_pattern_finder_html_ad61d85cddede5839f42056d75367fc7f"><div class="ttname"><a href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#ad61d85cddede5839f42056d75367fc7f">zqrdecode::multi::MultiFinderPatternFinder::findMulti</a></div><div class="ttdeci">virtual std::vector&lt; Ref&lt; zqrdecode::qrcode::FinderPatternInfo &gt; &gt; findMulti(DecodeHints const &amp;hints)</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.cpp:48</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_ref_html"><div class="ttname"><a href="classzqrdecode_1_1_ref.html">zqrdecode::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:39</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1multi_1_1_multi_finder_pattern_finder_html_a73f6ba2ed3e349cec618ef86e5866fd6"><div class="ttname"><a href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a73f6ba2ed3e349cec618ef86e5866fd6">zqrdecode::multi::MultiFinderPatternFinder::MAX_MODULE_COUNT_PER_EDGE</a></div><div class="ttdeci">static const float MAX_MODULE_COUNT_PER_EDGE</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:17</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1multi_1_1_multi_finder_pattern_finder_html_a1bb01398da3588604ab7c5d8c1e3ea73"><div class="ttname"><a href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a1bb01398da3588604ab7c5d8c1e3ea73">zqrdecode::multi::MultiFinderPatternFinder::DIFF_MODSIZE_CUTOFF</a></div><div class="ttdeci">static const float DIFF_MODSIZE_CUTOFF</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:20</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1multi_1_1_multi_finder_pattern_finder_html_a71e639619fa2e594d6525daa84bd9db8"><div class="ttname"><a href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a71e639619fa2e594d6525daa84bd9db8">zqrdecode::multi::MultiFinderPatternFinder::~MultiFinderPatternFinder</a></div><div class="ttdeci">virtual ~MultiFinderPatternFinder()</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.cpp:46</div></div>
 <div class="ttc" id="a_finder_pattern_finder_8h_html"><div class="ttname"><a href="_finder_pattern_finder_8h.html">FinderPatternFinder.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1multi_1_1_multi_finder_pattern_finder_html_a1bb01398da3588604ab7c5d8c1e3ea73"><div class="ttname"><a href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a1bb01398da3588604ab7c5d8c1e3ea73">zxing::multi::MultiFinderPatternFinder::DIFF_MODSIZE_CUTOFF</a></div><div class="ttdeci">static const float DIFF_MODSIZE_CUTOFF</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:34</div></div>
-<div class="ttc" id="aclasszxing_1_1multi_1_1_multi_finder_pattern_finder_html_a71e639619fa2e594d6525daa84bd9db8"><div class="ttname"><a href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a71e639619fa2e594d6525daa84bd9db8">zxing::multi::MultiFinderPatternFinder::~MultiFinderPatternFinder</a></div><div class="ttdeci">virtual ~MultiFinderPatternFinder()</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.cpp:61</div></div>
-<div class="ttc" id="aclasszxing_1_1multi_1_1_multi_finder_pattern_finder_html_a510e04d4728d5b0b155d45a2195ee833"><div class="ttname"><a href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a510e04d4728d5b0b155d45a2195ee833">zxing::multi::MultiFinderPatternFinder::DIFF_MODSIZE_CUTOFF_PERCENT</a></div><div class="ttdeci">static const float DIFF_MODSIZE_CUTOFF_PERCENT</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:33</div></div>
-<div class="ttc" id="anamespacezxing_html"><div class="ttname"><a href="namespacezxing.html">zxing</a></div><div class="ttdef"><b>Definition:</b> QZXing.h:15</div></div>
 <div class="ttc" id="a_finder_pattern_8h_html"><div class="ttname"><a href="_finder_pattern_8h.html">FinderPattern.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1qrcode_1_1_finder_pattern_finder_html"><div class="ttname"><a href="classzxing_1_1qrcode_1_1_finder_pattern_finder.html">zxing::qrcode::FinderPatternFinder</a></div><div class="ttdef"><b>Definition:</b> FinderPatternFinder.h:37</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1multi_1_1_multi_finder_pattern_finder_html_aef4d571d30ff197d3692ea9ff400c186"><div class="ttname"><a href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#aef4d571d30ff197d3692ea9ff400c186">zqrdecode::multi::MultiFinderPatternFinder::MultiFinderPatternFinder</a></div><div class="ttdeci">MultiFinderPatternFinder(Ref&lt; BitMatrix &gt; image, Ref&lt; ResultPointCallback &gt; resultPointCallback)</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.cpp:40</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1multi_1_1_multi_finder_pattern_finder_html"><div class="ttname"><a href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html">zqrdecode::multi::MultiFinderPatternFinder</a></div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:13</div></div>
 <div class="ttc" id="a_finder_pattern_info_8h_html"><div class="ttname"><a href="_finder_pattern_info_8h.html">FinderPatternInfo.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1multi_1_1_multi_finder_pattern_finder_html"><div class="ttname"><a href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html">zxing::multi::MultiFinderPatternFinder</a></div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:27</div></div>
-<div class="ttc" id="aclasszxing_1_1multi_1_1_multi_finder_pattern_finder_html_a3d4eed1c0b507f6de873dd2142c6f1b7"><div class="ttname"><a href="classzxing_1_1multi_1_1_multi_finder_pattern_finder.html#a3d4eed1c0b507f6de873dd2142c6f1b7">zxing::multi::MultiFinderPatternFinder::selectBestPatterns</a></div><div class="ttdeci">std::vector&lt; std::vector&lt; Ref&lt; zxing::qrcode::FinderPattern &gt; &gt; &gt; selectBestPatterns()</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.cpp:138</div></div>
-<div class="ttc" id="aclasszxing_1_1_ref_html"><div class="ttname"><a href="classzxing_1_1_ref.html">zxing::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:55</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1qrcode_1_1_finder_pattern_finder_html"><div class="ttname"><a href="classzqrdecode_1_1qrcode_1_1_finder_pattern_finder.html">zqrdecode::qrcode::FinderPatternFinder</a></div><div class="ttdef"><b>Definition:</b> FinderPatternFinder.h:24</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1multi_1_1_multi_finder_pattern_finder_html_a510e04d4728d5b0b155d45a2195ee833"><div class="ttname"><a href="classzqrdecode_1_1multi_1_1_multi_finder_pattern_finder.html#a510e04d4728d5b0b155d45a2195ee833">zqrdecode::multi::MultiFinderPatternFinder::DIFF_MODSIZE_CUTOFF_PERCENT</a></div><div class="ttdeci">static const float DIFF_MODSIZE_CUTOFF_PERCENT</div><div class="ttdef"><b>Definition:</b> MultiFinderPatternFinder.h:19</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_decode_hints_html"><div class="ttname"><a href="classzqrdecode_1_1_decode_hints.html">zqrdecode::DecodeHints</a></div><div class="ttdef"><b>Definition:</b> DecodeHints.h:19</div></div>
+<div class="ttc" id="anamespacezqrdecode_html"><div class="ttname"><a href="namespacezqrdecode.html">zqrdecode</a></div><div class="ttdef"><b>Definition:</b> QZqrDecode.h:15</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

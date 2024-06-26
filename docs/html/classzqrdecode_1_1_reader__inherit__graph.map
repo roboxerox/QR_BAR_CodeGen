@@ -1,0 +1,24 @@
+<map id="zqrdecode::Reader" name="zqrdecode::Reader">
+<area shape="rect" id="node1" title=" " alt="" coords="192,188,324,215"/>
+<area shape="rect" id="node3" href="$classzqrdecode_1_1aztec_1_1_aztec_reader.html" title=" " alt="" coords="372,5,579,32"/>
+<area shape="rect" id="node4" href="$classzqrdecode_1_1datamatrix_1_1_data_matrix_reader.html" title=" " alt="" coords="400,57,551,98"/>
+<area shape="rect" id="node5" href="$classzqrdecode_1_1multi_1_1_by_quadrant_reader.html" title=" " alt="" coords="378,122,573,163"/>
+<area shape="rect" id="node6" href="$classzqrdecode_1_1_multi_format_reader.html" title=" " alt="" coords="375,188,576,215"/>
+<area shape="rect" id="node7" href="$classzqrdecode_1_1oned_1_1_one_d_reader.html" title=" " alt="" coords="374,239,577,265"/>
+<area shape="rect" id="node20" href="$classzqrdecode_1_1pdf417_1_1_p_d_f417_reader.html" title=" " alt="" coords="407,290,544,331"/>
+<area shape="rect" id="node21" href="$classzqrdecode_1_1qrcode_1_1_q_r_code_reader.html" title=" " alt="" coords="407,414,544,455"/>
+<area shape="rect" id="node2" href="$classzqrdecode_1_1_counted.html" title=" " alt="" coords="5,188,144,215"/>
+<area shape="rect" id="node8" href="$classzqrdecode_1_1oned_1_1_coda_bar_reader.html" title=" " alt="" coords="651,6,828,47"/>
+<area shape="rect" id="node9" href="$classzqrdecode_1_1oned_1_1_code128_reader.html" title=" " alt="" coords="650,71,829,113"/>
+<area shape="rect" id="node10" href="$classzqrdecode_1_1oned_1_1_code39_reader.html" title=" " alt="" coords="633,137,846,164"/>
+<area shape="rect" id="node11" href="$classzqrdecode_1_1oned_1_1_code93_reader.html" title=" " alt="" coords="633,188,846,215"/>
+<area shape="rect" id="node12" href="$classzqrdecode_1_1oned_1_1_i_t_f_reader.html" title=" " alt="" coords="645,239,833,265"/>
+<area shape="rect" id="node13" href="$classzqrdecode_1_1oned_1_1_multi_format_one_d_reader.html" title=" " alt="" coords="642,290,837,331"/>
+<area shape="rect" id="node14" href="$classzqrdecode_1_1oned_1_1_multi_format_u_p_c_e_a_n_reader.html" title=" " alt="" coords="642,355,837,397"/>
+<area shape="rect" id="node15" href="$classzqrdecode_1_1oned_1_1_u_p_c_e_a_n_reader.html" title=" " alt="" coords="627,421,852,448"/>
+<area shape="rect" id="node16" href="$classzqrdecode_1_1oned_1_1_e_a_n13_reader.html" title=" " alt="" coords="900,345,1111,372"/>
+<area shape="rect" id="node17" href="$classzqrdecode_1_1oned_1_1_e_a_n8_reader.html" title=" " alt="" coords="904,396,1107,423"/>
+<area shape="rect" id="node18" href="$classzqrdecode_1_1oned_1_1_u_p_c_a_reader.html" title=" " alt="" coords="902,447,1109,473"/>
+<area shape="rect" id="node19" href="$classzqrdecode_1_1oned_1_1_u_p_c_e_reader.html" title=" " alt="" coords="902,497,1109,524"/>
+<area shape="rect" id="node22" href="$classzqrdecode_1_1multi_1_1_q_r_code_multi_reader.html" title=" " alt="" coords="651,473,828,514"/>
+</map>

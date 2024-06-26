@@ -1,6 +1,0 @@
-<map id="zxing::multi::MultipleBarcodeReader" name="zxing::multi::MultipleBarcodeReader">
-<area shape="rect" id="node1" title=" " alt="" coords="106,80,297,121"/>
-<area shape="rect" id="node3" href="$classzxing_1_1multi_1_1_generic_multiple_barcode_reader.html" title=" " alt="" coords="5,169,192,211"/>
-<area shape="rect" id="node4" href="$classzxing_1_1multi_1_1_q_r_code_multi_reader.html" title=" " alt="" coords="216,169,392,211"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_counted.html" title=" " alt="" coords="146,5,257,32"/>
-</map>

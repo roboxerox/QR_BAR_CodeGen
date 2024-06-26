@@ -1,10 +1,10 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/qrcode/detector/FinderPatternInfo.h" name="QZXing_sourceV2.4/zxing/zxing/qrcode/detector/FinderPatternInfo.h">
-<area shape="rect" id="node1" title=" " alt="" coords="122,5,297,61"/>
-<area shape="rect" id="node2" href="$_finder_pattern_8h.html" title=" " alt="" coords="192,109,339,151"/>
-<area shape="rect" id="node4" href="$_counted_8h.html" title=" " alt="" coords="12,273,183,300"/>
-<area shape="rect" id="node6" title=" " alt="" coords="236,273,295,300"/>
-<area shape="rect" id="node8" href="$_array_8h.html" title=" " alt="" coords="22,199,173,225"/>
-<area shape="rect" id="node3" href="$_result_point_8h.html" title=" " alt="" coords="197,199,333,225"/>
-<area shape="rect" id="node7" title=" " alt="" coords="357,199,416,225"/>
-<area shape="rect" id="node5" title=" " alt="" coords="61,348,133,375"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/qrcode/detector/FinderPatternInfo.h" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/qrcode/detector/FinderPatternInfo.h">
+<area shape="rect" id="node1" title=" " alt="" coords="147,5,346,76"/>
+<area shape="rect" id="node2" href="$_finder_pattern_8h.html" title=" " alt="" coords="221,124,397,165"/>
+<area shape="rect" id="node4" href="$_counted_8h.html" title=" " alt="" coords="12,288,212,315"/>
+<area shape="rect" id="node6" title=" " alt="" coords="280,288,339,315"/>
+<area shape="rect" id="node8" href="$_array_8h.html" title=" " alt="" coords="22,213,202,240"/>
+<area shape="rect" id="node3" href="$_result_point_8h.html" title=" " alt="" coords="227,213,392,240"/>
+<area shape="rect" id="node7" title=" " alt="" coords="416,213,475,240"/>
+<area shape="rect" id="node5" title=" " alt="" coords="76,363,148,389"/>
 </map>

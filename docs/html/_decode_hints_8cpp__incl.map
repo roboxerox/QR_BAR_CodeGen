@@ -1,13 +1,13 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/DecodeHints.cpp" name="QZXing_sourceV2.4/zxing/zxing/DecodeHints.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="382,5,557,47"/>
-<area shape="rect" id="node2" href="$_decode_hints_8h.html" title=" " alt="" coords="200,102,344,129"/>
-<area shape="rect" id="node7" href="$_illegal_argument_exception_8h.html" title=" " alt="" coords="369,95,570,136"/>
-<area shape="rect" id="node11" title=" " alt="" coords="595,102,669,129"/>
-<area shape="rect" id="node3" href="$_barcode_format_8h.html" title=" " alt="" coords="5,184,163,211"/>
-<area shape="rect" id="node4" href="$_result_point_callback_8h.html" title=" " alt="" coords="187,184,373,211"/>
-<area shape="rect" id="node5" href="$_counted_8h.html" title=" " alt="" coords="195,259,365,285"/>
-<area shape="rect" id="node6" title=" " alt="" coords="244,333,316,360"/>
-<area shape="rect" id="node8" href="$_exception_8h.html" title=" " alt="" coords="406,184,533,211"/>
-<area shape="rect" id="node9" title=" " alt="" coords="419,259,474,285"/>
-<area shape="rect" id="node10" title=" " alt="" coords="498,259,577,285"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/DecodeHints.cpp" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/DecodeHints.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="443,5,613,61"/>
+<area shape="rect" id="node2" href="$_decode_hints_8h.html" title=" " alt="" coords="237,117,411,143"/>
+<area shape="rect" id="node7" href="$_illegal_argument_exception_8h.html" title=" " alt="" coords="441,109,615,151"/>
+<area shape="rect" id="node11" title=" " alt="" coords="640,117,715,143"/>
+<area shape="rect" id="node3" href="$_barcode_format_8h.html" title=" " alt="" coords="5,199,192,225"/>
+<area shape="rect" id="node4" href="$_result_point_callback_8h.html" title=" " alt="" coords="216,199,432,225"/>
+<area shape="rect" id="node5" href="$_counted_8h.html" title=" " alt="" coords="224,273,424,300"/>
+<area shape="rect" id="node6" title=" " alt="" coords="288,348,360,375"/>
+<area shape="rect" id="node8" href="$_exception_8h.html" title=" " alt="" coords="456,199,611,225"/>
+<area shape="rect" id="node9" title=" " alt="" coords="477,273,531,300"/>
+<area shape="rect" id="node10" title=" " alt="" coords="555,273,634,300"/>
 </map>

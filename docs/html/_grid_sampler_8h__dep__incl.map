@@ -1,8 +1,8 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/common/GridSampler.h" name="QZXing_sourceV2.4/zxing/zxing/common/GridSampler.h">
-<area shape="rect" id="node1" title=" " alt="" coords="429,5,626,47"/>
-<area shape="rect" id="node2" href="$_aztec_detector_8cpp.html" title=" " alt="" coords="5,95,180,151"/>
-<area shape="rect" id="node3" href="$_grid_sampler_8cpp.html" title=" " alt="" coords="205,102,415,143"/>
-<area shape="rect" id="node4" href="$_data_matrix_detector_8cpp.html" title=" " alt="" coords="440,95,615,151"/>
-<area shape="rect" id="node5" href="$_p_d_f417_detector_8cpp.html" title=" " alt="" coords="639,95,813,151"/>
-<area shape="rect" id="node6" href="$_q_r_detector_8cpp.html" title=" " alt="" coords="837,95,1012,151"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/GridSampler.h" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/GridSampler.h">
+<area shape="rect" id="node1" title=" " alt="" coords="470,5,639,61"/>
+<area shape="rect" id="node2" href="$_aztec_detector_8cpp.html" title=" " alt="" coords="5,117,227,173"/>
+<area shape="rect" id="node3" href="$_grid_sampler_8cpp.html" title=" " alt="" coords="251,117,427,173"/>
+<area shape="rect" id="node4" href="$_data_matrix_detector_8cpp.html" title=" " alt="" coords="451,109,658,180"/>
+<area shape="rect" id="node5" href="$_p_d_f417_detector_8cpp.html" title=" " alt="" coords="683,117,925,173"/>
+<area shape="rect" id="node6" href="$_q_r_detector_8cpp.html" title=" " alt="" coords="950,117,1165,173"/>
 </map>

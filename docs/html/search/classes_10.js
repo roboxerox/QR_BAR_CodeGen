@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['string_1718',['String',['../classzxing_1_1_string.html',1,'zxing']]],
-  ['stringutils_1719',['StringUtils',['../classzxing_1_1common_1_1_string_utils.html',1,'zxing::common']]]
+  ['string_1720',['String',['../classzqrdecode_1_1_string.html',1,'zqrdecode']]],
+  ['stringutils_1721',['StringUtils',['../classzqrdecode_1_1common_1_1_string_utils.html',1,'zqrdecode::common']]]
 ];

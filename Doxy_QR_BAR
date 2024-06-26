@@ -4,9 +4,9 @@
 # Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
-PROJECT_NAME           = QR/BAR" "Code" "Encoder
+PROJECT_NAME           = QR/BAR" "Code" "Encoder-Decoder
 PROJECT_NUMBER         = 1.0.3
-PROJECT_BRIEF          = QR" "&" "BAR" "code" "generator" "using" "code128
+PROJECT_BRIEF          = QR" "&" "BAR" "code" "encode-decode" "using" "code128
 PROJECT_LOGO           = ./images/main_1.png
 OUTPUT_DIRECTORY       = ./docs
 CREATE_SUBDIRS         = NO

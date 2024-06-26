@@ -1,5 +1,0 @@
-<map id="zxing::qrcode::DataMask110" name="zxing::qrcode::DataMask110">
-<area shape="rect" id="node1" title="110: mask bits for which (xy mod 2 + xy mod 3) mod 2 == 0" alt="" coords="5,155,195,181"/>
-<area shape="rect" id="node2" href="$classzxing_1_1qrcode_1_1_data_mask.html" title=" " alt="" coords="16,80,184,107"/>
-<area shape="rect" id="node3" href="$classzxing_1_1_counted.html" title=" " alt="" coords="45,5,155,32"/>
-</map>

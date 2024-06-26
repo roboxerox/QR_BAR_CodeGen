@@ -1,8 +1,0 @@
-<map id="zxing::BinaryBitmap" name="zxing::BinaryBitmap">
-<area shape="rect" id="node1" title=" " alt="" coords="5,468,144,495"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_counted.html" title=" " alt="" coords="49,5,159,32"/>
-<area shape="rect" id="node4" href="$classzxing_1_1_binarizer.html" title=" " alt="" coords="101,275,213,301"/>
-<area shape="rect" id="node6" href="$classzxing_1_1_luminance_source.html" title=" " alt="" coords="141,81,307,108"/>
-<area shape="rect" id="node3" href="$classzxing_1_1_ref.html" title=" " alt="" coords="91,364,224,405"/>
-<area shape="rect" id="node5" href="$classzxing_1_1_ref.html" title=" " alt="" coords="148,171,287,212"/>
-</map>

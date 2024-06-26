@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['rss_5f14_3162',['RSS_14',['../classzxing_1_1_barcode_format.html#a53cafdcea01164c0a83bf0326c7061a3a955c7be272e03ee9b64d8ce8b0a06252',1,'zxing::BarcodeFormat']]],
-  ['rss_5fexpanded_3163',['RSS_EXPANDED',['../classzxing_1_1_barcode_format.html#a53cafdcea01164c0a83bf0326c7061a3aafe1e3bdb1046e2444b16630ff4e8959',1,'zxing::BarcodeFormat']]]
+  ['rss_5f14_3167',['RSS_14',['../classzqrdecode_1_1_barcode_format.html#ae46f46d069ac751e3656c32cf965b3c1a3805c3a61e7131130112d0edb12f0775',1,'zqrdecode::BarcodeFormat']]],
+  ['rss_5fexpanded_3168',['RSS_EXPANDED',['../classzqrdecode_1_1_barcode_format.html#ae46f46d069ac751e3656c32cf965b3c1a39fa766bad60dd9323447fff8b5455ae',1,'zqrdecode::BarcodeFormat']]]
 ];

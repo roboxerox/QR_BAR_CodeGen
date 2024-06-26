@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/qrcode/detector/Detector.h File Reference</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/qrcode/detector/Detector.h File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_a81396345277dcd706a99a1716de34a2.html">qrcode</a></li><li class="navelem"><a class="el" href="dir_08b34e7cfbe2e4df989bec1125d68428.html">detector</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_8709d7007c963af74aecb60bcc6914c0.html">qrcode</a></li><li class="navelem"><a class="el" href="dir_9186516203d906ffb0a49c2324df0366.html">detector</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,53 +75,53 @@ $(function() {
 <div class="title">Detector.h File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="_counted_8h_source.html">zxing/common/Counted.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_detector_result_8h_source.html">zxing/common/DetectorResult.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_bit_matrix_8h_source.html">zxing/common/BitMatrix.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_alignment_pattern_8h_source.html">zxing/qrcode/detector/AlignmentPattern.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_perspective_transform_8h_source.html">zxing/common/PerspectiveTransform.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_result_point_callback_8h_source.html">zxing/ResultPointCallback.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_finder_pattern_info_8h_source.html">zxing/qrcode/detector/FinderPatternInfo.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="_counted_8h_source.html">zqrdecode/common/Counted.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_detector_result_8h_source.html">zqrdecode/common/DetectorResult.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_bit_matrix_8h_source.html">zqrdecode/common/BitMatrix.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_alignment_pattern_8h_source.html">zqrdecode/qrcode/detector/AlignmentPattern.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_perspective_transform_8h_source.html">zqrdecode/common/PerspectiveTransform.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_result_point_callback_8h_source.html">zqrdecode/ResultPointCallback.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_finder_pattern_info_8h_source.html">zqrdecode/qrcode/detector/FinderPatternInfo.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Detector.h:</div>
 <div class="dyncontent">
-<div class="center"><img src="qrcode_2detector_2_detector_8h__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2qrcode_2detector_2_detector_8h" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2qrcode_2detector_2_detector_8h" id="_q_z_xing__source_v2_84_2zxing_2zxing_2qrcode_2detector_2_detector_8h">
-<area shape="rect" title=" " alt="" coords="338,5,513,61"/>
-<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="324,452,495,479"/>
-<area shape="rect" href="_detector_result_8h.html" title=" " alt="" coords="463,109,674,136"/>
-<area shape="rect" href="_bit_matrix_8h.html" title=" " alt="" coords="892,191,1066,218"/>
-<area shape="rect" href="_alignment_pattern_8h.html" title=" " alt="" coords="456,273,603,315"/>
-<area shape="rect" href="_perspective_transform_8h.html" title=" " alt="" coords="256,363,436,404"/>
-<area shape="rect" href="_result_point_callback_8h.html" title=" " alt="" coords="44,109,231,136"/>
-<area shape="rect" href="_finder_pattern_info_8h.html" title=" " alt="" coords="720,184,867,225"/>
-<area shape="rect" title=" " alt="" coords="774,527,846,553"/>
-<area shape="rect" href="_array_8h.html" title=" " alt="" coords="754,370,905,397"/>
-<area shape="rect" href="_result_point_8h.html" title=" " alt="" coords="511,370,647,397"/>
-<area shape="rect" title=" " alt="" coords="800,452,859,479"/>
-<area shape="rect" href="_bit_array_8h.html" title=" " alt="" coords="1006,281,1173,307"/>
-<area shape="rect" title=" " alt="" coords="1472,452,1526,479"/>
-<area shape="rect" href="_z_xing_8h.html" title=" " alt="" coords="1358,370,1461,397"/>
-<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="1133,363,1334,404"/>
-<area shape="rect" title=" " alt="" coords="1378,452,1441,479"/>
-<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="1170,452,1297,479"/>
-<area shape="rect" title=" " alt="" coords="1161,527,1216,553"/>
-<area shape="rect" title=" " alt="" coords="1240,527,1318,553"/>
-<area shape="rect" title=" " alt="" coords="671,370,730,397"/>
-<area shape="rect" href="_finder_pattern_8h.html" title=" " alt="" coords="627,273,774,315"/>
+<div class="center"><img src="qrcode_2detector_2_detector_8h__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2qrcode_2detector_2_detector_8h" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2qrcode_2detector_2_detector_8h" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2qrcode_2detector_2_detector_8h">
+<area shape="rect" title=" " alt="" coords="378,5,558,61"/>
+<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="352,467,552,493"/>
+<area shape="rect" href="_detector_result_8h.html" title=" " alt="" coords="506,109,697,151"/>
+<area shape="rect" href="_bit_matrix_8h.html" title=" " alt="" coords="983,206,1185,233"/>
+<area shape="rect" href="_alignment_pattern_8h.html" title=" " alt="" coords="488,288,664,329"/>
+<area shape="rect" href="_perspective_transform_8h.html" title=" " alt="" coords="275,377,485,419"/>
+<area shape="rect" href="_result_point_callback_8h.html" title=" " alt="" coords="45,117,261,143"/>
+<area shape="rect" href="_finder_pattern_info_8h.html" title=" " alt="" coords="783,199,959,240"/>
+<area shape="rect" title=" " alt="" coords="845,541,917,568"/>
+<area shape="rect" href="_array_8h.html" title=" " alt="" coords="833,385,1013,411"/>
+<area shape="rect" href="_result_point_8h.html" title=" " alt="" coords="560,385,725,411"/>
+<area shape="rect" title=" " alt="" coords="893,467,952,493"/>
+<area shape="rect" href="_bit_array_8h.html" title=" " alt="" coords="1099,295,1295,322"/>
+<area shape="rect" title=" " alt="" coords="1612,467,1665,493"/>
+<area shape="rect" href="_z_qrdecode_8h.html" title=" " alt="" coords="1439,385,1601,411"/>
+<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="1241,377,1415,419"/>
+<area shape="rect" title=" " alt="" coords="1489,467,1551,493"/>
+<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="1251,467,1405,493"/>
+<area shape="rect" title=" " alt="" coords="1255,541,1310,568"/>
+<area shape="rect" title=" " alt="" coords="1334,541,1413,568"/>
+<area shape="rect" title=" " alt="" coords="749,385,808,411"/>
+<area shape="rect" href="_finder_pattern_8h.html" title=" " alt="" coords="688,288,864,329"/>
 </map>
 </div>
 </div><div class="textblock"><div class="dynheader">
 This graph shows which files directly or indirectly include this file:</div>
 <div class="dyncontent">
-<div class="center"><img src="qrcode_2detector_2_detector_8h__dep__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2qrcode_2detector_2_detector_8hdep" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2qrcode_2detector_2_detector_8hdep" id="_q_z_xing__source_v2_84_2zxing_2zxing_2qrcode_2detector_2_detector_8hdep">
-<area shape="rect" title=" " alt="" coords="323,5,497,61"/>
-<area shape="rect" href="_multi_detector_8h.html" title=" " alt="" coords="116,109,299,165"/>
-<area shape="rect" href="_q_r_detector_8cpp.html" title=" " alt="" coords="323,109,497,165"/>
-<area shape="rect" href="_q_r_code_reader_8cpp.html" title=" " alt="" coords="522,117,743,158"/>
-<area shape="rect" href="_multi_detector_8cpp.html" title=" " alt="" coords="5,213,188,269"/>
-<area shape="rect" href="_q_r_code_multi_reader_8cpp.html" title=" " alt="" coords="212,213,427,269"/>
+<div class="center"><img src="qrcode_2detector_2_detector_8h__dep__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2qrcode_2detector_2_detector_8hdep" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2qrcode_2detector_2_detector_8hdep" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2qrcode_2detector_2_detector_8hdep">
+<area shape="rect" title=" " alt="" coords="332,5,512,61"/>
+<area shape="rect" href="_multi_detector_8h.html" title=" " alt="" coords="121,109,291,180"/>
+<area shape="rect" href="_q_r_detector_8cpp.html" title=" " alt="" coords="315,117,529,173"/>
+<area shape="rect" href="_q_r_code_reader_8cpp.html" title=" " alt="" coords="554,117,741,173"/>
+<area shape="rect" href="_multi_detector_8cpp.html" title=" " alt="" coords="5,228,175,299"/>
+<area shape="rect" href="_q_r_code_multi_reader_8cpp.html" title=" " alt="" coords="199,235,445,291"/>
 </map>
 </div>
 </div>
@@ -129,20 +129,20 @@ This graph shows which files directly or indirectly include this file:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classzxing_1_1qrcode_1_1_detector.html">zxing::qrcode::Detector</a></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classzqrdecode_1_1qrcode_1_1_detector.html">zqrdecode::qrcode::Detector</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="namespaces"></a>
 Namespaces</h2></td></tr>
-<tr class="memitem:namespacezxing"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacezxing.html">zxing</a></td></tr>
+<tr class="memitem:namespacezqrdecode"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacezqrdecode.html">zqrdecode</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:namespacezxing_1_1qrcode"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacezxing_1_1qrcode.html">zxing::qrcode</a></td></tr>
+<tr class="memitem:namespacezqrdecode_1_1qrcode"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacezqrdecode_1_1qrcode.html">zqrdecode::qrcode</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['negative_3152',['negative',['../class_big_integer.html#ab8bd05c604c2549930bd6f9169c13212a3c3e09d10906d4457942bee17c8e97f1',1,'BigInteger']]],
-  ['none_3153',['NONE',['../classzxing_1_1_barcode_format.html#a53cafdcea01164c0a83bf0326c7061a3a7201ea07a11ba9c94379947c7a96f692',1,'zxing::BarcodeFormat']]]
+  ['negative_3157',['negative',['../class_big_integer.html#ab8bd05c604c2549930bd6f9169c13212a3c3e09d10906d4457942bee17c8e97f1',1,'BigInteger']]],
+  ['none_3158',['NONE',['../classzqrdecode_1_1_barcode_format.html#ae46f46d069ac751e3656c32cf965b3c1a1e13ce938ddd53eb5564c84f6c5ba63c',1,'zqrdecode::BarcodeFormat']]]
 ];

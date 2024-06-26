@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['processingtime_3170',['processingTime',['../class_q_z_xing.html#a039a55ba6f1e5e416a39b26c407ee777',1,'QZXing']]]
+  ['processingtime_3175',['processingTime',['../class_q_zqr_decode.html#a260d33dab1c4ebcce23c1fd6e2dfb9e2',1,'QZqrDecode']]]
 ];

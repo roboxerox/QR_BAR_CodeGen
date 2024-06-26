@@ -1,9 +1,9 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/common/GreyscaleLuminanceSource.h" name="QZXing_sourceV2.4/zxing/zxing/common/GreyscaleLuminanceSource.h">
-<area shape="rect" id="node1" title=" " alt="" coords="85,5,323,61"/>
-<area shape="rect" id="node2" href="$_luminance_source_8h.html" title=" " alt="" coords="118,109,290,136"/>
-<area shape="rect" id="node3" href="$_counted_8h.html" title=" " alt="" coords="5,259,176,285"/>
-<area shape="rect" id="node5" href="$_array_8h.html" title=" " alt="" coords="129,184,279,211"/>
-<area shape="rect" id="node7" title=" " alt="" coords="303,184,369,211"/>
-<area shape="rect" id="node4" title=" " alt="" coords="55,333,127,360"/>
-<area shape="rect" id="node6" title=" " alt="" coords="200,259,259,285"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/GreyscaleLuminanceSource.h" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/GreyscaleLuminanceSource.h">
+<area shape="rect" id="node1" title=" " alt="" coords="106,5,361,61"/>
+<area shape="rect" id="node2" href="$_luminance_source_8h.html" title=" " alt="" coords="133,109,334,136"/>
+<area shape="rect" id="node3" href="$_counted_8h.html" title=" " alt="" coords="5,259,205,285"/>
+<area shape="rect" id="node5" href="$_array_8h.html" title=" " alt="" coords="143,184,323,211"/>
+<area shape="rect" id="node7" title=" " alt="" coords="347,184,413,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="69,333,141,360"/>
+<area shape="rect" id="node6" title=" " alt="" coords="229,259,288,285"/>
 </map>

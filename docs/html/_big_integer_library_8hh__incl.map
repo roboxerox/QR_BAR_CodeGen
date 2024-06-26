@@ -1,11 +1,11 @@
-<map id="QZXing_sourceV2.4/zxing/bigint/BigIntegerLibrary.hh" name="QZXing_sourceV2.4/zxing/bigint/BigIntegerLibrary.hh">
-<area shape="rect" id="node1" title=" " alt="" coords="83,5,258,47"/>
-<area shape="rect" id="node2" href="$_numberlike_array_8hh.html" title=" " alt="" coords="146,319,281,345"/>
-<area shape="rect" id="node3" href="$_big_unsigned_8hh.html" title=" " alt="" coords="156,244,271,271"/>
-<area shape="rect" id="node4" href="$_big_integer_8hh.html" title=" " alt="" coords="164,169,263,196"/>
-<area shape="rect" id="node5" href="$_big_integer_algorithms_8hh.html" title=" " alt="" coords="31,95,193,121"/>
-<area shape="rect" id="node6" href="$_big_unsigned_in_a_base_8hh.html" title=" " alt="" coords="269,95,433,121"/>
-<area shape="rect" id="node8" href="$_big_integer_utils_8hh.html" title=" " alt="" coords="457,95,583,121"/>
-<area shape="rect" id="node7" title=" " alt="" coords="397,169,451,196"/>
-<area shape="rect" id="node9" title=" " alt="" coords="484,169,556,196"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/bigint/BigIntegerLibrary.hh" name="QZQrdecode_sourceV2.0/zqrdecode/bigint/BigIntegerLibrary.hh">
+<area shape="rect" id="node1" title=" " alt="" coords="79,5,263,61"/>
+<area shape="rect" id="node2" href="$_numberlike_array_8hh.html" title=" " alt="" coords="146,333,281,360"/>
+<area shape="rect" id="node3" href="$_big_unsigned_8hh.html" title=" " alt="" coords="156,259,271,285"/>
+<area shape="rect" id="node4" href="$_big_integer_8hh.html" title=" " alt="" coords="164,184,263,211"/>
+<area shape="rect" id="node5" href="$_big_integer_algorithms_8hh.html" title=" " alt="" coords="31,109,193,136"/>
+<area shape="rect" id="node6" href="$_big_unsigned_in_a_base_8hh.html" title=" " alt="" coords="269,109,433,136"/>
+<area shape="rect" id="node8" href="$_big_integer_utils_8hh.html" title=" " alt="" coords="457,109,583,136"/>
+<area shape="rect" id="node7" title=" " alt="" coords="397,184,451,211"/>
+<area shape="rect" id="node9" title=" " alt="" coords="484,184,556,211"/>
 </map>

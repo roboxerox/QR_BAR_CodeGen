@@ -1,0 +1,8 @@
+<map id="zqrdecode::ResultPoint" name="zqrdecode::ResultPoint">
+<area shape="rect" id="node1" title=" " alt="" coords="192,111,351,138"/>
+<area shape="rect" id="node3" href="$classzqrdecode_1_1datamatrix_1_1_corner_point.html" title=" " alt="" coords="423,5,573,47"/>
+<area shape="rect" id="node4" href="$classzqrdecode_1_1oned_1_1_one_d_result_point.html" title=" " alt="" coords="399,71,597,112"/>
+<area shape="rect" id="node5" href="$classzqrdecode_1_1qrcode_1_1_alignment_pattern.html" title=" " alt="" coords="429,136,567,177"/>
+<area shape="rect" id="node6" href="$classzqrdecode_1_1qrcode_1_1_finder_pattern.html" title=" " alt="" coords="429,201,567,243"/>
+<area shape="rect" id="node2" href="$classzqrdecode_1_1_counted.html" title=" " alt="" coords="5,111,144,138"/>
+</map>

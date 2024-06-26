@@ -1,8 +1,0 @@
-<map id="zxing::aztec::Detector" name="zxing::aztec::Detector">
-<area shape="rect" id="node1" title=" " alt="" coords="5,453,156,480"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_counted.html" title=" " alt="" coords="80,5,191,32"/>
-<area shape="rect" id="node4" href="$classzxing_1_1_bit_matrix.html" title=" " alt="" coords="107,260,220,287"/>
-<area shape="rect" id="node5" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="148,171,299,197"/>
-<area shape="rect" id="node6" href="$classzxing_1_1_array.html" title=" " alt="" coords="198,81,329,108"/>
-<area shape="rect" id="node3" href="$classzxing_1_1_ref.html" title=" " alt="" coords="97,349,230,391"/>
-</map>

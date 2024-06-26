@@ -1,12 +1,12 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/InvertedLuminanceSource.h" name="QZXing_sourceV2.4/zxing/zxing/InvertedLuminanceSource.h">
-<area shape="rect" id="node1" title=" " alt="" coords="83,5,306,47"/>
-<area shape="rect" id="node2" href="$_z_xing_8h.html" title=" " alt="" coords="63,95,166,121"/>
-<area shape="rect" id="node5" href="$_luminance_source_8h.html" title=" " alt="" coords="201,95,373,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,169,59,196"/>
-<area shape="rect" id="node4" title=" " alt="" coords="83,169,146,196"/>
-<area shape="rect" id="node6" href="$_counted_8h.html" title=" " alt="" coords="99,244,269,271"/>
-<area shape="rect" id="node8" href="$_array_8h.html" title=" " alt="" coords="222,169,373,196"/>
-<area shape="rect" id="node10" title=" " alt="" coords="397,169,462,196"/>
-<area shape="rect" id="node7" title=" " alt="" coords="148,319,220,345"/>
-<area shape="rect" id="node9" title=" " alt="" coords="293,244,352,271"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/InvertedLuminanceSource.h" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/InvertedLuminanceSource.h">
+<area shape="rect" id="node1" title=" " alt="" coords="119,5,307,61"/>
+<area shape="rect" id="node2" href="$_z_qrdecode_8h.html" title=" " alt="" coords="30,109,191,136"/>
+<area shape="rect" id="node5" href="$_luminance_source_8h.html" title=" " alt="" coords="215,109,417,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,184,59,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="83,184,146,211"/>
+<area shape="rect" id="node6" href="$_counted_8h.html" title=" " alt="" coords="88,259,288,285"/>
+<area shape="rect" id="node8" href="$_array_8h.html" title=" " alt="" coords="226,184,406,211"/>
+<area shape="rect" id="node10" title=" " alt="" coords="430,184,495,211"/>
+<area shape="rect" id="node7" title=" " alt="" coords="152,333,224,360"/>
+<area shape="rect" id="node9" title=" " alt="" coords="312,259,371,285"/>
 </map>

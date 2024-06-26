@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/pdf417/decoder/PDF417DecodedBitStreamParser.cpp File Reference</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/pdf417/decoder/PDF417DecodedBitStreamParser.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_a5184062ba6f16105d8ab24013da1d1e.html">pdf417</a></li><li class="navelem"><a class="el" href="dir_9df11bb78439cd178d64ab8c95b8b8d7.html">decoder</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_a85fef204bd66c1475eb935e5135abd8.html">pdf417</a></li><li class="navelem"><a class="el" href="dir_be9d6a0f0c5bdb387ec060b018dd77ab.html">decoder</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,40 +74,40 @@ $(function() {
 <div class="contents">
 <div class="textblock"><code>#include &lt;<a class="el" href="stdint_8h_source.html">stdint.h</a>&gt;</code><br />
 <code>#include &lt;<a class="el" href="_big_integer_utils_8hh_source.html">bigint/BigIntegerUtils.hh</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_format_exception_8h_source.html">zxing/FormatException.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="pdf417_2decoder_2_decoded_bit_stream_parser_8h_source.html">zxing/pdf417/decoder/DecodedBitStreamParser.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_decoder_result_8h_source.html">zxing/common/DecoderResult.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_format_exception_8h_source.html">zqrdecode/FormatException.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="pdf417_2decoder_2_decoded_bit_stream_parser_8h_source.html">zqrdecode/pdf417/decoder/DecodedBitStreamParser.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_decoder_result_8h_source.html">zqrdecode/common/DecoderResult.h</a>&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for PDF417DecodedBitStreamParser.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_p_d_f417_decoded_bit_stream_parser_8cpp__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2pdf417_2decoder_2_p_d_f417_decoded_bit_stream_parser_8cpp" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2pdf417_2decoder_2_p_d_f417_decoded_bit_stream_parser_8cpp" id="_q_z_xing__source_v2_84_2zxing_2zxing_2pdf417_2decoder_2_p_d_f417_decoded_bit_stream_parser_8cpp">
-<area shape="rect" title=" " alt="" coords="355,5,602,61"/>
-<area shape="rect" href="stdint_8h.html" title=" " alt="" coords="95,117,161,143"/>
-<area shape="rect" href="_big_integer_utils_8hh.html" title=" " alt="" coords="607,117,769,143"/>
-<area shape="rect" href="_format_exception_8h.html" title=" " alt="" coords="798,117,965,143"/>
-<area shape="rect" href="pdf417_2decoder_2_decoded_bit_stream_parser_8h.html" title=" " alt="" coords="387,109,571,151"/>
-<area shape="rect" href="_decoder_result_8h.html" title=" " alt="" coords="235,199,445,225"/>
-<area shape="rect" title=" " alt="" coords="96,199,160,225"/>
-<area shape="rect" title=" " alt="" coords="5,199,72,225"/>
-<area shape="rect" href="_big_integer_8hh.html" title=" " alt="" coords="520,199,619,225"/>
-<area shape="rect" title=" " alt="" coords="663,348,718,375"/>
-<area shape="rect" title=" " alt="" coords="408,423,480,449"/>
-<area shape="rect" href="_big_unsigned_8hh.html" title=" " alt="" coords="508,273,623,300"/>
-<area shape="rect" href="_numberlike_array_8hh.html" title=" " alt="" coords="498,348,633,375"/>
-<area shape="rect" href="_reader_exception_8h.html" title=" " alt="" coords="799,199,967,225"/>
-<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="809,273,935,300"/>
-<area shape="rect" title=" " alt="" coords="833,348,911,375"/>
-<area shape="rect" href="_array_8h.html" title=" " alt="" coords="119,273,270,300"/>
-<area shape="rect" href="_str_8h.html" title=" " alt="" coords="345,273,484,300"/>
-<area shape="rect" title=" " alt="" coords="153,348,212,375"/>
-<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="236,348,407,375"/>
+<div class="center"><img src="_p_d_f417_decoded_bit_stream_parser_8cpp__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2pdf417_2decoder_2_p_d_f417_decoded_bit_stream_parser_8cpp" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2pdf417_2decoder_2_p_d_f417_decoded_bit_stream_parser_8cpp" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2pdf417_2decoder_2_p_d_f417_decoded_bit_stream_parser_8cpp">
+<area shape="rect" title=" " alt="" coords="351,5,569,76"/>
+<area shape="rect" href="stdint_8h.html" title=" " alt="" coords="95,131,161,158"/>
+<area shape="rect" href="_big_integer_utils_8hh.html" title=" " alt="" coords="586,131,747,158"/>
+<area shape="rect" href="_format_exception_8h.html" title=" " alt="" coords="777,131,973,158"/>
+<area shape="rect" href="pdf417_2decoder_2_decoded_bit_stream_parser_8h.html" title=" " alt="" coords="368,124,552,165"/>
+<area shape="rect" href="_decoder_result_8h.html" title=" " alt="" coords="235,213,424,255"/>
+<area shape="rect" title=" " alt="" coords="96,221,160,247"/>
+<area shape="rect" title=" " alt="" coords="5,221,72,247"/>
+<area shape="rect" href="_big_integer_8hh.html" title=" " alt="" coords="499,221,597,247"/>
+<area shape="rect" title=" " alt="" coords="643,377,698,404"/>
+<area shape="rect" title=" " alt="" coords="373,452,445,479"/>
+<area shape="rect" href="_big_unsigned_8hh.html" title=" " alt="" coords="488,303,603,329"/>
+<area shape="rect" href="_numberlike_array_8hh.html" title=" " alt="" coords="478,377,613,404"/>
+<area shape="rect" href="_reader_exception_8h.html" title=" " alt="" coords="779,221,976,247"/>
+<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="789,303,944,329"/>
+<area shape="rect" title=" " alt="" coords="827,377,906,404"/>
+<area shape="rect" href="_array_8h.html" title=" " alt="" coords="41,303,221,329"/>
+<area shape="rect" href="_str_8h.html" title=" " alt="" coords="297,303,463,329"/>
+<area shape="rect" title=" " alt="" coords="89,377,148,404"/>
+<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="172,377,372,404"/>
 </map>
 </div>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:52 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

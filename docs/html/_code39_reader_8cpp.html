@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/oned/Code39Reader.cpp File Reference</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/oned/Code39Reader.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_89b460aecacdb4679659afb99c74f3da.html">oned</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_0ae25b46d53b39d5776198a261105e14.html">oned</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -73,59 +73,59 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="_code39_reader_8h_source.html">Code39Reader.h</a>&quot;</code><br />
-<code>#include &lt;<a class="el" href="_one_d_result_point_8h_source.html">zxing/oned/OneDResultPoint.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_array_8h_source.html">zxing/common/Array.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_reader_exception_8h_source.html">zxing/ReaderException.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_not_found_exception_8h_source.html">zxing/NotFoundException.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_checksum_exception_8h_source.html">zxing/ChecksumException.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_one_d_result_point_8h_source.html">zqrdecode/oned/OneDResultPoint.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_array_8h_source.html">zqrdecode/common/Array.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_reader_exception_8h_source.html">zqrdecode/ReaderException.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_not_found_exception_8h_source.html">zqrdecode/NotFoundException.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_checksum_exception_8h_source.html">zqrdecode/ChecksumException.h</a>&gt;</code><br />
 <code>#include &lt;math.h&gt;</code><br />
 <code>#include &lt;limits.h&gt;</code><br />
 <code>#include &lt;algorithm&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for Code39Reader.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_code39_reader_8cpp__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2oned_2_code39_reader_8cpp" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2oned_2_code39_reader_8cpp" id="_q_z_xing__source_v2_84_2zxing_2zxing_2oned_2_code39_reader_8cpp">
-<area shape="rect" title=" " alt="" coords="1776,5,1980,47"/>
-<area shape="rect" href="_code39_reader_8h.html" title=" " alt="" coords="710,95,828,121"/>
-<area shape="rect" title=" " alt="" coords="1572,707,1635,733"/>
-<area shape="rect" href="_array_8h.html" title=" " alt="" coords="1091,625,1242,651"/>
-<area shape="rect" href="_one_d_result_point_8h.html" title=" " alt="" coords="1164,95,1366,121"/>
-<area shape="rect" href="_reader_exception_8h.html" title=" " alt="" coords="1900,169,2068,196"/>
-<area shape="rect" href="_not_found_exception_8h.html" title=" " alt="" coords="1787,95,1970,121"/>
-<area shape="rect" href="_checksum_exception_8h.html" title=" " alt="" coords="1994,95,2184,121"/>
-<area shape="rect" title=" " alt="" coords="2258,95,2322,121"/>
-<area shape="rect" title=" " alt="" coords="2346,95,2421,121"/>
-<area shape="rect" href="_one_d_reader_8h.html" title=" " alt="" coords="387,169,562,196"/>
-<area shape="rect" href="_bit_array_8h.html" title=" " alt="" coords="1347,543,1514,569"/>
-<area shape="rect" href="_result_8h.html" title=" " alt="" coords="506,543,613,569"/>
-<area shape="rect" href="_reader_8h.html" title=" " alt="" coords="449,244,558,271"/>
-<area shape="rect" href="_binary_bitmap_8h.html" title=" " alt="" coords="873,319,1020,345"/>
-<area shape="rect" href="_decode_hints_8h.html" title=" " alt="" coords="338,543,482,569"/>
-<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="668,707,838,733"/>
-<area shape="rect" href="_bit_matrix_8h.html" title=" " alt="" coords="978,468,1152,495"/>
-<area shape="rect" href="_binarizer_8h.html" title=" " alt="" coords="887,393,1006,420"/>
-<area shape="rect" title=" " alt="" coords="717,781,789,808"/>
-<area shape="rect" title=" " alt="" coords="1469,707,1522,733"/>
-<area shape="rect" href="_z_xing_8h.html" title=" " alt="" coords="1520,625,1623,651"/>
-<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="1647,617,1848,659"/>
-<area shape="rect" title=" " alt="" coords="1137,707,1196,733"/>
-<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="1684,707,1811,733"/>
-<area shape="rect" title=" " alt="" coords="74,781,128,808"/>
-<area shape="rect" title=" " alt="" coords="1708,781,1787,808"/>
-<area shape="rect" href="_luminance_source_8h.html" title=" " alt="" coords="846,543,1018,569"/>
-<area shape="rect" title=" " alt="" coords="899,625,964,651"/>
-<area shape="rect" href="_str_8h.html" title=" " alt="" coords="32,625,170,651"/>
-<area shape="rect" href="_result_point_8h.html" title=" " alt="" coords="738,625,874,651"/>
-<area shape="rect" href="_barcode_format_8h.html" title=" " alt="" coords="405,625,562,651"/>
-<area shape="rect" href="_result_point_callback_8h.html" title=" " alt="" coords="194,625,381,651"/>
-<area shape="rect" title=" " alt="" coords="1308,169,1366,196"/>
+<div class="center"><img src="_code39_reader_8cpp__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2oned_2_code39_reader_8cpp" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2oned_2_code39_reader_8cpp" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2oned_2_code39_reader_8cpp">
+<area shape="rect" title=" " alt="" coords="1904,5,2074,61"/>
+<area shape="rect" href="_code39_reader_8h.html" title=" " alt="" coords="860,117,979,143"/>
+<area shape="rect" title=" " alt="" coords="1746,736,1808,763"/>
+<area shape="rect" href="_array_8h.html" title=" " alt="" coords="1208,654,1388,681"/>
+<area shape="rect" href="_one_d_result_point_8h.html" title=" " alt="" coords="1334,109,1524,151"/>
+<area shape="rect" href="_reader_exception_8h.html" title=" " alt="" coords="2069,199,2266,225"/>
+<area shape="rect" href="_not_found_exception_8h.html" title=" " alt="" coords="1883,117,2095,143"/>
+<area shape="rect" href="_checksum_exception_8h.html" title=" " alt="" coords="2120,117,2338,143"/>
+<area shape="rect" title=" " alt="" coords="2413,117,2477,143"/>
+<area shape="rect" title=" " alt="" coords="2501,117,2576,143"/>
+<area shape="rect" href="_one_d_reader_8h.html" title=" " alt="" coords="446,199,650,225"/>
+<area shape="rect" href="_bit_array_8h.html" title=" " alt="" coords="1479,572,1675,599"/>
+<area shape="rect" href="_result_8h.html" title=" " alt="" coords="566,572,700,599"/>
+<area shape="rect" href="_reader_8h.html" title=" " alt="" coords="494,273,633,300"/>
+<area shape="rect" href="_binary_bitmap_8h.html" title=" " alt="" coords="968,348,1143,375"/>
+<area shape="rect" href="_decode_hints_8h.html" title=" " alt="" coords="368,572,541,599"/>
+<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="749,736,949,763"/>
+<area shape="rect" href="_bit_matrix_8h.html" title=" " alt="" coords="1088,497,1290,524"/>
+<area shape="rect" href="_binarizer_8h.html" title=" " alt="" coords="982,423,1129,449"/>
+<area shape="rect" title=" " alt="" coords="813,811,885,837"/>
+<area shape="rect" title=" " alt="" coords="1616,736,1669,763"/>
+<area shape="rect" href="_z_qrdecode_8h.html" title=" " alt="" coords="1667,654,1828,681"/>
+<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="1852,647,2027,688"/>
+<area shape="rect" title=" " alt="" coords="1269,736,1328,763"/>
+<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="1862,736,2017,763"/>
+<area shape="rect" title=" " alt="" coords="88,811,143,837"/>
+<area shape="rect" title=" " alt="" coords="1900,811,1979,837"/>
+<area shape="rect" href="_luminance_source_8h.html" title=" " alt="" coords="948,572,1150,599"/>
+<area shape="rect" title=" " alt="" coords="1016,654,1082,681"/>
+<area shape="rect" href="_str_8h.html" title=" " alt="" coords="32,654,199,681"/>
+<area shape="rect" href="_result_point_8h.html" title=" " alt="" coords="826,654,992,681"/>
+<area shape="rect" href="_barcode_format_8h.html" title=" " alt="" coords="464,654,650,681"/>
+<area shape="rect" href="_result_point_callback_8h.html" title=" " alt="" coords="224,654,440,681"/>
+<area shape="rect" title=" " alt="" coords="1466,199,1525,225"/>
 </map>
 </div>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:52 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

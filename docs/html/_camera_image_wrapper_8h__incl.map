@@ -1,11 +1,11 @@
-<map id="QZXing_sourceV2.4/CameraImageWrapper.h" name="QZXing_sourceV2.4/CameraImageWrapper.h">
-<area shape="rect" id="node1" title=" " alt="" coords="37,5,226,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,73,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="98,95,165,121"/>
-<area shape="rect" id="node4" href="$_luminance_source_8h.html" title=" " alt="" coords="189,95,396,121"/>
-<area shape="rect" id="node5" href="$_counted_8h.html" title=" " alt="" coords="94,244,265,271"/>
-<area shape="rect" id="node7" href="$_array_8h.html" title=" " alt="" coords="217,169,368,196"/>
-<area shape="rect" id="node9" title=" " alt="" coords="392,169,457,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="143,319,215,345"/>
-<area shape="rect" id="node8" title=" " alt="" coords="289,244,347,271"/>
+<map id="QZQrdecode_sourceV2.0/CameraImageWrapper.h" name="QZQrdecode_sourceV2.0/CameraImageWrapper.h">
+<area shape="rect" id="node1" title=" " alt="" coords="47,5,216,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,102,73,129"/>
+<area shape="rect" id="node3" title=" " alt="" coords="98,102,165,129"/>
+<area shape="rect" id="node4" href="$_luminance_source_8h.html" title=" " alt="" coords="189,95,335,136"/>
+<area shape="rect" id="node5" href="$_counted_8h.html" title=" " alt="" coords="34,259,234,285"/>
+<area shape="rect" id="node7" href="$_array_8h.html" title=" " alt="" coords="172,184,352,211"/>
+<area shape="rect" id="node9" title=" " alt="" coords="376,184,441,211"/>
+<area shape="rect" id="node6" title=" " alt="" coords="98,333,170,360"/>
+<area shape="rect" id="node8" title=" " alt="" coords="258,259,317,285"/>
 </map>

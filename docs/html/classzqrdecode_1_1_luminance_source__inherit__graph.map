@@ -1,0 +1,8 @@
+<map id="zqrdecode::LuminanceSource" name="zqrdecode::LuminanceSource">
+<area shape="rect" id="node1" title=" " alt="" coords="192,97,387,124"/>
+<area shape="rect" id="node3" href="$class_camera_image_wrapper.html" title=" " alt="" coords="465,5,617,32"/>
+<area shape="rect" id="node4" href="$classzqrdecode_1_1_greyscale_luminance_source.html" title=" " alt="" coords="435,57,647,98"/>
+<area shape="rect" id="node5" href="$classzqrdecode_1_1_greyscale_rotated_luminance_source.html" title=" " alt="" coords="443,122,638,163"/>
+<area shape="rect" id="node6" href="$classzqrdecode_1_1_inverted_luminance_source.html" title=" " alt="" coords="441,187,641,229"/>
+<area shape="rect" id="node2" href="$classzqrdecode_1_1_counted.html" title=" " alt="" coords="5,97,144,124"/>
+</map>

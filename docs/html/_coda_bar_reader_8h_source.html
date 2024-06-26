@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/oned/CodaBarReader.h Source File</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/oned/CodaBarReader.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_89b460aecacdb4679659afb99c74f3da.html">oned</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_0ae25b46d53b39d5776198a261105e14.html">oned</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -75,84 +75,70 @@ $(function() {
 <a href="_coda_bar_reader_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="comment">// -*- mode:c++; tab-width:2; indent-tabs-mode:nil; c-basic-offset:2 -*-</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef __CODA_BAR_READER_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define __CODA_BAR_READER_H__</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Copyright 2010 ZXing authors All rights reserved.</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> * you may not use this file except in compliance with the License.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * limitations under the License.</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_one_d_reader_8h.html">zxing/oned/OneDReader.h</a>&gt;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bit_array_8h.html">zxing/common/BitArray.h</a>&gt;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_result_8h.html">zxing/Result.h</a>&gt;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezxing.html">zxing</a> {</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacezxing_1_1oned.html">   25</a></span>&#160;<span class="keyword">namespace </span>oned {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classzxing_1_1oned_1_1_coda_bar_reader.html">   27</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html">CodaBarReader</a> : <span class="keyword">public</span> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html">OneDReader</a> {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a00d44699abb7a143a032be15714e4c6c">   29</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a00d44699abb7a143a032be15714e4c6c">MAX_ACCEPTABLE</a>;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a9c2e85a47479d97b9b6babd6f8114928">   30</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a9c2e85a47479d97b9b6babd6f8114928">PADDING</a>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="comment">// Keep some instance variables to avoid reallocations</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a5206d4babfbdd9d7df9a8f616b54fd4b">   33</a></span>&#160;  std::string <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a5206d4babfbdd9d7df9a8f616b54fd4b">decodeRowResult</a>;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a87043752ae4797dbda619ffd49c19ca5">   34</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a87043752ae4797dbda619ffd49c19ca5">counters</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classzxing_1_1oned_1_1_coda_bar_reader.html#aab5d0f2f11a601512b91146cd9f57b7d">   35</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#aab5d0f2f11a601512b91146cd9f57b7d">counterLength</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_one_d_reader_8h.html">zqrdecode/oned/OneDReader.h</a>&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_bit_array_8h.html">zqrdecode/common/BitArray.h</a>&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_result_8h.html">zqrdecode/Result.h</a>&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezqrdecode.html">zqrdecode</a> {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="namespacezqrdecode_1_1oned.html">   11</a></span>&#160;<span class="keyword">namespace </span>oned {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html">CodaBarReader</a> : <span class="keyword">public</span> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html">OneDReader</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a00d44699abb7a143a032be15714e4c6c">   15</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a00d44699abb7a143a032be15714e4c6c">MAX_ACCEPTABLE</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a9c2e85a47479d97b9b6babd6f8114928">   16</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a9c2e85a47479d97b9b6babd6f8114928">PADDING</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <span class="comment">// Keep some instance variables to avoid reallocations</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a17bc0fdc07bee647abe492ad3b0ee3e6">   19</a></span>&#160;  std::string <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a17bc0fdc07bee647abe492ad3b0ee3e6">decodeRowResult</a>;</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a8bc1bab09a656223a01374ccec1cfb46">   20</a></span>&#160;  std::vector&lt;int&gt; <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a8bc1bab09a656223a01374ccec1cfb46">counters</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a5b1e8c296539224c6c1cb1da335650d7">   21</a></span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a5b1e8c296539224c6c1cb1da335650d7">counterLength</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#abba765414637cebe08dfda939277c18d">CodaBarReader</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;Result&gt;</a> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#ae562605d15a7814c62a8cc07899d7f57">decodeRow</a>(<span class="keywordtype">int</span> rowNumber, <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitArray&gt;</a> row);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#ab1b26b1d536ce7280cb9ecfd4041afe9">validatePattern</a>(<span class="keywordtype">int</span> start);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#ae11f9a58914f76b970062a00832ea97a">setCounters</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitArray&gt;</a> row);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a79d60a9f0777261f7e3dd90287f6359a">counterAppend</a>(<span class="keywordtype">int</span> e);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#aeb5ce218223023e0ae266610e2b043b5">findStartPattern</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a463181ca3d2ad629367d8abc57481c30">arrayContains</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> array[], <span class="keywordtype">char</span> key);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#abba765414637cebe08dfda939277c18d">CodaBarReader</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a16c9945840f1c1d54482ab18fa158ab2">toNarrowWidePattern</a>(<span class="keywordtype">int</span> position);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;};</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <a class="code" href="classzxing_1_1_ref.html">Ref&lt;Result&gt;</a> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#ae562605d15a7814c62a8cc07899d7f57">decodeRow</a>(<span class="keywordtype">int</span> rowNumber, <a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitArray&gt;</a> row);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#ab1b26b1d536ce7280cb9ecfd4041afe9">validatePattern</a>(<span class="keywordtype">int</span> start);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#ae11f9a58914f76b970062a00832ea97a">setCounters</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitArray&gt;</a> row);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keywordtype">void</span> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a79d60a9f0777261f7e3dd90287f6359a">counterAppend</a>(<span class="keywordtype">int</span> e);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#aeb5ce218223023e0ae266610e2b043b5">findStartPattern</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">bool</span> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a463181ca3d2ad629367d8abc57481c30">arrayContains</a>(<span class="keywordtype">char</span> <span class="keyword">const</span> array[], <span class="keywordtype">char</span> key);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1oned_1_1_coda_bar_reader.html#a16c9945840f1c1d54482ab18fa158ab2">toNarrowWidePattern</a>(<span class="keywordtype">int</span> position);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;};</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_ab1b26b1d536ce7280cb9ecfd4041afe9"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#ab1b26b1d536ce7280cb9ecfd4041afe9">zxing::oned::CodaBarReader::validatePattern</a></div><div class="ttdeci">void validatePattern(int start)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:169</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_ae562605d15a7814c62a8cc07899d7f57"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#ae562605d15a7814c62a8cc07899d7f57">zxing::oned::CodaBarReader::decodeRow</a></div><div class="ttdeci">Ref&lt; Result &gt; decodeRow(int rowNumber, Ref&lt; BitArray &gt; row)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:79</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_a463181ca3d2ad629367d8abc57481c30"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#a463181ca3d2ad629367d8abc57481c30">zxing::oned::CodaBarReader::arrayContains</a></div><div class="ttdeci">static bool arrayContains(char const array[], char key)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:285</div></div>
-<div class="ttc" id="anamespacezxing_html"><div class="ttname"><a href="namespacezxing.html">zxing</a></div><div class="ttdef"><b>Definition:</b> QZXing.h:15</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_a5206d4babfbdd9d7df9a8f616b54fd4b"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#a5206d4babfbdd9d7df9a8f616b54fd4b">zxing::oned::CodaBarReader::decodeRowResult</a></div><div class="ttdeci">std::string decodeRowResult</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:33</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_a9c2e85a47479d97b9b6babd6f8114928"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#a9c2e85a47479d97b9b6babd6f8114928">zxing::oned::CodaBarReader::PADDING</a></div><div class="ttdeci">static const int PADDING</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:30</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html">zxing::oned::OneDReader</a></div><div class="ttdef"><b>Definition:</b> OneDReader.h:29</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_a79d60a9f0777261f7e3dd90287f6359a"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#a79d60a9f0777261f7e3dd90287f6359a">zxing::oned::CodaBarReader::counterAppend</a></div><div class="ttdeci">void counterAppend(int e)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:258</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_a16c9945840f1c1d54482ab18fa158ab2"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#a16c9945840f1c1d54482ab18fa158ab2">zxing::oned::CodaBarReader::toNarrowWidePattern</a></div><div class="ttdeci">int toNarrowWidePattern(int position)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:290</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_a00d44699abb7a143a032be15714e4c6c"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a00d44699abb7a143a032be15714e4c6c">zqrdecode::oned::CodaBarReader::MAX_ACCEPTABLE</a></div><div class="ttdeci">static const int MAX_ACCEPTABLE</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:15</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_ref_html"><div class="ttname"><a href="classzqrdecode_1_1_ref.html">zqrdecode::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:39</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_a17bc0fdc07bee647abe492ad3b0ee3e6"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a17bc0fdc07bee647abe492ad3b0ee3e6">zqrdecode::oned::CodaBarReader::decodeRowResult</a></div><div class="ttdeci">std::string decodeRowResult</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:19</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_abba765414637cebe08dfda939277c18d"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#abba765414637cebe08dfda939277c18d">zqrdecode::oned::CodaBarReader::CodaBarReader</a></div><div class="ttdeci">CodaBarReader()</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:62</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_ae562605d15a7814c62a8cc07899d7f57"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#ae562605d15a7814c62a8cc07899d7f57">zqrdecode::oned::CodaBarReader::decodeRow</a></div><div class="ttdeci">Ref&lt; Result &gt; decodeRow(int rowNumber, Ref&lt; BitArray &gt; row)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:65</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_ae11f9a58914f76b970062a00832ea97a"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#ae11f9a58914f76b970062a00832ea97a">zqrdecode::oned::CodaBarReader::setCounters</a></div><div class="ttdeci">void setCounters(Ref&lt; BitArray &gt; row)</div><div class="ttdoc">Records the size of all runs of white and black pixels, starting with white.</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:222</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_a5b1e8c296539224c6c1cb1da335650d7"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a5b1e8c296539224c6c1cb1da335650d7">zqrdecode::oned::CodaBarReader::counterLength</a></div><div class="ttdeci">int counterLength</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:21</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html">zqrdecode::oned::CodaBarReader</a></div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:13</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_aeb5ce218223023e0ae266610e2b043b5"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#aeb5ce218223023e0ae266610e2b043b5">zqrdecode::oned::CodaBarReader::findStartPattern</a></div><div class="ttdeci">int findStartPattern()</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:253</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_a8bc1bab09a656223a01374ccec1cfb46"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a8bc1bab09a656223a01374ccec1cfb46">zqrdecode::oned::CodaBarReader::counters</a></div><div class="ttdeci">std::vector&lt; int &gt; counters</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:20</div></div>
 <div class="ttc" id="a_bit_array_8h_html"><div class="ttname"><a href="_bit_array_8h.html">BitArray.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html">zxing::oned::CodaBarReader</a></div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:27</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_ae11f9a58914f76b970062a00832ea97a"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#ae11f9a58914f76b970062a00832ea97a">zxing::oned::CodaBarReader::setCounters</a></div><div class="ttdeci">void setCounters(Ref&lt; BitArray &gt; row)</div><div class="ttdoc">Records the size of all runs of white and black pixels, starting with white.</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:236</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_aeb5ce218223023e0ae266610e2b043b5"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#aeb5ce218223023e0ae266610e2b043b5">zxing::oned::CodaBarReader::findStartPattern</a></div><div class="ttdeci">int findStartPattern()</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:267</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_ab1b26b1d536ce7280cb9ecfd4041afe9"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#ab1b26b1d536ce7280cb9ecfd4041afe9">zqrdecode::oned::CodaBarReader::validatePattern</a></div><div class="ttdeci">void validatePattern(int start)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:155</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_a463181ca3d2ad629367d8abc57481c30"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a463181ca3d2ad629367d8abc57481c30">zqrdecode::oned::CodaBarReader::arrayContains</a></div><div class="ttdeci">static bool arrayContains(char const array[], char key)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:271</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_a79d60a9f0777261f7e3dd90287f6359a"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a79d60a9f0777261f7e3dd90287f6359a">zqrdecode::oned::CodaBarReader::counterAppend</a></div><div class="ttdeci">void counterAppend(int e)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:244</div></div>
 <div class="ttc" id="a_one_d_reader_8h_html"><div class="ttname"><a href="_one_d_reader_8h.html">OneDReader.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_abba765414637cebe08dfda939277c18d"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#abba765414637cebe08dfda939277c18d">zxing::oned::CodaBarReader::CodaBarReader</a></div><div class="ttdeci">CodaBarReader()</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:76</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html">zqrdecode::oned::OneDReader</a></div><div class="ttdef"><b>Definition:</b> OneDReader.h:16</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_a16c9945840f1c1d54482ab18fa158ab2"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a16c9945840f1c1d54482ab18fa158ab2">zqrdecode::oned::CodaBarReader::toNarrowWidePattern</a></div><div class="ttdeci">int toNarrowWidePattern(int position)</div><div class="ttdef"><b>Definition:</b> CodaBarReader.cpp:276</div></div>
 <div class="ttc" id="a_result_8h_html"><div class="ttname"><a href="_result_8h.html">Result.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_a87043752ae4797dbda619ffd49c19ca5"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#a87043752ae4797dbda619ffd49c19ca5">zxing::oned::CodaBarReader::counters</a></div><div class="ttdeci">std::vector&lt; int &gt; counters</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:34</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_aab5d0f2f11a601512b91146cd9f57b7d"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#aab5d0f2f11a601512b91146cd9f57b7d">zxing::oned::CodaBarReader::counterLength</a></div><div class="ttdeci">int counterLength</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:35</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_coda_bar_reader_html_a00d44699abb7a143a032be15714e4c6c"><div class="ttname"><a href="classzxing_1_1oned_1_1_coda_bar_reader.html#a00d44699abb7a143a032be15714e4c6c">zxing::oned::CodaBarReader::MAX_ACCEPTABLE</a></div><div class="ttdeci">static const int MAX_ACCEPTABLE</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:29</div></div>
-<div class="ttc" id="aclasszxing_1_1_ref_html"><div class="ttname"><a href="classzxing_1_1_ref.html">zxing::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:55</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_coda_bar_reader_html_a9c2e85a47479d97b9b6babd6f8114928"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_coda_bar_reader.html#a9c2e85a47479d97b9b6babd6f8114928">zqrdecode::oned::CodaBarReader::PADDING</a></div><div class="ttdeci">static const int PADDING</div><div class="ttdef"><b>Definition:</b> CodaBarReader.h:16</div></div>
+<div class="ttc" id="anamespacezqrdecode_html"><div class="ttname"><a href="namespacezqrdecode.html">zqrdecode</a></div><div class="ttdef"><b>Definition:</b> QZqrDecode.h:15</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

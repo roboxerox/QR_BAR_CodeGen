@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/Result.h Source File</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/Result.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -77,86 +77,73 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment"> *  Result.h</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  zxing</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  zqrdecode</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *  Copyright 2010 ZXing authors All rights reserved.</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * you may not use this file except in compliance with the License.</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * limitations under the License.</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_array_8h.html">zxing/common/Array.h</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_counted_8h.html">zxing/common/Counted.h</a>&gt;</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_str_8h.html">zxing/common/Str.h</a>&gt;</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_result_point_8h.html">zxing/ResultPoint.h</a>&gt;</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_barcode_format_8h.html">zxing/BarcodeFormat.h</a>&gt;</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezxing.html">zxing</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classzxing_1_1_result.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzxing_1_1_result.html">Result</a> : <span class="keyword">public</span> <a class="code" href="classzxing_1_1_counted.html">Counted</a> {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classzxing_1_1_result.html#aaffe574979c3fb45f5b6ac77a2b52254">   34</a></span>&#160;  <a class="code" href="classzxing_1_1_ref.html">Ref&lt;String&gt;</a> <a class="code" href="classzxing_1_1_result.html#aaffe574979c3fb45f5b6ac77a2b52254">text_</a>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="classzxing_1_1_result.html#a40d67dab6c38c46d435c8c38e104c997">   35</a></span>&#160;  <a class="code" href="classzxing_1_1_array_ref.html">ArrayRef&lt;char&gt;</a> <a class="code" href="classzxing_1_1_result.html#a40d67dab6c38c46d435c8c38e104c997">rawBytes_</a>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classzxing_1_1_result.html#a5cbe452c6cba20d64c336ed325199567">   36</a></span>&#160;  <a class="code" href="classzxing_1_1_array_ref.html">ArrayRef&lt; Ref&lt;ResultPoint&gt;</a> &gt; <a class="code" href="classzxing_1_1_result.html#a5cbe452c6cba20d64c336ed325199567">resultPoints_</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classzxing_1_1_result.html#a9deecf5a957bfa3ce76c7d3827f558c3">   37</a></span>&#160;  <a class="code" href="classzxing_1_1_barcode_format.html">BarcodeFormat</a> <a class="code" href="classzxing_1_1_result.html#a9deecf5a957bfa3ce76c7d3827f558c3">format_</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="classzxing_1_1_result.html#a5252273e8338211b69bda1ca046d083c">   38</a></span>&#160;  std::string <a class="code" href="classzxing_1_1_result.html#a5252273e8338211b69bda1ca046d083c">charSet_</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_array_8h.html">zqrdecode/common/Array.h</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_counted_8h.html">zqrdecode/common/Counted.h</a>&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_str_8h.html">zqrdecode/common/Str.h</a>&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_result_point_8h.html">zqrdecode/ResultPoint.h</a>&gt;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_barcode_format_8h.html">zqrdecode/BarcodeFormat.h</a>&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezqrdecode.html">zqrdecode</a> {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_result.html">   19</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzqrdecode_1_1_result.html">Result</a> : <span class="keyword">public</span> <a class="code" href="classzqrdecode_1_1_counted.html">Counted</a> {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_result.html#a99c9755a8131fa0334ef5026412424a0">   21</a></span>&#160;  <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;String&gt;</a> <a class="code" href="classzqrdecode_1_1_result.html#a99c9755a8131fa0334ef5026412424a0">text_</a>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_result.html#ac610f8cd83897c17fde0caa34b47a59e">   22</a></span>&#160;  <a class="code" href="classzqrdecode_1_1_array_ref.html">ArrayRef&lt;char&gt;</a> <a class="code" href="classzqrdecode_1_1_result.html#ac610f8cd83897c17fde0caa34b47a59e">rawBytes_</a>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_result.html#a7b677a096a1c860c1aff023b34152e20">   23</a></span>&#160;  <a class="code" href="classzqrdecode_1_1_array_ref.html">ArrayRef&lt; Ref&lt;ResultPoint&gt;</a> &gt; <a class="code" href="classzqrdecode_1_1_result.html#a7b677a096a1c860c1aff023b34152e20">resultPoints_</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_result.html#aa5022b7c99577cfadc9873d2f350c1c4">   24</a></span>&#160;  <a class="code" href="classzqrdecode_1_1_barcode_format.html">BarcodeFormat</a> <a class="code" href="classzqrdecode_1_1_result.html#aa5022b7c99577cfadc9873d2f350c1c4">format_</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1_result.html#a5e5cd8c468a7bbf4fbaf69fd29f88cd9">   25</a></span>&#160;  std::string <a class="code" href="classzqrdecode_1_1_result.html#a5e5cd8c468a7bbf4fbaf69fd29f88cd9">charSet_</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  <a class="code" href="classzqrdecode_1_1_result.html#a3e77daa35263a8cdd80c0280930a9ab4">Result</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;String&gt;</a> text,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;         <a class="code" href="classzqrdecode_1_1_array_ref.html">ArrayRef&lt;char&gt;</a> rawBytes,</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;         <a class="code" href="classzqrdecode_1_1_array_ref.html">ArrayRef</a>&lt; <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;ResultPoint&gt;</a> &gt; resultPoints,</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;         <a class="code" href="classzqrdecode_1_1_barcode_format.html">BarcodeFormat</a> format, std::string charSet = <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  <a class="code" href="classzqrdecode_1_1_result.html#ab83cf33a31236b3da75d66aaf9a05ed0">~Result</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;  <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;String&gt;</a> <a class="code" href="classzqrdecode_1_1_result.html#a13aeddef6aa873df07fe5eff76974f2f">getText</a>();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  <a class="code" href="classzqrdecode_1_1_array_ref.html">ArrayRef&lt;char&gt;</a> <a class="code" href="classzqrdecode_1_1_result.html#ac84e0c12fd554f0976a04acaf1f8c50d">getRawBytes</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  <a class="code" href="classzqrdecode_1_1_array_ref.html">ArrayRef&lt; Ref&lt;ResultPoint&gt;</a> &gt; <span class="keyword">const</span>&amp; <a class="code" href="classzqrdecode_1_1_result.html#a92394960b8cd626da1065d1fad0b21eb">getResultPoints</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  <a class="code" href="classzqrdecode_1_1_array_ref.html">ArrayRef&lt; Ref&lt;ResultPoint&gt;</a> &gt;&amp; <a class="code" href="classzqrdecode_1_1_result.html#a92394960b8cd626da1065d1fad0b21eb">getResultPoints</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <a class="code" href="classzqrdecode_1_1_barcode_format.html">BarcodeFormat</a> <a class="code" href="classzqrdecode_1_1_result.html#afecef6a9cde3c703e4ba4607f067b148">getBarcodeFormat</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  std::string <a class="code" href="classzqrdecode_1_1_result.html#a17b65b3bd78960128f34ccdef8705531">getCharSet</a>() <span class="keyword">const</span>;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  <a class="code" href="classzxing_1_1_result.html#a3e77daa35263a8cdd80c0280930a9ab4">Result</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;String&gt;</a> text,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;         <a class="code" href="classzxing_1_1_array_ref.html">ArrayRef&lt;char&gt;</a> rawBytes,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;         <a class="code" href="classzxing_1_1_array_ref.html">ArrayRef</a>&lt; <a class="code" href="classzxing_1_1_ref.html">Ref&lt;ResultPoint&gt;</a> &gt; resultPoints,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;         <a class="code" href="classzxing_1_1_barcode_format.html">BarcodeFormat</a> format, std::string charSet = <span class="stringliteral">&quot;&quot;</span>);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  <a class="code" href="classzxing_1_1_result.html#ab83cf33a31236b3da75d66aaf9a05ed0">~Result</a>();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <a class="code" href="classzxing_1_1_ref.html">Ref&lt;String&gt;</a> <a class="code" href="classzxing_1_1_result.html#a13aeddef6aa873df07fe5eff76974f2f">getText</a>();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  <a class="code" href="classzxing_1_1_array_ref.html">ArrayRef&lt;char&gt;</a> <a class="code" href="classzxing_1_1_result.html#ac84e0c12fd554f0976a04acaf1f8c50d">getRawBytes</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <a class="code" href="classzxing_1_1_array_ref.html">ArrayRef&lt; Ref&lt;ResultPoint&gt;</a> &gt; <span class="keyword">const</span>&amp; <a class="code" href="classzxing_1_1_result.html#a92394960b8cd626da1065d1fad0b21eb">getResultPoints</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  <a class="code" href="classzxing_1_1_array_ref.html">ArrayRef&lt; Ref&lt;ResultPoint&gt;</a> &gt;&amp; <a class="code" href="classzxing_1_1_result.html#a92394960b8cd626da1065d1fad0b21eb">getResultPoints</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  <a class="code" href="classzxing_1_1_barcode_format.html">BarcodeFormat</a> <a class="code" href="classzxing_1_1_result.html#a4d17ff8233419511e74a0a85ae29515f">getBarcodeFormat</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  std::string <a class="code" href="classzxing_1_1_result.html#a17b65b3bd78960128f34ccdef8705531">getCharSet</a>() <span class="keyword">const</span>;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classzxing_1_1_result.html#af56d0651dc870ed40b911f7dd79c4692">operator&lt;&lt;</a>(std::ostream &amp;out, <a class="code" href="classzxing_1_1_result.html">Result</a>&amp; result);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;};</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // __RESULT_H__</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">friend</span> std::ostream&amp; <a class="code" href="classzqrdecode_1_1_result.html#af56d0651dc870ed40b911f7dd79c4692">operator&lt;&lt;</a>(std::ostream &amp;out, <a class="code" href="classzqrdecode_1_1_result.html">Result</a>&amp; result);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;};</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#endif // __RESULT_H__</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasszxing_1_1_result_html_a17b65b3bd78960128f34ccdef8705531"><div class="ttname"><a href="classzxing_1_1_result.html#a17b65b3bd78960128f34ccdef8705531">zxing::Result::getCharSet</a></div><div class="ttdeci">std::string getCharSet() const</div><div class="ttdef"><b>Definition:</b> Result.cpp:63</div></div>
 <div class="ttc" id="a_counted_8h_html"><div class="ttname"><a href="_counted_8h.html">Counted.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_counted_html"><div class="ttname"><a href="classzxing_1_1_counted.html">zxing::Counted</a></div><div class="ttdef"><b>Definition:</b> Counted.h:26</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html"><div class="ttname"><a href="classzxing_1_1_result.html">zxing::Result</a></div><div class="ttdef"><b>Definition:</b> Result.h:32</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html"><div class="ttname"><a href="classzqrdecode_1_1_result.html">zqrdecode::Result</a></div><div class="ttdef"><b>Definition:</b> Result.h:19</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_ref_html"><div class="ttname"><a href="classzqrdecode_1_1_ref.html">zqrdecode::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:39</div></div>
 <div class="ttc" id="a_result_point_8h_html"><div class="ttname"><a href="_result_point_8h.html">ResultPoint.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_a3e77daa35263a8cdd80c0280930a9ab4"><div class="ttname"><a href="classzxing_1_1_result.html#a3e77daa35263a8cdd80c0280930a9ab4">zxing::Result::Result</a></div><div class="ttdeci">Result(Ref&lt; String &gt; text, ArrayRef&lt; char &gt; rawBytes, ArrayRef&lt; Ref&lt; ResultPoint &gt; &gt; resultPoints, BarcodeFormat format, std::string charSet=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> Result.cpp:33</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_a92394960b8cd626da1065d1fad0b21eb"><div class="ttname"><a href="classzxing_1_1_result.html#a92394960b8cd626da1065d1fad0b21eb">zxing::Result::getResultPoints</a></div><div class="ttdeci">ArrayRef&lt; Ref&lt; ResultPoint &gt; &gt; const  &amp; getResultPoints() const</div><div class="ttdef"><b>Definition:</b> Result.cpp:51</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_a5252273e8338211b69bda1ca046d083c"><div class="ttname"><a href="classzxing_1_1_result.html#a5252273e8338211b69bda1ca046d083c">zxing::Result::charSet_</a></div><div class="ttdeci">std::string charSet_</div><div class="ttdef"><b>Definition:</b> Result.h:38</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_ac84e0c12fd554f0976a04acaf1f8c50d"><div class="ttname"><a href="classzxing_1_1_result.html#ac84e0c12fd554f0976a04acaf1f8c50d">zxing::Result::getRawBytes</a></div><div class="ttdeci">ArrayRef&lt; char &gt; getRawBytes()</div><div class="ttdef"><b>Definition:</b> Result.cpp:47</div></div>
-<div class="ttc" id="aclasszxing_1_1_barcode_format_html"><div class="ttname"><a href="classzxing_1_1_barcode_format.html">zxing::BarcodeFormat</a></div><div class="ttdef"><b>Definition:</b> BarcodeFormat.h:26</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_a13aeddef6aa873df07fe5eff76974f2f"><div class="ttname"><a href="classzxing_1_1_result.html#a13aeddef6aa873df07fe5eff76974f2f">zxing::Result::getText</a></div><div class="ttdeci">Ref&lt; String &gt; getText()</div><div class="ttdef"><b>Definition:</b> Result.cpp:43</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_a17b65b3bd78960128f34ccdef8705531"><div class="ttname"><a href="classzqrdecode_1_1_result.html#a17b65b3bd78960128f34ccdef8705531">zqrdecode::Result::getCharSet</a></div><div class="ttdeci">std::string getCharSet() const</div><div class="ttdef"><b>Definition:</b> Result.cpp:49</div></div>
 <div class="ttc" id="a_str_8h_html"><div class="ttname"><a href="_str_8h.html">Str.h</a></div></div>
-<div class="ttc" id="anamespacezxing_html"><div class="ttname"><a href="namespacezxing.html">zxing</a></div><div class="ttdef"><b>Definition:</b> QZXing.h:15</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_a40d67dab6c38c46d435c8c38e104c997"><div class="ttname"><a href="classzxing_1_1_result.html#a40d67dab6c38c46d435c8c38e104c997">zxing::Result::rawBytes_</a></div><div class="ttdeci">ArrayRef&lt; char &gt; rawBytes_</div><div class="ttdef"><b>Definition:</b> Result.h:35</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_ab83cf33a31236b3da75d66aaf9a05ed0"><div class="ttname"><a href="classzxing_1_1_result.html#ab83cf33a31236b3da75d66aaf9a05ed0">zxing::Result::~Result</a></div><div class="ttdeci">~Result()</div><div class="ttdef"><b>Definition:</b> Result.cpp:40</div></div>
-<div class="ttc" id="aclasszxing_1_1_array_ref_html"><div class="ttname"><a href="classzxing_1_1_array_ref.html">zxing::ArrayRef&lt; char &gt;</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_aaffe574979c3fb45f5b6ac77a2b52254"><div class="ttname"><a href="classzxing_1_1_result.html#aaffe574979c3fb45f5b6ac77a2b52254">zxing::Result::text_</a></div><div class="ttdeci">Ref&lt; String &gt; text_</div><div class="ttdef"><b>Definition:</b> Result.h:34</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_a5cbe452c6cba20d64c336ed325199567"><div class="ttname"><a href="classzxing_1_1_result.html#a5cbe452c6cba20d64c336ed325199567">zxing::Result::resultPoints_</a></div><div class="ttdeci">ArrayRef&lt; Ref&lt; ResultPoint &gt; &gt; resultPoints_</div><div class="ttdef"><b>Definition:</b> Result.h:36</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_a4d17ff8233419511e74a0a85ae29515f"><div class="ttname"><a href="classzxing_1_1_result.html#a4d17ff8233419511e74a0a85ae29515f">zxing::Result::getBarcodeFormat</a></div><div class="ttdeci">BarcodeFormat getBarcodeFormat() const</div><div class="ttdef"><b>Definition:</b> Result.cpp:59</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_ab83cf33a31236b3da75d66aaf9a05ed0"><div class="ttname"><a href="classzqrdecode_1_1_result.html#ab83cf33a31236b3da75d66aaf9a05ed0">zqrdecode::Result::~Result</a></div><div class="ttdeci">~Result()</div><div class="ttdef"><b>Definition:</b> Result.cpp:26</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_a92394960b8cd626da1065d1fad0b21eb"><div class="ttname"><a href="classzqrdecode_1_1_result.html#a92394960b8cd626da1065d1fad0b21eb">zqrdecode::Result::getResultPoints</a></div><div class="ttdeci">ArrayRef&lt; Ref&lt; ResultPoint &gt; &gt; const  &amp; getResultPoints() const</div><div class="ttdef"><b>Definition:</b> Result.cpp:37</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_a5e5cd8c468a7bbf4fbaf69fd29f88cd9"><div class="ttname"><a href="classzqrdecode_1_1_result.html#a5e5cd8c468a7bbf4fbaf69fd29f88cd9">zqrdecode::Result::charSet_</a></div><div class="ttdeci">std::string charSet_</div><div class="ttdef"><b>Definition:</b> Result.h:25</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_counted_html"><div class="ttname"><a href="classzqrdecode_1_1_counted.html">zqrdecode::Counted</a></div><div class="ttdef"><b>Definition:</b> Counted.h:10</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_array_ref_html"><div class="ttname"><a href="classzqrdecode_1_1_array_ref.html">zqrdecode::ArrayRef&lt; char &gt;</a></div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_barcode_format_html"><div class="ttname"><a href="classzqrdecode_1_1_barcode_format.html">zqrdecode::BarcodeFormat</a></div><div class="ttdef"><b>Definition:</b> BarcodeFormat.h:12</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_a3e77daa35263a8cdd80c0280930a9ab4"><div class="ttname"><a href="classzqrdecode_1_1_result.html#a3e77daa35263a8cdd80c0280930a9ab4">zqrdecode::Result::Result</a></div><div class="ttdeci">Result(Ref&lt; String &gt; text, ArrayRef&lt; char &gt; rawBytes, ArrayRef&lt; Ref&lt; ResultPoint &gt; &gt; resultPoints, BarcodeFormat format, std::string charSet=&quot;&quot;)</div><div class="ttdef"><b>Definition:</b> Result.cpp:19</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_aa5022b7c99577cfadc9873d2f350c1c4"><div class="ttname"><a href="classzqrdecode_1_1_result.html#aa5022b7c99577cfadc9873d2f350c1c4">zqrdecode::Result::format_</a></div><div class="ttdeci">BarcodeFormat format_</div><div class="ttdef"><b>Definition:</b> Result.h:24</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_ac610f8cd83897c17fde0caa34b47a59e"><div class="ttname"><a href="classzqrdecode_1_1_result.html#ac610f8cd83897c17fde0caa34b47a59e">zqrdecode::Result::rawBytes_</a></div><div class="ttdeci">ArrayRef&lt; char &gt; rawBytes_</div><div class="ttdef"><b>Definition:</b> Result.h:22</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_afecef6a9cde3c703e4ba4607f067b148"><div class="ttname"><a href="classzqrdecode_1_1_result.html#afecef6a9cde3c703e4ba4607f067b148">zqrdecode::Result::getBarcodeFormat</a></div><div class="ttdeci">BarcodeFormat getBarcodeFormat() const</div><div class="ttdef"><b>Definition:</b> Result.cpp:45</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_a13aeddef6aa873df07fe5eff76974f2f"><div class="ttname"><a href="classzqrdecode_1_1_result.html#a13aeddef6aa873df07fe5eff76974f2f">zqrdecode::Result::getText</a></div><div class="ttdeci">Ref&lt; String &gt; getText()</div><div class="ttdef"><b>Definition:</b> Result.cpp:29</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_ac84e0c12fd554f0976a04acaf1f8c50d"><div class="ttname"><a href="classzqrdecode_1_1_result.html#ac84e0c12fd554f0976a04acaf1f8c50d">zqrdecode::Result::getRawBytes</a></div><div class="ttdeci">ArrayRef&lt; char &gt; getRawBytes()</div><div class="ttdef"><b>Definition:</b> Result.cpp:33</div></div>
 <div class="ttc" id="a_array_8h_html"><div class="ttname"><a href="_array_8h.html">Array.h</a></div></div>
 <div class="ttc" id="a_barcode_format_8h_html"><div class="ttname"><a href="_barcode_format_8h.html">BarcodeFormat.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_af56d0651dc870ed40b911f7dd79c4692"><div class="ttname"><a href="classzxing_1_1_result.html#af56d0651dc870ed40b911f7dd79c4692">zxing::Result::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Result &amp;result)</div></div>
-<div class="ttc" id="aclasszxing_1_1_ref_html"><div class="ttname"><a href="classzxing_1_1_ref.html">zxing::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:55</div></div>
-<div class="ttc" id="aclasszxing_1_1_result_html_a9deecf5a957bfa3ce76c7d3827f558c3"><div class="ttname"><a href="classzxing_1_1_result.html#a9deecf5a957bfa3ce76c7d3827f558c3">zxing::Result::format_</a></div><div class="ttdeci">BarcodeFormat format_</div><div class="ttdef"><b>Definition:</b> Result.h:37</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_a7b677a096a1c860c1aff023b34152e20"><div class="ttname"><a href="classzqrdecode_1_1_result.html#a7b677a096a1c860c1aff023b34152e20">zqrdecode::Result::resultPoints_</a></div><div class="ttdeci">ArrayRef&lt; Ref&lt; ResultPoint &gt; &gt; resultPoints_</div><div class="ttdef"><b>Definition:</b> Result.h:23</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_a99c9755a8131fa0334ef5026412424a0"><div class="ttname"><a href="classzqrdecode_1_1_result.html#a99c9755a8131fa0334ef5026412424a0">zqrdecode::Result::text_</a></div><div class="ttdeci">Ref&lt; String &gt; text_</div><div class="ttdef"><b>Definition:</b> Result.h:21</div></div>
+<div class="ttc" id="anamespacezqrdecode_html"><div class="ttname"><a href="namespacezqrdecode.html">zqrdecode</a></div><div class="ttdef"><b>Definition:</b> QZqrDecode.h:15</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_result_html_af56d0651dc870ed40b911f7dd79c4692"><div class="ttname"><a href="classzqrdecode_1_1_result.html#af56d0651dc870ed40b911f7dd79c4692">zqrdecode::Result::operator&lt;&lt;</a></div><div class="ttdeci">friend std::ostream &amp; operator&lt;&lt;(std::ostream &amp;out, Result &amp;result)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

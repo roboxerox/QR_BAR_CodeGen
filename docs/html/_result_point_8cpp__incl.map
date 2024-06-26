@@ -1,9 +1,9 @@
-<map id="QZXing_sourceV2.4/zxing/zxing/ResultPoint.cpp" name="QZXing_sourceV2.4/zxing/zxing/ResultPoint.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="182,5,357,47"/>
-<area shape="rect" id="node2" href="$_result_point_8h.html" title=" " alt="" coords="116,102,252,129"/>
-<area shape="rect" id="node6" href="$_math_utils_8h.html" title=" " alt="" coords="277,95,435,136"/>
-<area shape="rect" id="node3" href="$_counted_8h.html" title=" " alt="" coords="5,184,176,211"/>
-<area shape="rect" id="node5" title=" " alt="" coords="200,184,259,211"/>
-<area shape="rect" id="node4" title=" " alt="" coords="55,259,127,285"/>
-<area shape="rect" id="node7" title=" " alt="" coords="327,184,385,211"/>
+<map id="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/ResultPoint.cpp" name="QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/ResultPoint.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="215,5,385,61"/>
+<area shape="rect" id="node2" href="$_result_point_8h.html" title=" " alt="" coords="117,117,283,143"/>
+<area shape="rect" id="node6" href="$_math_utils_8h.html" title=" " alt="" coords="307,109,493,151"/>
+<area shape="rect" id="node3" href="$_counted_8h.html" title=" " alt="" coords="5,199,205,225"/>
+<area shape="rect" id="node5" title=" " alt="" coords="229,199,288,225"/>
+<area shape="rect" id="node4" title=" " alt="" coords="69,273,141,300"/>
+<area shape="rect" id="node7" title=" " alt="" coords="371,199,429,225"/>
 </map>

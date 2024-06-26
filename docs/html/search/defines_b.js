@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['qzxingshared_5fexport_3253',['QZXINGSHARED_EXPORT',['../_q_z_xing__global_8h.html#a81ad01f993c2c28e44888bc37d756054',1,'QZXing_global.h']]]
+  ['qzqrdecodeshared_5fexport_3258',['QZQRDECODESHARED_EXPORT',['../_q_zqr_decode__global_8h.html#a6dda535d6425a3cae86213927f6ef308',1,'QZqrDecode_global.h']]]
 ];

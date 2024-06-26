@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['alpha_3108',['ALPHA',['../classzxing_1_1pdf417_1_1_decoded_bit_stream_parser.html#a15ba72b31c9fb9e71c6f47be82bbef65a24149ec87b97687a5bb3e17fcd92bbf4',1,'zxing::pdf417::DecodedBitStreamParser']]],
-  ['alpha_5fshift_3109',['ALPHA_SHIFT',['../classzxing_1_1pdf417_1_1_decoded_bit_stream_parser.html#a15ba72b31c9fb9e71c6f47be82bbef65a0a373013c5ec515a911f8296c47ea7e9',1,'zxing::pdf417::DecodedBitStreamParser']]],
-  ['aztec_3110',['AZTEC',['../classzxing_1_1_barcode_format.html#a53cafdcea01164c0a83bf0326c7061a3a6942f85384df255fe9e3efd1b22bafbc',1,'zxing::BarcodeFormat']]]
+  ['alpha_3113',['ALPHA',['../classzqrdecode_1_1pdf417_1_1_decoded_bit_stream_parser.html#a21062babff1151bd48a3ce3209bf5cb4a451d377808d2cab088c6575543e9ff8c',1,'zqrdecode::pdf417::DecodedBitStreamParser']]],
+  ['alpha_5fshift_3114',['ALPHA_SHIFT',['../classzqrdecode_1_1pdf417_1_1_decoded_bit_stream_parser.html#a21062babff1151bd48a3ce3209bf5cb4a4d4d7425b4bd330192a9dcd6d5074aae',1,'zqrdecode::pdf417::DecodedBitStreamParser']]],
+  ['aztec_3115',['AZTEC',['../classzqrdecode_1_1_barcode_format.html#ae46f46d069ac751e3656c32cf965b3c1a4d3b0b8dc6b531c819ace2b95ae4fc6a',1,'zqrdecode::BarcodeFormat']]]
 ];

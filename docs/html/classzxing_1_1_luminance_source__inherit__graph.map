@@ -1,8 +1,0 @@
-<map id="zxing::LuminanceSource" name="zxing::LuminanceSource">
-<area shape="rect" id="node1" title=" " alt="" coords="164,97,329,124"/>
-<area shape="rect" id="node3" href="$class_camera_image_wrapper.html" title=" " alt="" coords="416,5,568,32"/>
-<area shape="rect" id="node4" href="$classzxing_1_1_greyscale_luminance_source.html" title=" " alt="" coords="401,57,583,98"/>
-<area shape="rect" id="node5" href="$classzxing_1_1_greyscale_rotated_luminance_source.html" title=" " alt="" coords="377,122,607,163"/>
-<area shape="rect" id="node6" href="$classzxing_1_1_inverted_luminance_source.html" title=" " alt="" coords="407,187,577,229"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_counted.html" title=" " alt="" coords="5,97,116,124"/>
-</map>

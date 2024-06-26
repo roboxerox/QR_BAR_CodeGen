@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/common/detector/WhiteRectangleDetector.cpp File Reference</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/common/detector/WhiteRectangleDetector.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_a3ace16ddd93045efc82ba13e68cbc36.html">common</a></li><li class="navelem"><a class="el" href="dir_1c37374ea53b376430f93a88c59f7f96.html">detector</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_4d73b296e36c89c6e527070d6d113155.html">common</a></li><li class="navelem"><a class="el" href="dir_c1ab4fb7bc867766c0564215e01c65c8.html">detector</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -72,42 +72,42 @@ $(function() {
 <div class="title">WhiteRectangleDetector.cpp File Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;<a class="el" href="_not_found_exception_8h_source.html">zxing/NotFoundException.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_white_rectangle_detector_8h_source.html">zxing/common/detector/WhiteRectangleDetector.h</a>&gt;</code><br />
-<code>#include &lt;<a class="el" href="_math_utils_8h_source.html">zxing/common/detector/MathUtils.h</a>&gt;</code><br />
+<div class="textblock"><code>#include &lt;<a class="el" href="_not_found_exception_8h_source.html">zqrdecode/NotFoundException.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_white_rectangle_detector_8h_source.html">zqrdecode/common/detector/WhiteRectangleDetector.h</a>&gt;</code><br />
+<code>#include &lt;<a class="el" href="_math_utils_8h_source.html">zqrdecode/common/detector/MathUtils.h</a>&gt;</code><br />
 <code>#include &lt;sstream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for WhiteRectangleDetector.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="_white_rectangle_detector_8cpp__incl.png" border="0" usemap="#_q_z_xing__source_v2_84_2zxing_2zxing_2common_2detector_2_white_rectangle_detector_8cpp" alt=""/></div>
-<map name="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2detector_2_white_rectangle_detector_8cpp" id="_q_z_xing__source_v2_84_2zxing_2zxing_2common_2detector_2_white_rectangle_detector_8cpp">
-<area shape="rect" title=" " alt="" coords="866,5,1059,61"/>
-<area shape="rect" href="_not_found_exception_8h.html" title=" " alt="" coords="465,117,647,143"/>
-<area shape="rect" href="_white_rectangle_detector_8h.html" title=" " alt="" coords="777,109,956,151"/>
-<area shape="rect" href="_math_utils_8h.html" title=" " alt="" coords="981,109,1139,151"/>
-<area shape="rect" title=" " alt="" coords="1164,117,1233,143"/>
-<area shape="rect" href="_reader_exception_8h.html" title=" " alt="" coords="339,199,507,225"/>
-<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="231,437,358,464"/>
-<area shape="rect" title=" " alt="" coords="293,512,347,539"/>
-<area shape="rect" title=" " alt="" coords="190,512,269,539"/>
-<area shape="rect" title=" " alt="" coords="816,437,875,464"/>
-<area shape="rect" href="_result_point_8h.html" title=" " alt="" coords="904,355,1040,382"/>
-<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="588,437,759,464"/>
-<area shape="rect" href="_bit_matrix_8h.html" title=" " alt="" coords="531,199,706,225"/>
-<area shape="rect" title=" " alt="" coords="544,512,616,539"/>
-<area shape="rect" href="_bit_array_8h.html" title=" " alt="" coords="385,273,551,300"/>
-<area shape="rect" title=" " alt="" coords="5,437,59,464"/>
-<area shape="rect" href="_array_8h.html" title=" " alt="" coords="627,355,778,382"/>
-<area shape="rect" href="_z_xing_8h.html" title=" " alt="" coords="70,355,173,382"/>
-<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="249,348,450,389"/>
-<area shape="rect" title=" " alt="" coords="90,437,153,464"/>
-<area shape="rect" title=" " alt="" coords="1115,199,1173,225"/>
+<div class="center"><img src="_white_rectangle_detector_8cpp__incl.png" border="0" usemap="#_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2detector_2_white_rectangle_detector_8cpp" alt=""/></div>
+<map name="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2detector_2_white_rectangle_detector_8cpp" id="_q_z_qrdecode__source_v2_80_2zqrdecode_2zqrdecode_2common_2detector_2_white_rectangle_detector_8cpp">
+<area shape="rect" title=" " alt="" coords="921,5,1145,76"/>
+<area shape="rect" href="_not_found_exception_8h.html" title=" " alt="" coords="477,131,689,158"/>
+<area shape="rect" href="_white_rectangle_detector_8h.html" title=" " alt="" coords="835,124,1021,165"/>
+<area shape="rect" href="_math_utils_8h.html" title=" " alt="" coords="1045,124,1232,165"/>
+<area shape="rect" title=" " alt="" coords="1256,131,1325,158"/>
+<area shape="rect" href="_reader_exception_8h.html" title=" " alt="" coords="331,213,528,240"/>
+<area shape="rect" href="_exception_8h.html" title=" " alt="" coords="263,452,417,479"/>
+<area shape="rect" title=" " alt="" coords="331,527,386,553"/>
+<area shape="rect" title=" " alt="" coords="229,527,307,553"/>
+<area shape="rect" title=" " alt="" coords="877,452,936,479"/>
+<area shape="rect" href="_result_point_8h.html" title=" " alt="" coords="965,370,1131,397"/>
+<area shape="rect" href="_counted_8h.html" title=" " alt="" coords="620,452,820,479"/>
+<area shape="rect" href="_bit_matrix_8h.html" title=" " alt="" coords="552,213,755,240"/>
+<area shape="rect" title=" " alt="" coords="584,527,656,553"/>
+<area shape="rect" href="_bit_array_8h.html" title=" " alt="" coords="387,288,583,315"/>
+<area shape="rect" title=" " alt="" coords="5,452,59,479"/>
+<area shape="rect" href="_array_8h.html" title=" " alt="" coords="659,370,839,397"/>
+<area shape="rect" href="_z_qrdecode_8h.html" title=" " alt="" coords="70,370,231,397"/>
+<area shape="rect" href="_illegal_argument_exception_8h.html" title=" " alt="" coords="307,363,482,404"/>
+<area shape="rect" title=" " alt="" coords="119,452,182,479"/>
+<area shape="rect" title=" " alt="" coords="1205,213,1264,240"/>
 </map>
 </div>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

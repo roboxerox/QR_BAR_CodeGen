@@ -1,0 +1,13 @@
+<map id="QR_BarCodeEncoderDecoder" name="QR_BarCodeEncoderDecoder">
+<area shape="rect" id="node1" title=" " alt="" coords="5,572,203,599"/>
+<area shape="rect" id="node2" title=" " alt="" coords="29,483,136,509"/>
+<area shape="rect" id="node3" href="$class_q_zqr_decode.html" title="A class containing a very very small subset of the ZqrDecode library." alt="" coords="160,483,256,509"/>
+<area shape="rect" id="node4" title=" " alt="" coords="159,295,230,322"/>
+<area shape="rect" id="node5" href="$class_image_handler.html" title=" " alt="" coords="157,393,259,420"/>
+<area shape="rect" id="node6" href="$classzqrdecode_1_1_multi_format_reader.html" title=" " alt="" coords="283,393,485,420"/>
+<area shape="rect" id="node7" href="$classzqrdecode_1_1_reader.html" title=" " alt="" coords="235,132,367,159"/>
+<area shape="rect" id="node8" href="$classzqrdecode_1_1_counted.html" title=" " alt="" coords="241,5,380,32"/>
+<area shape="rect" id="node11" href="$classzqrdecode_1_1_result_point_callback.html" title=" " alt="" coords="333,81,542,108"/>
+<area shape="rect" id="node9" href="$classzqrdecode_1_1_decode_hints.html" title=" " alt="" coords="346,295,513,322"/>
+<area shape="rect" id="node10" href="$classzqrdecode_1_1_ref.html" title=" " alt="" coords="343,183,526,224"/>
+</map>

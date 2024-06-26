@@ -1,0 +1,12 @@
+<map id="zqrdecode::qrcode::DataMask" name="zqrdecode::qrcode::DataMask">
+<area shape="rect" id="node1" title=" " alt="" coords="192,235,329,276"/>
+<area shape="rect" id="node3" href="$classzqrdecode_1_1qrcode_1_1_data_mask000.html" title="000: mask bits for which (x + y) mod 2 == 0" alt="" coords="377,5,515,47"/>
+<area shape="rect" id="node4" href="$classzqrdecode_1_1qrcode_1_1_data_mask001.html" title="001: mask bits for which x mod 2 == 0" alt="" coords="377,71,515,112"/>
+<area shape="rect" id="node5" href="$classzqrdecode_1_1qrcode_1_1_data_mask010.html" title="010: mask bits for which y mod 3 == 0" alt="" coords="377,136,515,177"/>
+<area shape="rect" id="node6" href="$classzqrdecode_1_1qrcode_1_1_data_mask011.html" title="011: mask bits for which (x + y) mod 3 == 0" alt="" coords="377,201,515,243"/>
+<area shape="rect" id="node7" href="$classzqrdecode_1_1qrcode_1_1_data_mask100.html" title="100: mask bits for which (x/2 + y/3) mod 2 == 0" alt="" coords="377,267,515,308"/>
+<area shape="rect" id="node8" href="$classzqrdecode_1_1qrcode_1_1_data_mask101.html" title="101: mask bits for which xy mod 2 + xy mod 3 == 0" alt="" coords="377,332,515,373"/>
+<area shape="rect" id="node9" href="$classzqrdecode_1_1qrcode_1_1_data_mask110.html" title="110: mask bits for which (xy mod 2 + xy mod 3) mod 2 == 0" alt="" coords="377,397,515,439"/>
+<area shape="rect" id="node10" href="$classzqrdecode_1_1qrcode_1_1_data_mask111.html" title="111: mask bits for which ((x+y)mod 2 + xy mod 3) mod 2 == 0" alt="" coords="377,463,515,504"/>
+<area shape="rect" id="node2" href="$classzqrdecode_1_1_counted.html" title=" " alt="" coords="5,242,144,269"/>
+</map>

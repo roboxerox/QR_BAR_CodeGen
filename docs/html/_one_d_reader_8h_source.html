@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QZXing_sourceV2.4/zxing/zxing/oned/OneDReader.h Source File</title>
+<title>QR/BAR  Code  Encoder-Decoder: QZQrdecode_sourceV2.0/zqrdecode/zqrdecode/oned/OneDReader.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -64,7 +64,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_3d553dc02591ccf16d9f45b953e4c844.html">QZXing_sourceV2.4</a></li><li class="navelem"><a class="el" href="dir_015afd23c38344630f5229d088b4ccac.html">zxing</a></li><li class="navelem"><a class="el" href="dir_969621418ed5ba17e3fd14c334450b48.html">zxing</a></li><li class="navelem"><a class="el" href="dir_89b460aecacdb4679659afb99c74f3da.html">oned</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_22a00abf22d3715f7b9a74888359acd2.html">QZQrdecode_sourceV2.0</a></li><li class="navelem"><a class="el" href="dir_2c8f0af5d55f92cf0c033e2ce1f94ae3.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_011e1b6a9fbff3587ad718c54bd738a4.html">zqrdecode</a></li><li class="navelem"><a class="el" href="dir_0ae25b46d53b39d5776198a261105e14.html">oned</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -78,105 +78,92 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="comment">/*</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="comment"> *  OneDReader.h</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  ZXing</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="comment"> *  zqrdecode</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> *  Copyright 2010 ZXing authors All rights reserved.</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="comment"> * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="comment"> * you may not use this file except in compliance with the License.</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="comment"> * You may obtain a copy of the License at</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="comment"> *      http://www.apache.org/licenses/LICENSE-2.0</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment"> * Unless required by applicable law or agreed to in writing, software</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment"> * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="comment"> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="comment"> * See the License for the specific language governing permissions and</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="comment"> * limitations under the License.</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_reader_8h.html">zxing/Reader.h</a>&gt;</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezxing.html">zxing</a> {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">namespace </span>oned {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classzxing_1_1oned_1_1_one_d_reader.html">   29</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html">OneDReader</a> : <span class="keyword">public</span> <a class="code" href="classzxing_1_1_reader.html">Reader</a> {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  <a class="code" href="classzxing_1_1_ref.html">Ref&lt;Result&gt;</a> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#a38a0fb1777ef32d2db79065c0e09ff4c">doDecode</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;BinaryBitmap&gt;</a> image, <a class="code" href="classzxing_1_1_decode_hints.html">DecodeHints</a> hints);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classzxing_1_1oned_1_1_one_d_reader.html#a22ff0589a3af657acfbbd902bb674a29">   34</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#a22ff0589a3af657acfbbd902bb674a29">INTEGER_MATH_SHIFT</a> = 8;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html">   36</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html">Range</a> {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;  <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a3f2ece99201314a3503c36be414cd6f8">   38</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a3f2ece99201314a3503c36be414cd6f8">data</a>[2];</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#adf5b38a8612b14b497e5dda23c29f8b1">   40</a></span>&#160;    <a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#adf5b38a8612b14b497e5dda23c29f8b1">Range</a>() {}</div>
-<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#ab95846fbee2cb81c4287f7119a0ac8b7">   41</a></span>&#160;    <a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#ab95846fbee2cb81c4287f7119a0ac8b7">Range</a>(<span class="keywordtype">int</span> zero, <span class="keywordtype">int</span> one) {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a3f2ece99201314a3503c36be414cd6f8">data</a>[0] = zero;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a3f2ece99201314a3503c36be414cd6f8">data</a>[1] = one;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a379eed7dfc91b9f255f449e312e231a0">   45</a></span>&#160;    <span class="keywordtype">int</span>&amp; <a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a379eed7dfc91b9f255f449e312e231a0">operator [] </a>(<span class="keywordtype">int</span> index) {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a3f2ece99201314a3503c36be414cd6f8">data</a>[index];</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#addbff005eac49515c6bc254154d9b6bb">   48</a></span>&#160;    <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a379eed7dfc91b9f255f449e312e231a0">operator [] </a>(<span class="keywordtype">int</span> index)<span class="keyword"> const </span>{</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a3f2ece99201314a3503c36be414cd6f8">data</a>[index];</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;  };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#a2a8d881fa49a9a4c7befd348a951f2c1">patternMatchVariance</a>(std::vector&lt;int&gt;&amp; counters,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                                  std::vector&lt;int&gt; <span class="keyword">const</span>&amp; pattern,</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                                  <span class="keywordtype">int</span> maxIndividualVariance);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#a2a8d881fa49a9a4c7befd348a951f2c1">patternMatchVariance</a>(std::vector&lt;int&gt;&amp; counters,</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                  <span class="keywordtype">int</span> <span class="keyword">const</span> pattern[],</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                                  <span class="keywordtype">int</span> maxIndividualVariance);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="classzxing_1_1oned_1_1_one_d_reader.html#aaa277c8f2ad2041fc7a18feaa4fad7e4">   61</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#aaa277c8f2ad2041fc7a18feaa4fad7e4">PATTERN_MATCH_RESULT_SCALE_FACTOR</a> = 1 &lt;&lt; <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#a22ff0589a3af657acfbbd902bb674a29">INTEGER_MATH_SHIFT</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;<a class="code" href="_reader_8h.html">zqrdecode/Reader.h</a>&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacezqrdecode.html">zqrdecode</a> {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>oned {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1oned_1_1_one_d_reader.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html">OneDReader</a> : <span class="keyword">public</span> <a class="code" href="classzqrdecode_1_1_reader.html">Reader</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;Result&gt;</a> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a38a0fb1777ef32d2db79065c0e09ff4c">doDecode</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BinaryBitmap&gt;</a> image, <a class="code" href="classzqrdecode_1_1_decode_hints.html">DecodeHints</a> hints);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#ae90cac80806c5370539de49b5765e787">   21</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#ae90cac80806c5370539de49b5765e787">INTEGER_MATH_SHIFT</a> = 8;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html">   23</a></span>&#160;  <span class="keyword">struct </span><a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html">Range</a> {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;  <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a222c41e02f52c1f5f564cef00ecc1d63">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a222c41e02f52c1f5f564cef00ecc1d63">data</a>[2];</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a1ffa11a1ef57a003547441a5e73c26a2">   27</a></span>&#160;    <a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a1ffa11a1ef57a003547441a5e73c26a2">Range</a>() {}</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a5107b3d96400ddc8ead9c8675a8c772d">   28</a></span>&#160;    <a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a5107b3d96400ddc8ead9c8675a8c772d">Range</a>(<span class="keywordtype">int</span> zero, <span class="keywordtype">int</span> one) {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a222c41e02f52c1f5f564cef00ecc1d63">data</a>[0] = zero;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a222c41e02f52c1f5f564cef00ecc1d63">data</a>[1] = one;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a01988a8ddd0ac81b00046065495e1bb9">   32</a></span>&#160;    <span class="keywordtype">int</span>&amp; <a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a01988a8ddd0ac81b00046065495e1bb9">operator [] </a>(<span class="keywordtype">int</span> index) {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a222c41e02f52c1f5f564cef00ecc1d63">data</a>[index];</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a058016c67f53e2e5e55b00c8fc900edf">   35</a></span>&#160;    <span class="keywordtype">int</span> <span class="keyword">const</span>&amp; <a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a01988a8ddd0ac81b00046065495e1bb9">operator [] </a>(<span class="keywordtype">int</span> index)<span class="keyword"> const </span>{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a222c41e02f52c1f5f564cef00ecc1d63">data</a>[index];</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a2a8d881fa49a9a4c7befd348a951f2c1">patternMatchVariance</a>(std::vector&lt;int&gt;&amp; counters,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                                  std::vector&lt;int&gt; <span class="keyword">const</span>&amp; pattern,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                                  <span class="keywordtype">int</span> maxIndividualVariance);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a2a8d881fa49a9a4c7befd348a951f2c1">patternMatchVariance</a>(std::vector&lt;int&gt;&amp; counters,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                                  <span class="keywordtype">int</span> <span class="keyword">const</span> pattern[],</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                                  <span class="keywordtype">int</span> maxIndividualVariance);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a4be1e422da673c74059f216db340e5c2">   48</a></span>&#160;  <span class="keyword">static</span> <span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a4be1e422da673c74059f216db340e5c2">PATTERN_MATCH_RESULT_SCALE_FACTOR</a> = 1 &lt;&lt; <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#ae90cac80806c5370539de49b5765e787">INTEGER_MATH_SHIFT</a>;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a3aa6ccc85145e26f6b2fa2efc415e335">OneDReader</a>();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;Result&gt;</a> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a1e4fbadd302963652b9cc59dd541c934">decode</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BinaryBitmap&gt;</a> image, <a class="code" href="classzqrdecode_1_1_decode_hints.html">DecodeHints</a> hints);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;  <span class="comment">// Implementations must not throw any exceptions. If a barcode is not found on this row,</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;  <span class="comment">// a empty ref should be returned e.g. return Ref&lt;Result&gt;();</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;Result&gt;</a> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a1692b0288f0918c6bd52d760e97b15d2">decodeRow</a>(<span class="keywordtype">int</span> rowNumber, <a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitArray&gt;</a> row) = 0;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a07b7ff2108e166bcad370b4f669601b3">recordPattern</a>(<a class="code" href="classzqrdecode_1_1_ref.html">Ref&lt;BitArray&gt;</a> row,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                            <span class="keywordtype">int</span> start,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                            std::vector&lt;int&gt;&amp; counters);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzqrdecode_1_1oned_1_1_one_d_reader.html#ae4b7f1196c190b4017a0f5efc6549daf">~OneDReader</a>();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;};</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;  <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#a3aa6ccc85145e26f6b2fa2efc415e335">OneDReader</a>();</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzxing_1_1_ref.html">Ref&lt;Result&gt;</a> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#a1e4fbadd302963652b9cc59dd541c934">decode</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;BinaryBitmap&gt;</a> image, <a class="code" href="classzxing_1_1_decode_hints.html">DecodeHints</a> hints);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  <span class="comment">// Implementations must not throw any exceptions. If a barcode is not found on this row,</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  <span class="comment">// a empty ref should be returned e.g. return Ref&lt;Result&gt;();</span></div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzxing_1_1_ref.html">Ref&lt;Result&gt;</a> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#a2011f459ee2a0502d3819cbc23765e22">decodeRow</a>(<span class="keywordtype">int</span> rowNumber, <a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitArray&gt;</a> row) = 0;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;  <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#a07b7ff2108e166bcad370b4f669601b3">recordPattern</a>(<a class="code" href="classzxing_1_1_ref.html">Ref&lt;BitArray&gt;</a> row,</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                            <span class="keywordtype">int</span> start,</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                            std::vector&lt;int&gt;&amp; counters);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  <span class="keyword">virtual</span> <a class="code" href="classzxing_1_1oned_1_1_one_d_reader.html#ae4b7f1196c190b4017a0f5efc6549daf">~OneDReader</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html_a1e4fbadd302963652b9cc59dd541c934"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html#a1e4fbadd302963652b9cc59dd541c934">zxing::oned::OneDReader::decode</a></div><div class="ttdeci">virtual Ref&lt; Result &gt; decode(Ref&lt; BinaryBitmap &gt; image, DecodeHints hints)</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:40</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html_a38a0fb1777ef32d2db79065c0e09ff4c"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html#a38a0fb1777ef32d2db79065c0e09ff4c">zxing::oned::OneDReader::doDecode</a></div><div class="ttdeci">Ref&lt; Result &gt; doDecode(Ref&lt; BinaryBitmap &gt; image, DecodeHints hints)</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:70</div></div>
-<div class="ttc" id="aclasszxing_1_1_reader_html"><div class="ttname"><a href="classzxing_1_1_reader.html">zxing::Reader</a></div><div class="ttdef"><b>Definition:</b> Reader.h:29</div></div>
-<div class="ttc" id="astructzxing_1_1oned_1_1_one_d_reader_1_1_range_html"><div class="ttname"><a href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html">zxing::oned::OneDReader::Range</a></div><div class="ttdef"><b>Definition:</b> OneDReader.h:36</div></div>
-<div class="ttc" id="astructzxing_1_1oned_1_1_one_d_reader_1_1_range_html_ab95846fbee2cb81c4287f7119a0ac8b7"><div class="ttname"><a href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#ab95846fbee2cb81c4287f7119a0ac8b7">zxing::oned::OneDReader::Range::Range</a></div><div class="ttdeci">Range(int zero, int one)</div><div class="ttdef"><b>Definition:</b> OneDReader.h:41</div></div>
-<div class="ttc" id="aclasszxing_1_1_decode_hints_html"><div class="ttname"><a href="classzxing_1_1_decode_hints.html">zxing::DecodeHints</a></div><div class="ttdef"><b>Definition:</b> DecodeHints.h:32</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html_a38a0fb1777ef32d2db79065c0e09ff4c"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a38a0fb1777ef32d2db79065c0e09ff4c">zqrdecode::oned::OneDReader::doDecode</a></div><div class="ttdeci">Ref&lt; Result &gt; doDecode(Ref&lt; BinaryBitmap &gt; image, DecodeHints hints)</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:55</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_ref_html"><div class="ttname"><a href="classzqrdecode_1_1_ref.html">zqrdecode::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:39</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html_ae4b7f1196c190b4017a0f5efc6549daf"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html#ae4b7f1196c190b4017a0f5efc6549daf">zqrdecode::oned::OneDReader::~OneDReader</a></div><div class="ttdeci">virtual ~OneDReader()</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:213</div></div>
+<div class="ttc" id="astructzqrdecode_1_1oned_1_1_one_d_reader_1_1_range_html"><div class="ttname"><a href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html">zqrdecode::oned::OneDReader::Range</a></div><div class="ttdef"><b>Definition:</b> OneDReader.h:23</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html_a2a8d881fa49a9a4c7befd348a951f2c1"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a2a8d881fa49a9a4c7befd348a951f2c1">zqrdecode::oned::OneDReader::patternMatchVariance</a></div><div class="ttdeci">static int patternMatchVariance(std::vector&lt; int &gt; &amp;counters, std::vector&lt; int &gt; const &amp;pattern, int maxIndividualVariance)</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:138</div></div>
 <div class="ttc" id="a_reader_8h_html"><div class="ttname"><a href="_reader_8h.html">Reader.h</a></div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html_a3aa6ccc85145e26f6b2fa2efc415e335"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html#a3aa6ccc85145e26f6b2fa2efc415e335">zxing::oned::OneDReader::OneDReader</a></div><div class="ttdeci">OneDReader()</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:38</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html_a07b7ff2108e166bcad370b4f669601b3"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html#a07b7ff2108e166bcad370b4f669601b3">zxing::oned::OneDReader::recordPattern</a></div><div class="ttdeci">static void recordPattern(Ref&lt; BitArray &gt; row, int start, std::vector&lt; int &gt; &amp;counters)</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:193</div></div>
-<div class="ttc" id="anamespacezxing_html"><div class="ttname"><a href="namespacezxing.html">zxing</a></div><div class="ttdef"><b>Definition:</b> QZXing.h:15</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html_ae4b7f1196c190b4017a0f5efc6549daf"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html#ae4b7f1196c190b4017a0f5efc6549daf">zxing::oned::OneDReader::~OneDReader</a></div><div class="ttdeci">virtual ~OneDReader()</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:228</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html_a2a8d881fa49a9a4c7befd348a951f2c1"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html#a2a8d881fa49a9a4c7befd348a951f2c1">zxing::oned::OneDReader::patternMatchVariance</a></div><div class="ttdeci">static int patternMatchVariance(std::vector&lt; int &gt; &amp;counters, std::vector&lt; int &gt; const &amp;pattern, int maxIndividualVariance)</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:153</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html">zxing::oned::OneDReader</a></div><div class="ttdef"><b>Definition:</b> OneDReader.h:29</div></div>
-<div class="ttc" id="astructzxing_1_1oned_1_1_one_d_reader_1_1_range_html_a3f2ece99201314a3503c36be414cd6f8"><div class="ttname"><a href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a3f2ece99201314a3503c36be414cd6f8">zxing::oned::OneDReader::Range::data</a></div><div class="ttdeci">int data[2]</div><div class="ttdef"><b>Definition:</b> OneDReader.h:38</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html_a2011f459ee2a0502d3819cbc23765e22"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html#a2011f459ee2a0502d3819cbc23765e22">zxing::oned::OneDReader::decodeRow</a></div><div class="ttdeci">virtual Ref&lt; Result &gt; decodeRow(int rowNumber, Ref&lt; BitArray &gt; row)=0</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html_aaa277c8f2ad2041fc7a18feaa4fad7e4"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html#aaa277c8f2ad2041fc7a18feaa4fad7e4">zxing::oned::OneDReader::PATTERN_MATCH_RESULT_SCALE_FACTOR</a></div><div class="ttdeci">static const int PATTERN_MATCH_RESULT_SCALE_FACTOR</div><div class="ttdef"><b>Definition:</b> OneDReader.h:61</div></div>
-<div class="ttc" id="astructzxing_1_1oned_1_1_one_d_reader_1_1_range_html_a379eed7dfc91b9f255f449e312e231a0"><div class="ttname"><a href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#a379eed7dfc91b9f255f449e312e231a0">zxing::oned::OneDReader::Range::operator[]</a></div><div class="ttdeci">int &amp; operator[](int index)</div><div class="ttdef"><b>Definition:</b> OneDReader.h:45</div></div>
-<div class="ttc" id="astructzxing_1_1oned_1_1_one_d_reader_1_1_range_html_adf5b38a8612b14b497e5dda23c29f8b1"><div class="ttname"><a href="structzxing_1_1oned_1_1_one_d_reader_1_1_range.html#adf5b38a8612b14b497e5dda23c29f8b1">zxing::oned::OneDReader::Range::Range</a></div><div class="ttdeci">Range()</div><div class="ttdef"><b>Definition:</b> OneDReader.h:40</div></div>
-<div class="ttc" id="aclasszxing_1_1oned_1_1_one_d_reader_html_a22ff0589a3af657acfbbd902bb674a29"><div class="ttname"><a href="classzxing_1_1oned_1_1_one_d_reader.html#a22ff0589a3af657acfbbd902bb674a29">zxing::oned::OneDReader::INTEGER_MATH_SHIFT</a></div><div class="ttdeci">static const int INTEGER_MATH_SHIFT</div><div class="ttdef"><b>Definition:</b> OneDReader.h:34</div></div>
-<div class="ttc" id="aclasszxing_1_1_ref_html"><div class="ttname"><a href="classzxing_1_1_ref.html">zxing::Ref</a></div><div class="ttdef"><b>Definition:</b> Counted.h:55</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html_a1e4fbadd302963652b9cc59dd541c934"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a1e4fbadd302963652b9cc59dd541c934">zqrdecode::oned::OneDReader::decode</a></div><div class="ttdeci">virtual Ref&lt; Result &gt; decode(Ref&lt; BinaryBitmap &gt; image, DecodeHints hints)</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:25</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html_a4be1e422da673c74059f216db340e5c2"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a4be1e422da673c74059f216db340e5c2">zqrdecode::oned::OneDReader::PATTERN_MATCH_RESULT_SCALE_FACTOR</a></div><div class="ttdeci">static const int PATTERN_MATCH_RESULT_SCALE_FACTOR</div><div class="ttdef"><b>Definition:</b> OneDReader.h:48</div></div>
+<div class="ttc" id="astructzqrdecode_1_1oned_1_1_one_d_reader_1_1_range_html_a5107b3d96400ddc8ead9c8675a8c772d"><div class="ttname"><a href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a5107b3d96400ddc8ead9c8675a8c772d">zqrdecode::oned::OneDReader::Range::Range</a></div><div class="ttdeci">Range(int zero, int one)</div><div class="ttdef"><b>Definition:</b> OneDReader.h:28</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html_a3aa6ccc85145e26f6b2fa2efc415e335"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a3aa6ccc85145e26f6b2fa2efc415e335">zqrdecode::oned::OneDReader::OneDReader</a></div><div class="ttdeci">OneDReader()</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:23</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html_ae90cac80806c5370539de49b5765e787"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html#ae90cac80806c5370539de49b5765e787">zqrdecode::oned::OneDReader::INTEGER_MATH_SHIFT</a></div><div class="ttdeci">static const int INTEGER_MATH_SHIFT</div><div class="ttdef"><b>Definition:</b> OneDReader.h:21</div></div>
+<div class="ttc" id="astructzqrdecode_1_1oned_1_1_one_d_reader_1_1_range_html_a1ffa11a1ef57a003547441a5e73c26a2"><div class="ttname"><a href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a1ffa11a1ef57a003547441a5e73c26a2">zqrdecode::oned::OneDReader::Range::Range</a></div><div class="ttdeci">Range()</div><div class="ttdef"><b>Definition:</b> OneDReader.h:27</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_reader_html"><div class="ttname"><a href="classzqrdecode_1_1_reader.html">zqrdecode::Reader</a></div><div class="ttdef"><b>Definition:</b> Reader.h:16</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html">zqrdecode::oned::OneDReader</a></div><div class="ttdef"><b>Definition:</b> OneDReader.h:16</div></div>
+<div class="ttc" id="astructzqrdecode_1_1oned_1_1_one_d_reader_1_1_range_html_a222c41e02f52c1f5f564cef00ecc1d63"><div class="ttname"><a href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a222c41e02f52c1f5f564cef00ecc1d63">zqrdecode::oned::OneDReader::Range::data</a></div><div class="ttdeci">int data[2]</div><div class="ttdef"><b>Definition:</b> OneDReader.h:25</div></div>
+<div class="ttc" id="astructzqrdecode_1_1oned_1_1_one_d_reader_1_1_range_html_a01988a8ddd0ac81b00046065495e1bb9"><div class="ttname"><a href="structzqrdecode_1_1oned_1_1_one_d_reader_1_1_range.html#a01988a8ddd0ac81b00046065495e1bb9">zqrdecode::oned::OneDReader::Range::operator[]</a></div><div class="ttdeci">int &amp; operator[](int index)</div><div class="ttdef"><b>Definition:</b> OneDReader.h:32</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html_a1692b0288f0918c6bd52d760e97b15d2"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a1692b0288f0918c6bd52d760e97b15d2">zqrdecode::oned::OneDReader::decodeRow</a></div><div class="ttdeci">virtual Ref&lt; Result &gt; decodeRow(int rowNumber, Ref&lt; BitArray &gt; row)=0</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1oned_1_1_one_d_reader_html_a07b7ff2108e166bcad370b4f669601b3"><div class="ttname"><a href="classzqrdecode_1_1oned_1_1_one_d_reader.html#a07b7ff2108e166bcad370b4f669601b3">zqrdecode::oned::OneDReader::recordPattern</a></div><div class="ttdeci">static void recordPattern(Ref&lt; BitArray &gt; row, int start, std::vector&lt; int &gt; &amp;counters)</div><div class="ttdef"><b>Definition:</b> OneDReader.cpp:178</div></div>
+<div class="ttc" id="aclasszqrdecode_1_1_decode_hints_html"><div class="ttname"><a href="classzqrdecode_1_1_decode_hints.html">zqrdecode::DecodeHints</a></div><div class="ttdef"><b>Definition:</b> DecodeHints.h:19</div></div>
+<div class="ttc" id="anamespacezqrdecode_html"><div class="ttname"><a href="namespacezqrdecode.html">zqrdecode</a></div><div class="ttdef"><b>Definition:</b> QZqrDecode.h:15</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:04:59 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:51 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -1,8 +1,0 @@
-<map id="zxing::WhiteRectangleDetector" name="zxing::WhiteRectangleDetector">
-<area shape="rect" id="node1" title=" " alt="" coords="5,453,209,480"/>
-<area shape="rect" id="node2" href="$classzxing_1_1_counted.html" title=" " alt="" coords="107,5,217,32"/>
-<area shape="rect" id="node4" href="$classzxing_1_1_bit_matrix.html" title=" " alt="" coords="133,260,247,287"/>
-<area shape="rect" id="node5" href="$classzxing_1_1_array_ref.html" title=" " alt="" coords="175,171,325,197"/>
-<area shape="rect" id="node6" href="$classzxing_1_1_array.html" title=" " alt="" coords="225,81,355,108"/>
-<area shape="rect" id="node3" href="$classzxing_1_1_ref.html" title=" " alt="" coords="123,349,257,391"/>
-</map>

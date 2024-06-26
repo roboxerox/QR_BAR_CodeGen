@@ -1,26 +1,31 @@
 
 # ![](https://github.com/roboxerox/QR_BAR_CodeGen/blob/main/images/qrcode.png) QR_BAR_CodeGen ![](https://github.com/roboxerox/QR_BAR_CodeGen/blob/main/images/barcode.png)
-QR_BAR_CodeGen is a Bar code and QR code generator. It's also able to save as images (jpg/png). BAR code encoded by CODE128.
+QR_BAR_CodeGen is a Bar code and QR code generator as will as decode QR code. It's also able to save as images (jpg/png). BAR code encoded by CODE128.
 
 
-### Cmake build and run
+### Cmake build & run
 
 		git clone https://github.com/roboxerox/QR_BAR_CodeGen.git
 		cd QR_BAR_CodeGen
 		mkdir cbuild && cd cbuild
 		cmake ..
 		make
+		
+		cd QR_BarCodeGen/
+		./QR_BarCodeEncoderDecoder
     
-    
-### Qmake build and run
+### Qmake build & run
 
 		git clone https://github.com/roboxerox/QR_BAR_CodeGen.git
 		cd QR_BAR_CodeGen
 		mkdir qbuild && cd qbuild
 		qmake ..
 		make
+		
+		./QR_BarCodeEncoderDecoder
+		
     
-### Help links
+### Refrences
 
 
 1. Bar Code using [Code 128](https://en.wikipedia.org/wiki/Code_128)

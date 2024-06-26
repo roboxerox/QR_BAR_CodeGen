@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>QR/BAR  Code  Encoder: QR_BAR_CodeGen</title>
+<title>QR/BAR  Code  Encoder-Decoder: &lt;img src=&quot;https://github.com/roboxerox/QR_BAR_CodeGen/blob/main/images/qrcode.png&quot; alt=&quot;&quot;/&gt; QR_BAR_CodeGen &lt;img src=&quot;https://github.com/roboxerox/QR_BAR_CodeGen/blob/main/images/barcode.png&quot; alt=&quot;&quot;/&gt;</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,10 +22,10 @@
  <tr style="height: 56px;">
   <td id="projectlogo"><img alt="Logo" src="main_1.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">QR/BAR  Code  Encoder
+   <div id="projectname">QR/BAR  Code  Encoder-Decoder
    &#160;<span id="projectnumber">1.0.3</span>
    </div>
-   <div id="projectbrief">QR  &amp;  BAR  code  generator  using  code128</div>
+   <div id="projectbrief">QR  &amp;  BAR  code  encode-decode  using  code128</div>
   </td>
  </tr>
  </tbody>
@@ -65,26 +65,31 @@ $(function() {
 
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">QR_BAR_CodeGen </div>  </div>
+<div class="title"><img src="https://github.com/roboxerox/QR_BAR_CodeGen/blob/main/images/qrcode.png" alt="" class="inline"/> QR_BAR_CodeGen <img src="https://github.com/roboxerox/QR_BAR_CodeGen/blob/main/images/barcode.png" alt="" class="inline"/> </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>QR_BAR_CodeGen is a Bar code and QR code generator. It's also able to save as images (jpg/png). BAR code encoded by <a href="https://en.wikipedia.org/wiki/Code_128">CODE128</a> .</p>
+<div class="textblock"><p>QR_BAR_CodeGen is a Bar code and QR code generator as will as decode QR code. It's also able to save as images (jpg/png). BAR code encoded by CODE128.</p>
 <h2><a class="anchor" id="autotoc_md1"></a>
-Cmake build and run</h2>
+Cmake build &amp; run</h2>
 <pre class="fragment">    git clone https://github.com/roboxerox/QR_BAR_CodeGen.git
     cd QR_BAR_CodeGen
     mkdir cbuild &amp;&amp; cd cbuild
     cmake ..
     make
+
+    cd QR_BarCodeGen/
+    ./QR_BarCodeEncoderDecoder
 </pre><h2><a class="anchor" id="autotoc_md2"></a>
-Qmake build and run</h2>
+Qmake build &amp; run</h2>
 <pre class="fragment">    git clone https://github.com/roboxerox/QR_BAR_CodeGen.git
     cd QR_BAR_CodeGen
     mkdir qbuild &amp;&amp; cd qbuild
     qmake ..
     make
+
+    ./QR_BarCodeEncoderDecoder
 </pre><h2><a class="anchor" id="autotoc_md3"></a>
-References</h2>
+Refrences</h2>
 <ol type="1">
 <li>Bar Code using <a href="https://en.wikipedia.org/wiki/Code_128">Code 128</a></li>
 <li><a href="https://github.com/nayuki/QR-Code-generator/tree/master/cpp">QR Codegen</a> source code</li>
@@ -94,7 +99,7 @@ References</h2>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Jun 25 2024 17:05:00 for QR/BAR  Code  Encoder by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Jun 26 2024 14:08:52 for QR/BAR  Code  Encoder-Decoder by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

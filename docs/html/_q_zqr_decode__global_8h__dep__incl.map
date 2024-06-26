@@ -1,0 +1,8 @@
+<map id="QZQrdecode_sourceV2.0/QZqrDecode_global.h" name="QZQrdecode_sourceV2.0/QZqrDecode_global.h">
+<area shape="rect" id="node1" title=" " alt="" coords="149,5,318,47"/>
+<area shape="rect" id="node2" href="$_q_zqr_decode_8h.html" title=" " alt="" coords="149,95,318,136"/>
+<area shape="rect" id="node3" href="$_q_r___bar_code_encoder_decoder_8h.html" title="This is header QR_BarCodeEncoderDecoder class." alt="" coords="25,191,231,218"/>
+<area shape="rect" id="node6" href="$_q_zqr_decode_8cpp.html" title=" " alt="" coords="255,184,425,225"/>
+<area shape="rect" id="node4" href="$main_8cpp.html" title=" " alt="" coords="5,273,80,300"/>
+<area shape="rect" id="node5" href="$_q_r___bar_code_encoder_decoder_8cpp.html" title="This is QR_BarCodeEncoderDecoder class and main window of UI. It generate BAR code using code128...." alt="" coords="104,273,325,300"/>
+</map>

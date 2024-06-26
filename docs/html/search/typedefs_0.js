@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['base_3042',['Base',['../class_big_unsigned_in_a_base.html#a357d3922227fcb502acd69b5b9288bd1',1,'BigUnsignedInABase::Base()'],['../classzxing_1_1_checksum_exception.html#a66676fcf41e3ee12c7e26d89bf92dc0d',1,'zxing::ChecksumException::Base()']]],
-  ['blk_3043',['Blk',['../class_big_integer.html#a087f32e1a98d13063afabbbba5ee7777',1,'BigInteger::Blk()'],['../class_big_unsigned.html#a100302c62ee708432c81de0a961c319b',1,'BigUnsigned::Blk()']]],
-  ['boolean_3044',['boolean',['../namespacezxing.html#af79845f73ce85a5f026c1b2b089ea7a0',1,'zxing']]],
-  ['byte_3045',['byte',['../classzxing_1_1_bit_source.html#a75ca9a5771c4bc2722b7f5942f59ad46',1,'zxing::BitSource::byte()'],['../namespacezxing.html#a9b97e50f5e3f4f71336eff25a2b140c6',1,'zxing::byte()']]]
+  ['base_3047',['Base',['../class_big_unsigned_in_a_base.html#a357d3922227fcb502acd69b5b9288bd1',1,'BigUnsignedInABase::Base()'],['../classzqrdecode_1_1_checksum_exception.html#a0e63be9af30c0554ae0eabd6362527b9',1,'zqrdecode::ChecksumException::Base()']]],
+  ['blk_3048',['Blk',['../class_big_integer.html#a087f32e1a98d13063afabbbba5ee7777',1,'BigInteger::Blk()'],['../class_big_unsigned.html#a100302c62ee708432c81de0a961c319b',1,'BigUnsigned::Blk()']]],
+  ['boolean_3049',['boolean',['../namespacezqrdecode.html#a079a27bcfe2428e9a265173b1dc4e8b6',1,'zqrdecode']]],
+  ['byte_3050',['byte',['../classzqrdecode_1_1_bit_source.html#ac22fa546af014ac94a87d78b23c8fa51',1,'zqrdecode::BitSource::byte()'],['../namespacezqrdecode.html#a644b28d291f18256b03861833d33dced',1,'zqrdecode::byte()']]]
 ];
